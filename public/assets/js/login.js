@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             email: document.querySelector('input[name="email"]').value,
             senha: document.querySelector('input[name="pass"]').value
         }
-        const resp = await fetch('http://localhost/sys_login/core/Router.php?controller=Auth&method=login', {
+        const resp = await fetch('http://localhost/sys_login/index.php?controller=auth&method=login', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(fields)

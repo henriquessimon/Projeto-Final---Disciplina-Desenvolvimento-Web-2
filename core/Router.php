@@ -2,22 +2,40 @@
 class Router {
     public function routeContorler($controller, $method) {
         $controllerName = ucfirst($controller) . 'Controller';
-        $url = '../app/controller/' . $controllerName  . '.php';
+        $url = __DIR__ . '/../app/controller/' . $controllerName  . '.php';
 
-        if(!file_exists($url)) die('Rota não encontrada');
+        if(!file_exists($url)) {
+            http_response_code(404);
+            echo json_encode([
+                'success' => false,
+                'm;essage' => 'Rota não encontrada'
+            ]);
+            exit;
+        }
 
         require_once $url;
 
-        if(!class_exists($controllerName)) die('Class inexistente');
+        if(!class_exists($controllerName)) {
+            http_response_code(500);
+            echo json_encode([
+                'success' => false,
+                'message' => 'Classe não encontrada'
+            ]);
+            exit;
+        }
 
         $controllerObj = new $controllerName();
 
-        if(!method_exists($controllerObj, $method)) die('Método não existe');
+        if(!method_exists($controllerObj, $method)){
+            http_response_code(500);
+            echo json_encode([
+                'success' => false,
+                'message' => 'Method não encontrado'
+            ]);
+            exit;
+        }
 
         $controllerObj->$method();
     }
 }
-
-$router = new Router();
-$router->routeContorler($_GET['controller'], $_GET['method']);
 ?>

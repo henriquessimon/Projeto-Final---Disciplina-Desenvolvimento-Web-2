@@ -1,11 +1,8 @@
 <?php
-    require_once '../config/connection.php' ;
-    session_start();
 
 class AuthController {
     public function login() {
         $conn = connection();
-        error_log(print_r($conn, true));
         $data = json_decode(file_get_contents('php://input'), true);
         $email = $data['email'] ?? '';
         $senha = $data['senha'] ?? '';
@@ -18,12 +15,9 @@ class AuthController {
 
         $stmt->execute();
 
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        error_log(print_r($row, true));
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);        
 
         if($row) {
-            error_log('Entrou');
             if($row['sys_ativo'] == 1) {
                 $_SESSION['user_id'] = $row['id'];
                 $_SESSION['nome'] = $row['nome_completo'];
