@@ -1,0 +1,78 @@
+==categoria_armas==
+
+nome: Daggers:
+id: 1
+
+nome: Straight Swords
+id: 2
+
+nome: Greatswords
+id: 3
+
+nome: Ultra Greatsowrds
+id: 4
+
+nome: Curved Swords
+id: 5
+
+nome: Katanas
+id: 6
+
+nome: Curved Greatsowrds
+id: 7
+
+nome: Piercing Swords
+id: 8
+
+nome: Axes
+id: 9
+
+nome: Great Axes
+id: 10
+
+nome: Hammers
+id: 11
+
+nome: Great Hammers
+id: 12
+
+nome: Fist & Claw
+id: 13
+
+nome: Spears
+id: 14
+
+nome: Halberds
+id: 15
+
+nome: Whips
+id: 16
+
+nome: Bows
+id: 17
+
+nome: Greatbows
+id: 18
+
+nome: Crossbows
+id: 19
+
+nome: Flames
+id: 20
+
+nome: Catalysts
+id: 21
+
+nome: Talismans
+id: 22
+
+==categoria_escudos==
+
+nome: Small Shields
+id: 1
+
+nome: Standard Shields
+id: 2
+
+nome: Greatshields
+id: 3

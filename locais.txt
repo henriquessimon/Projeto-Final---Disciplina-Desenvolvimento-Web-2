@@ -1,0 +1,86 @@
+nome: Northern Undead Asylum
+id: 1
+
+nome: Firelink Shrine
+id: 2
+
+nome: Undead Burg
+id: 3
+
+nome: Undead Parish
+id: 4
+
+nome: Depths
+id: 5
+
+nome: Blighttown
+id: 6
+
+nome: Quelaag's Domain
+id: 7
+
+nome: The Great Hollow
+id: 8
+
+nome: Ash Lake
+id: 9
+
+nome: Sen's Fortress
+id: 10
+
+nome: Anor Londo
+id: 11
+
+nome: Painted World of Ariamis
+id: 12
+
+nome: Darkrrot Garden
+id: 13
+
+nome: Darkroot Basin
+id: 14
+
+nome: New Londo Ruins
+id: 15
+
+nome: The Duke's Archives
+id: 16
+
+nome: Crystal Cave
+id: 17
+
+nome: Demon Ruins
+id: 18
+
+nome: Lost Izalith
+id: 19
+
+nome: The Catacombs
+id: 20
+
+nome: Tomb of Giants
+id: 21
+
+nome: Kiln of the First Flame
+id: 22
+
+nome: The Valley of the Drakes
+id: 23
+
+nome: Sanctuary Garden
+id: 24
+
+nome: Oolacile Sanctuary
+id: 25
+
+nome: Royal Wood
+id: 26
+
+nome: Oolacile Township
+id: 27
+
+nome: Chasm of the Abyss
+id: 28
+
+nome: Battle of Stoicism
+id: 29

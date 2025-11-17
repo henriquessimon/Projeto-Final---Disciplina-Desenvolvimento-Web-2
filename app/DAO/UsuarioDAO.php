@@ -21,9 +21,6 @@ class UsuarioDAO {
         $stmt->bindValue(":ativo", $usuario->getSysAtivo());
 
         $stmt->execute();
-
-        header("Location: /sys_login/app/Views/mainPage.php");
-        exit;
     }
 }
 ?>

@@ -1,0 +1,15 @@
+.local_list_container {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column;
+    width: 100%;
+}
+
+.local_list_item {
+    border-bottom: 3px #DC4413 solid;
+    cursor: pointer;
+}
+
+.local_list_item:hover h3{
+    text-decoration: underline;
+}

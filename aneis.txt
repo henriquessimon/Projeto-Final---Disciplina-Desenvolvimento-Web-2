@@ -1,0 +1,232 @@
+Aneis:
+
+Nome: Tiny Being's Ring:        
+    descricao: Ring made of an ancient tiny red jewel. Grants small increase to HP. Rings grant powers large and small.
+Their discovery, and effective use, can make one's journey easier
+
+    effect: Maximum HP: +5%
+    raridade_id:
+
+Nome: Cloranthy Ring
+    descricao: This ancient ring, engraved with a large green flower, is of unknown origin.
+Hastens the regeneration of stamina.
+    effect: Stamina regeneration: +20%
+
+Nome: Havel's Ring
+    descricao: This ring was named after Havel the Rock, Lord Gwyn's old battlefield compatriot.
+Havel's men wore the ring to express faith in their leader and to carry a heavier load.
+    effect: Maximum equip load: +50%
+
+Nome: Ring of Steel Protection
+    descricao: This ring belonged to the Knight King Rendal. It grants its wearer protection by boosting
+defense against physical attacks. Of the many legends surrounding the Knight King Rendal,
+one of the more well-known speaks of his standing down a giant drake and slashing it to pieces.
+    effect: Physical defense: +50 points
+
+Nome: Spell Stoneplate Ring
+    descricao: Stoneplates, the symbol of a true knight, grant the strength to face various hardships.
+The blue stoneplate symbolizes souls, and boosts defense against magic.
+    effect: Magic defense: +50 points
+
+Nome: Flame Stoneplate Ring
+    descricao: Stoneplates, the symbol of a true knight, grant the strength to face various hardships.
+The red stoneplate symbolizes fire, and boosts defence against flame.
+    effect: Fire defense: +50 points
+
+Nome: Thunder Stoneplate Ring
+    descricao: Stoneplates, the symbol of a true knight, grant the strength to face various hardships.
+The yellow stoneplate symbolizes thunder, and boosts defence against lightning.
+    effect: Lightning defense: +50 points
+
+Nome: Speckled Stoneplate Ring
+    descricao: Stoneplates, the symbol of a true knight, grant the strength to face various hardships. The precious rare speckled stoneplate grants a small boost to defense against magic, flame, and lightning.
+    effect: Magic defense: +25 points
+Fire defense: +25 points
+Lightning defense: +25 points
+
+Nome: Bloodbite Ring
+    descricao: One of the infamous bite rings commissioned by Sir Arstor of Carim. Despite the dreadful rumors
+surrounding its creation, this ring is an unmistakable asset, in its ability to help prevent bleeding.
+    effect: Bleed resistance: +400%
+
+Nome: Poisonbite Ring
+    descricao: One of the infamous bite rings commissioned by Sir Arstor of Carim. Despite the dreadful rumors
+surrounding its creation, this ring is an unmistakable asset, in its ability to help prevent poison.
+    effect: Poison resistance: +400%
+
+Nome: Cursebite Ring
+    descricao: One of the infamous bite rings commissioned by Sir Arstor of Carim. Despite the dreadful rumors
+surrounding its creation, this ring is an unmistakable asset, in its ability to help prevent curses.
+    effect: Curse resistance: +400%
+
+Nome: Red Tearstone Ring
+    descricao: The rare gem called tearstone has the uncanny ability to sense imminent death.
+This red tearstone from Carim boosts the attack of its wearer when in danger.
+    effect: Attack: +50% when health is below 20%
+
+Nome: Blue Tearstone Ring
+    descricao: The rare gem called tearstone has the uncanny ability to sense imminent death.
+This blue tearstone from Catarina boosts the defence of its wearer when in danger.
+    effect: Defense: +50% when health is below 20%
+
+Nome: Ring of Sacrifice
+    descricao: This mystical ring was created in a sacrificial rite of Velka, the Goddess of Sin. Its wearer will lose nothing upon death, but the ring itself breaks.
+    effect: Lose nothing upon death
+Ring breaks when used
+
+Nome: Rare Ring of Sacrifice
+    descricao: This mystical ring was created in a sacrificial rite of Velka, the Goddess of Sin.
+The magenta-shaded ring is especially rare. Its wearer will lose nothing upon death,
+and will be freed from any curse whatsoever, but the ring itself breaks.
+    effect: Lose nothing upon death
+Death caused by curse will not take effect
+Ring breaks when used
+
+Nome: Bellowing Dragoncrest Ring
+    descricao: A special ring granted to only the most accomplished sorcerers at Vinheim Dragon School.
+The ring is engraved with an everlasting dragon, and boosts the strength of sorceries.
+    effect: Magic damage: +20-26% depending on spell
+
+Nome: Lingering Dragoncrest Ring
+    descricao: A special ring granted to only the most accomplished sorcerers at Vinheim Dragon School.
+The ring is engraved with a lingering dragon, and boosts the length of the effects of sorceries.
+    effect: Magic effect length: +50%
+
+Nome: Slumbering Dragoncrest Ring
+    descricao: This ring was secretly worn by a surreptitious sorcerer at Vinheim Dragon School.
+The ring is engraved with an everlasting dragon in silent slumber, and masks all sound emitting from its wearer.
+    effect: Wearer makes no sound
+
+Nome: Dusk Crown Ring
+    descricao: This magic crown-shaped ring was granted to princess Dusk of Oolacile upon her birth.
+The ringstone allows its wearer to cast additional sorceries, but at the cost of one-half of HP.
+    effect:Amount of sorcery castings: +50%
+Maximum HP: -50%
+
+Nome: White Seance Ring
+    descricao: A divine ring entrusted to the head bishop of the Way of White and apostle to Allfather Lloyd, uncle to Lord Gwyn.
+It grants additional attunement slots.
+The head bishop of the Way of White is the guardian of law and caste, and one of the great royals of Thorolund.
+    effect: Attunement slots: +1 slot
+
+Nome: Darkmoon Seance Ring
+    descricao: This ring is granted to adherents of Gwyndolin, Darkmoon deity and last born of Gwyn, Lord of Sunlight.
+Grants additional magic attunement slots. The Dark Sun Gwyndolin is the only remaining deity in Anor
+Londo. His followers are few, but their tasks are of vital importance.
+    effect: Attunement slots: +1 slot
+Grants player entrance to Darkmoon Blades covenant at Anor Londo.
+
+Nome: Ring of the Sun's Firstborn
+    descricao: Lord Gwyn's firstborn, who inherited the sunlight, once wore this ancient ring.
+Lord Gwyn's firstborn was a god of war, but his foolishness led to a loss of the annals, and rescinding of his deific status.
+Today, even his name is not known.
+    effect: Miracle power: +20%
+
+Nome: Darkmoon Blade Covenant Ring
+    descricao: Ring granted to those bound by the Darkmoon Blade covenant. Answer Dark Sun Gwyndolin's summoning.
+Gwyndolin, all too aware of his repulsive, frail appearance, created the illusion of a sister Gwynevere, who
+helps him guard over Anor Londo. An unmasking of these deities would be tantamount to blasphemy.
+    effect: Allows Gwyndolin to summon one player to invade another player's Dark Anor Londo.
+
+Nome: Ring of the Sun Princess
+    descricao: This ring is granted to those who enter a Covenant with Gwynevere, daughter of Lord Gwyn and the Princess of Sunlight. This slightly warm ring boosts the synergy of miracles.
+The Princess of Sunlight left Anor Londo along with many other deities, and later became wife to Flame God Flann.
+    effect: Boosts miracle synergy
+
+Nome: Leo Ring
+    descricao: One of the special rings granted to the four knights of Gwyn. The Leo Ring belonged
+to Ornstein the Dragonslayer. This ring strengthens counters with pierce weapons.
+His lugged spear is said to have sliced a boulder in two.
+    effect: Counter damage: +40%
+
+Nome: Wolf Ring
+    descricao: One of the special rings granted to the four knights of Gwyn. The Wolf Ring belongs to Artorias the Abysswalker. Artorias had an unbendable will of steel, and was unmatched with a greatsword.
+    effect: Increases Poise by 40.
+
+Nome: Hawk Ring
+    descricao: One of the special rings granted to the four knights of Gwyn. The Hawk Ring belonged to Hawkeye Gough, who led the Greatarchers. Boosts bow range, so that arrows fly like they were shot by Gough's great bow, which took down high-flying dragons.
+    effect: Bow range: +50%
+Enhanced zooming: bows and binoculars
+
+Nome: Hornet Ring
+    descricao: One of the special rings granted to the four knights of Gwyn. The Hornet Ring
+Belonged to the Lord's Blade Ciaran. By boosting critical attacks, its wearer can
+annihilate foes, as Ciaran's dagger laid waste to Lord Gwyn's enemies.
+    effect: Critical attack (backstab, riposte): +30%
+
+Nome: East Wood Grain Ring
+    descricao: This special ring crafted in an Eastern land is made of gold, but with a wood grain crest on its surface. The ring slows the loss of weapon durability and is particularly useful to bearers of delicate swords crafted in the East.
+    effect: Lessens the amount of durability loss.
+Note: Does not lessen durability loss when using a weapon's special ability (i.e. dragon weapons' two-handed strong attack).
+
+Nome: Dark Wood Grain Ring
+    descricao: This special ring crafted in an Eastern land is made of gold, but with a wood grain crest
+on its surface. Agents of subterfuge in this faraway land are particularly fond of the
+dark gold wood grain, which greatly alters its wearer's rolling action.
+    effect: Changes rolling action to a faster and wider one (ninja flip).
+Only works when equip load is under 25% as of Patch 1.06
+
+Nome: Rusted Iron Ring
+    descricao: 
+This iron ring was used to shackle the guilty. It is terribly rusted, and faintly stained with blood.
+Those who find this strange ring to their liking will be pleased to find it easier to gain footing on poor ground such as swamps.
+    effect: Rusted Iron Ring	Removes the movement speed penalty in water, poison swamp, tar, etc
+
+Nome: Covetous Gold Serpent Ring
+    descricao: The serpent is an imperfect dragon and symbol of the Undead. Its habit of devouring prey
+even larger than itself has led to an association of gluttony. This gold ring, engraved with
+the serpent, boosts its wearer's item discovery, so that more items can be amassed.
+    effect: Item discovery: +200 points
+
+Nome: Covetous Silver Serpent Ring
+    descricao: The serpent is an imperfect dragon and symbol of the Undead. Its habit of devouring prey
+even larger than itself has led to an association of gluttony. This silver ring, engraved with
+the serpent, rewards its wearer with additional souls for each kill.
+    effect: Souls absorbed for each kill: +20%
+
+Nome: Covenant of Artorias
+    descricao: This ring symbolizes Knight Artorias's covenant with the beasts of the Abyss.
+Its wearer, like Artorias himself can traverse the Abyss.
+    effect: Allows entering to The Abyss
+
+Nome: Orange Charred Ring
+    descricao: Since his sores were inflamed by lava from birth, his witch sisters gave him this special ring.
+But fool that he is, he readily dropped it, and from that spot, a terrible centipede demon was born.
+    effect: Reduces lava damage
+Adds fire element to kick motion
+
+Nome: Old Witch's Ring
+    descricao: Old ring from an old witch. Engraved minutely with indecipherable script, but seemingly useless.
+    effect: Allows talking to Quelaag's Sister
+Note: Without the ring choosing to talk to her only prompts a "...?" response.
+
+Nome: Cat Covenant Ring
+    descricao: Ring granted to those bound by the Forest Hunter covenant. Answer Alvina's summoning.
+The white cat Alvina speaks a human tongue and has lived since the early Age of Fire.
+Alvina was a trusted friend of Knight Artorias and the Great Wolf Sif.
+    effect:Allows Alvina to summon player to protect Darkroot Garden from other players
+Note: Requires to be a member of the Forest Hunter Covenant to be summoned.
+
+Nome: Ring of Fog
+    descricao: Those who befriend Alvina are given this mysterious ring. It resembles a pearl with its robust pure-white fog.
+The ring camouflages its wearer's presence, helping to prevent detection.
+    effect: Turns the player transparent making them un-targetable (but not un-hittable).
+Note: As of Patch 1.04, users of this ring are targetable.
+
+Nome: Ring of Favor and Protection
+    descricao: A ring symbolizing the favor and protection of the goddess Fina, known in legend to possess "fateful beauty."
+This ring boosts its wearer's HP, stamina, and max equipment load, but breaks if ever removed.
+    effect: Maximum HP: +20%
+Stamina: +20%
+Maximum equip load: +20%.
+Breaks when removed
+
+Nome: Ring of the Evil Eye
+    descricao: According to legend, this ring contains the spirit of the evil eye, a dark beast which assaulted Astora.
+The strength of the evil eye does not waver, and HP is absorbed from fallen enemies.
+    effect: Absorbs 30 HP from every fallen enemy.
+
+Nome: Calamity Ring
+    descricao: A ring enchanted by the orange eye of Kalameet, the bringer of calamity. Doubles damage received by its wearer.
+A useless ring befitting of no finger. Best left unknown, or at least well hidden.
+    effect: The player receives twice the amount of damage they normally would

@@ -1,0 +1,2141 @@
+---Dagger---
+
+-nome: Dagger
+    -descricao: This standard small dagger has only a modest attack but can be jabbed in rapid succession, and is effective in critical hits such as after a parry or when stabbing in the back."
+"With both slash and thrust attacks this dagger is useful in various situations.
+
+    -categoria_id: 1
+    -raridade_id: 1
+    -estabilidade: 26
+    -dano_fisico: 140
+    -dano_magico : 105(115)
+    -dano_fogo : 134(134)
+    -dano_eletrico : 140(140)
+    -dano_fisico_reducao : 45
+    -dano_magico_reducao : 10
+    -dano_fogo_reducao : 30
+    -dano_eletrico_reducao: 30
+    -effect: Fast atacks
+
+-nome: Ghost Blade:
+    -descricao: The ghosts of New Londo clutch this wickedly sharp dagger with their bony hands and make mincemeat of the living."
+"One of the cursed weapons which can inflict damage upon ghosts.
+
+    -caregoria_id: 1
+    -raridade_id: 2
+    -estabilidade: 26
+    -dano_fisico : 165
+    -dano_magico :
+    -dano_fogo :
+    -dano_eletrico :
+    -dano_fisico_reducao :
+    -dano_magico_reducao :
+    -dano_fogo_reducao : 
+    -dano_eletrico_reducao: 
+    -effect: 
+
+-nome: Bandit's Knife:
+-descricao: "A coarse, heavy knife used by bandits. Its thick blade is designed for slashing, making it effective at causing bleed. Light and easy to wield, allowing for quick, successive attacks."
+-categoria_id:  1
+-raridade_id: 1
+-estabilidade: 20
+-dano_fisico : 84
+-dano_magico : 0
+-dano_fogo : 0
+-dano_eletrico : 0
+-dano_fisico_reducao : 40
+-dano_magico_reducao : 10
+-dano_fogo_reducao : 20
+-dano_eletrico_reducao: 20
+-effect: Causa Sangramento (300)
+
+-nome: Parrying Dagger:
+-descricao: "A dagger with a large hilt, designed for parrying. Its unique shape provides superior deflection, making it easier to parry enemy attacks, but its attack power is subpar."
+-categoria_id: 1
+-raridade_id: 1
+-estabilidade: 18
+-dano_fisico : 72
+-dano_magico : 0
+-dano_fogo : 0
+-dano_eletrico : 0
+-dano_fisico_reducao : 35
+-dano_magico_reducao : 10
+-dano_fogo_reducao : 15
+-dano_eletrico_reducao: 15
+-effect: Bônus no tempo de parry
+
+-nome: Priscilla's Dagger
+-descricao: "A graceful, yet wickedly sharp dagger wielded by the Crossbreed of the Painted World. Its blade inflicts a lacerating wound that causes rapid blood loss."
+-categoria_id: 1
+-raridade_id: 3
+-estabilidade: 22
+-dano_fisico : 80
+-dano_magico : 0
+-dano_fogo : 0
+-dano_eletrico : 0
+-dano_fisico_reducao : 38
+-dano_magico_reducao : 15
+-dano_fogo_reducao : 25
+-dano_eletrico_reducao: 25
+-effect: Causa Sangramento (500)
+
+-nome: Dark Silver Tracer
+-descricao: "Lord's Blade Ciaran's dagger of choice. A deadly weapon characterized by its elegant, flowing design. It is a tracer, its movements nigh impossible to read. Inflicts critical damage of immense proportions."
+-categoria_id: 1
+-raridade_id: 2
+-estabilidade: 24
+-dano_fisico : 75
+-dano_magico : 0
+-dano_fogo : 0
+-dano_eletrico : 0
+-dano_fisico_reducao : 36
+-dano_magico_reducao : 20
+-dano_fogo_reducao : 22
+-dano_eletrico_reducao: 22
+-effect: Dano crítico extremamente alto (500)
+
+
+---------------------
+
+---Straight Sword---
+
+-nome: Straight Sword Hilt:
+-descricao: "The broken hilt of a straight sword, with a mere sliver of blade remaining. Deals negligible damage and is all but useless in combat. A testament to a battle lost."
+-categoria_id: 2
+-raridade_id: 1
+-estabilidade: 16
+-dano_fisico : 42
+-dano_magico : 0
+-dano_fogo : 0
+-dano_eletrico : 0
+-dano_fisico_reducao : 30
+-dano_magico_reducao : 5
+-dano_fogo_reducao : 10
+-dano_eletrico_reducao: 10
+-effect: Nenhum
+
+-nome: Broken Straight Sword:
+-descricao: "A straight sword that has been broken in two. Slightly more useful than the hilt alone, but still a pitiful excuse for a weapon. Only the truly desperate would wield it."
+-categoria_id: 2
+-raridade_id: 1
+-estabilidade: 18
+-dano_fisico : 56
+-dano_magico : 0
+-dano_fogo : 0
+-dano_eletrico : 0
+-dano_fisico_reducao : 32
+-dano_magico_reducao : 8
+-dano_fogo_reducao : 12
+-dano_eletrico_reducao: 12
+-effect: Nenhum
+
+-nome: Broadsword:
+-descricao: "A standard, wide-bladed straight sword. Offers no fancy tricks, but is a reliable and well-balanced weapon with solid attack power and a versatile moveset."
+-categoria_id: 2
+-raridade_id: 1
+-estabilidade: 40
+-dano_fisico : 132
+-dano_magico : 0
+-dano_fogo : 0
+-dano_eletrico : 0
+-dano_fisico_reducao : 50
+-dano_magico_reducao : 30
+-dano_fogo_reducao : 40
+-dano_eletrico_reducao: 40
+-effect: Nenhum
+
+-nome: Shortsword:
+-descricao: "A short, lightweight straight sword. Its reduced reach is compensated by its speed and low stamina consumption, making it ideal for quick, defensive playstyles."
+-categoria_id: 2
+-raridade_id: 1
+-estabilidade: 36
+-dano_fisico : 115
+-dano_magico : 0
+-dano_fogo : 0
+-dano_eletrico : 0
+-dano_fisico_reducao : 45
+-dano_magico_reducao : 25
+-dano_fogo_reducao : 35
+-dano_eletrico_reducao: 35
+-effect: Nenhum
+
+-nome: Longsword:
+-descricao: "A versatile standard longsword. A perfect balance of weight, reach, and damage, featuring a reliable thrusting heavy attack. A favorite amongst knights and adventurers alike."
+-categoria_id: 2
+-raridade_id: 1
+-estabilidade: 44
+-dano_fisico : 144
+-dano_magico : 0
+-dano_fogo : 0
+-dano_eletrico : 0
+-dano_fisico_reducao : 52
+-dano_magico_reducao : 32
+-dano_fogo_reducao : 42
+-dano_eletrico_reducao: 42
+-effect: Nenhum
+
+-nome: Barbed Straight Sword:
+-descricao: "A straight sword wielded by the knights of the cathedral of the Deep. Its blade is lined with nasty, flesh-rending barbs that cause bleeding."
+-categoria_id: 2
+-raridade_id: 1
+-estabilidade: 38
+-dano_fisico : 125
+-dano_magico : 0
+-dano_fogo : 0
+-dano_eletrico : 0
+-dano_fisico_reducao : 48
+-dano_magico_reducao : 28
+-dano_fogo_reducao : 38
+-dano_eletrico_reducao: 38
+-effect: Causa Sangramento (330)
+
+-nome: Sunlight Straight Sword
+-descricao: "A straight sword blessed by the power of sunlight. Offers holy damage that is effective against the undead and those who dwell in darkness. A weapon of hope and miracles."
+-categoria_id: 2
+-raridade_id: 1
+-estabilidade: 46
+-dano_fisico : 138
+-dano_magico : 0
+-dano_fogo : 0
+-dano_eletrico : 0
+-dano_fisico_reducao : 54
+-dano_magico_reducao : 40
+-dano_fogo_reducao : 45
+-dano_eletrico_reducao: 45
+-effect: Dano extra contra Mortos-Vivos
+
+-nome: Balder Side Sword:
+-descricao: "A slender thrusting sword used by the knights of Balder. Renowned for its exceptional reach and swift, piercing attacks. A rare and coveted treasure from a fallen land."
+-categoria_id: 2
+-raridade_id: 1
+-estabilidade: 42
+-dano_fisico : 135
+-dano_magico : 0
+-dano_fogo : 0
+-dano_eletrico : 0
+-dano_fisico_reducao : 50
+-dano_magico_reducao : 35
+-dano_fogo_reducao : 40
+-dano_eletrico_reducao: 40
+-effect: Moveset com ênfase em ataques de perfuração.
+
+-nome: Astora's Straight Sword:
+-descricao: "A divine straight sword from the lost land of Astora. Though small, it is a blessed weapon that scatters the dark, dealing holy damage. Scales slightly with Faith."
+-categoria_id: 2
+-raridade_id: 2
+-estabilidade: 40
+-dano_fisico : 120
+-dano_magico : 120
+-dano_fogo : 0
+-dano_eletrico : 0
+-dano_fisico_reducao : 48
+-dano_magico_reducao : 50
+-dano_fogo_reducao : 35
+-dano_eletrico_reducao: 35
+-effect: Dano Mágico Divino inato. Dano extra contra Mortos-Vivos e Demônios.
+
+-nome: Silver Knight Straight Sword:
+-descricao: "A beautifully crafted straight sword wielded by the Silver Knights of Anor Londo. Forged from rare demon-repellent ore, it is effective against chaotic forces."
+-categoria_id: 2
+-raridade_id: 1
+-estabilidade: 48
+-dano_fisico : 155
+-dano_magico : 0
+-dano_fogo : 0
+-dano_eletrico : 0
+-dano_fisico_reducao : 58
+-dano_magico_reducao : 38
+-dano_fogo_reducao : 48
+-dano_eletrico_reducao: 48
+-effect: Dano extra contra Demônios.
+
+-nome: Drake Sword:
+-descricao: "A sword forged from the tail of a Hellkite Wyvern. Its blade holds the power of dragons, allowing it to unleash a powerful shockwave. A powerful early-game weapon that does not scale."
+-categoria_id: 2
+-raridade_id: 2
+-estabilidade: 40
+-dano_fisico : 200
+-dano_magico : 0
+-dano_fogo : 0
+-dano_eletrico : 0
+-dano_fisico_reducao : 55
+-dano_magico_reducao : 30
+-dano_fogo_reducao : 50
+-dano_eletrico_reducao: 30
+-effect: Pode usar o forte ataque para lançar uma onda de choque (consome durabilidade).
+
+-nome: Darksword:
+-descricao: "A straight sword born from the abyss. Its blade is unnaturally heavy and dark, dealing strike damage instead of the standard slash, crushing through armor with ease."
+-categoria_id: 2
+-raridade_id: 2
+-estabilidade: 50
+-dano_fisico : 148
+-dano_magico : 0
+-dano_fogo : 0
+-dano_eletrico : 0
+-dano_fisico_reducao : 60
+-dano_magico_reducao : 25
+-dano_fogo_reducao : 45
+-dano_eletrico_reducao: 25
+-effect: Causa dano do tipo "Strike".
+
+-nome: Crystal Straight Sword:
+-descricao: "A straight sword sheathed in crystal. The crystal enhances its attack power far beyond normal limits, but the weapon is eternally fragile and cannot be repaired."
+-categoria_id: 2
+-raridade_id: 1
+-estabilidade: 35
+-dano_fisico : 180
+-dano_magico : 0
+-dano_fogo : 0
+-dano_eletrico : 0
+-dano_fisico_reducao : 45
+-dano_magico_reducao : 40
+-dano_fogo_reducao : 30
+-dano_eletrico_reducao: 30
+-effect: Dano físico muito alto, mas durabilidade irreparável e quebradiça.
+
+
+-----------------------------------
+
+
+---Greatsword---
+
+—Bastard Sword—
+
+-nome: Bastard Sword
+-descricao: A standard greatsword that balances power and weight. Its wide blade allows for effective sweeping attacks and solid thrusts. Reliable in both single and multiple enemy encounters.
+
+-categoria_id: 3
+-raridade_id: 1
+-estabilidade: 38
+-dano_fisico: 420
+-dano_magico: 180(210)
+-dano_fogo: 190(200)
+-dano_eletrico: 185(195)
+-dano_fisico_reducao: 50
+-dano_magico_reducao: 25
+-dano_fogo_reducao: 35
+-dano_eletrico_reducao: 30
+-effect: Balanced power
+
+—Black Knight Sword—
+
+-nome: Black Knight Sword
+-descricao: Sword wielded by the Black Knights who wander Lordran. Its weight and power reflect the might of its original wielder. Deals additional damage to demons.
+
+-categoria_id: 3
+-raridade_id: 2
+-estabilidade: 46
+-dano_fisico: 540
+-dano_magico: 0
+-dano_fogo: 300
+-dano_eletrico: 0
+-dano_fisico_reducao: 65
+-dano_magico_reducao: 25
+-dano_fogo_reducao: 55
+-dano_eletrico_reducao: 25
+-effect: Extra damage vs Demons
+
+—Claymore—
+
+-nome: Claymore
+-descricao: A versatile greatsword with both slash and thrust attacks. Favored for its balance between speed, reach, and power. Effective against a variety of foes.
+
+-categoria_id: 3
+-raridade_id: 1
+-estabilidade: 36
+-dano_fisico: 430
+-dano_magico: 200(220)
+-dano_fogo: 190(210)
+-dano_eletrico: 200(215)
+-dano_fisico_reducao: 48
+-dano_magico_reducao: 20
+-dano_fogo_reducao: 30
+-dano_eletrico_reducao: 30
+-effect: Wide reach
+
+—Flamberge—
+
+-nome: Flamberge
+-descricao: A greatsword with a distinctive undulating blade. Designed to cause bleeding, the wave-like shape increases the wounds it inflicts.
+
+-categoria_id: 3
+-raridade_id: 1
+-estabilidade: 34
+-dano_fisico: 410
+-dano_magico: 170(200)
+-dano_fogo: 185(195)
+-dano_eletrico: 180(200)
+-dano_fisico_reducao: 46
+-dano_magico_reducao: 18
+-dano_fogo_reducao: 28
+-dano_eletrico_reducao: 28
+-effect: Causes Bleeding
+
+—Crystal Greatsword—
+
+-nome: Crystal Greatsword
+-descricao: A greatsword made entirely of crystal. Its power is extraordinary, but it cannot be repaired once broken.
+
+-categoria_id: 3
+-raridade_id: 1
+-estabilidade: 32
+-dano_fisico: 560
+-dano_magico: 240
+-dano_fogo: 220
+-dano_eletrico: 230
+-dano_fisico_reducao: 35
+-dano_magico_reducao: 20
+-dano_fogo_reducao: 25
+-dano_eletrico_reducao: 25
+-effect: Unrepairable
+
+—Man-Serpent Greatsword—
+
+-nome: Man-Serpent Greatsword
+-descricao: A heavy, curved greatsword used by the serpent soldiers of Sen’s Fortress. Known for its brutal swings and surprising balance.
+
+-categoria_id: 3
+-raridade_id: 1
+-estabilidade: 42
+-dano_fisico: 460
+-dano_magico: 190(210)
+-dano_fogo: 195(205)
+-dano_eletrico: 190(200)
+-dano_fisico_reducao: 52
+-dano_magico_reducao: 22
+-dano_fogo_reducao: 32
+-dano_eletrico_reducao: 32
+-effect: High stability
+
+—Great Lord Greatsword—
+
+-nome: Great Lord Greatsword
+-descricao: The legendary greatsword of Lord Gwyn, once the Lord of Sunlight. Its holy power is unmatched among mortal weapons.
+
+-categoria_id: 3
+-raridade_id: 2
+-estabilidade: 48
+-dano_fisico: 520
+-dano_magico: 270
+-dano_fogo: 0
+-dano_eletrico: 0
+-dano_fisico_reducao: 60
+-dano_magico_reducao: 35
+-dano_fogo_reducao: 25
+-dano_eletrico_reducao: 25
+-effect: Emits holy light
+
+—Moonlight Greatsword—
+
+-nome: Moonlight Greatsword
+-descricao: The sword of Seath the Scaleless, imbued with powerful magic. It scales only with Intelligence and unleashes waves of sorcery when swung.
+
+-categoria_id: 3
+-raridade_id:  2
+-estabilidade: 40
+-dano_fisico: 0
+-dano_magico: 600
+-dano_fogo: 0
+-dano_eletrico: 0
+-dano_fisico_reducao: 40
+-dano_magico_reducao: 60
+-dano_fogo_reducao: 20
+-dano_eletrico_reducao: 20
+-effect: Magic wave projectile
+
+—Greatsword of Artorias—
+
+-nome: Greatsword of Artorias
+-descricao: The greatsword of the legendary knight Artorias, who fell to the Abyss. It possesses holy power that repels dark creatures.
+
+-categoria_id: 3
+-raridade_id: 3
+-estabilidade: 45
+-dano_fisico: 450
+-dano_magico: 250
+-dano_fogo: 0
+-dano_eletrico: 0
+-dano_fisico_reducao: 58
+-dano_magico_reducao: 38
+-dano_fogo_reducao: 28
+-dano_eletrico_reducao: 28
+-effect: Extra damage vs Dark enemies
+
+—Greatsword of Artorias (Cursed)—
+
+-nome: Greatsword of Artorias (Cursed)
+-descricao: A cursed version of Artorias’ greatsword, created to combat the Abyss. Unlike the original, it can harm ghostly beings.
+
+-categoria_id:
+-raridade_id: 3 3
+-estabilidade: 44
+-dano_fisico: 470
+-dano_magico: 220
+-dano_fogo: 0
+-dano_eletrico: 0
+-dano_fisico_reducao: 55
+-dano_magico_reducao: 30
+-dano_fogo_reducao: 25
+-dano_eletrico_reducao: 25
+-effect: Can strike ghosts
+
+—Stone Greatsword—
+
+-nome: Stone Greatsword
+-descricao: A massive greatsword wielded by the Stone Knights of Darkroot Garden. Its moss-covered blade seems alive and can emit a slowing magic.
+
+-categoria_id: 3
+-raridade_id: 2
+-estabilidade: 50
+-dano_fisico: 500
+-dano_magico: 300
+-dano_fogo: 0
+-dano_eletrico: 0
+-dano_fisico_reducao: 65
+-dano_magico_reducao: 45
+-dano_fogo_reducao: 25
+-dano_eletrico_reducao: 25
+-effect: Emits slowing aura
+
+—Abyss Greatsword—
+
+-nome: Abyss Greatsword
+-descricao: A greatsword born from the soul of Knight Artorias after being corrupted by the Abyss. It resonates with humanity.
+
+-categoria_id: 3
+-raridade_id: 3
+-estabilidade: 43
+-dano_fisico: 490
+-dano_magico: 260
+-dano_fogo: 0
+-dano_eletrico: 0
+-dano_fisico_reducao: 60
+-dano_magico_reducao: 40
+-dano_fogo_reducao: 25
+-dano_eletrico_reducao: 25
+-effect: Scales with Humanity
+
+—Obsidian Greatsword—
+
+-nome: Obsidian Greatsword
+-descricao: A greatsword crafted from the tail of the Black Dragon Kalameet. The obsidian blade is dark and heavy, capable of unleashing shockwaves.
+
+-categoria_id: 3
+-raridade_id: 2
+-estabilidade: 46
+-dano_fisico: 510
+-dano_magico: 0
+-dano_fogo: 0
+-dano_eletrico: 0
+-dano_fisico_reducao: 62
+-dano_magico_reducao: 30
+-dano_fogo_reducao: 30
+-dano_eletrico_reducao: 30
+-effect: Shockwave attack
+
+
+------------------------------------
+
+
+---Utra Greatsowrd---
+
+—Dragon Greatsword—
+
+-nome: Dragon Greatsword
+-descricao: Formed from the tail of the Everlasting Dragon. A mighty weapon of ancient power that unleashes devastating shockwaves.
+-categoria_id: 4
+-raridade_id: 4
+-estabilidade: 58
+-dano_fisico: 570
+-dano_magico: 0
+-dano_fogo: 0
+-dano_eletrico: 0
+-dano_fisico_reducao: 70
+-dano_magico_reducao: 25
+-dano_fogo_reducao: 35
+-dano_eletrico_reducao: 35
+-effect: Shockwave attack
+
+—Greatsword—
+
+-nome: Greatsword
+-descricao: A massive, heavy greatsword designed for maximum strength scaling. Capable of crushing armor and shields alike.
+-categoria_id: 4
+-raridade_id: 1
+-estabilidade: 52
+-dano_fisico: 560
+-dano_magico: 200(220)
+-dano_fogo: 210(220)
+-dano_eletrico: 200(215)
+-dano_fisico_reducao: 60
+-dano_magico_reducao: 25
+-dano_fogo_reducao: 35
+-dano_eletrico_reducao: 35
+-effect: High stagger impact
+
+—Black Knight Greatsword—
+
+-nome: Black Knight Greatsword
+-descricao: A greatsword wielded by the Black Knights who served Gwyn. Deals powerful damage to demons and is imbued with dark fire.
+-categoria_id: 4
+-raridade_id: 2
+-estabilidade: 60
+-dano_fisico: 590
+-dano_magico: 0
+-dano_fogo: 300
+-dano_eletrico: 0
+-dano_fisico_reducao: 68
+-dano_magico_reducao: 30
+-dano_fogo_reducao: 55
+-dano_eletrico_reducao: 25
+-effect: Extra damage vs Demons
+
+—Zweihander—
+
+-nome: Zweihander
+-descricao: Ultra greatsword used by elite knights. Despite its size, it allows relatively fast swings and can stagger most foes in one hit.
+-categoria_id: 4
+-raridade_id: 1
+-estabilidade: 48
+-dano_fisico: 540
+-dano_magico: 200(220)
+-dano_fogo: 210(230)
+-dano_eletrico: 200(220)
+-dano_fisico_reducao: 55
+-dano_magico_reducao: 20
+-dano_fogo_reducao: 30
+-dano_eletrico_reducao: 30
+-effect: High stagger
+
+—Demon Great Machete—
+
+-nome: Demon Great Machete
+-descricao: A massive blade wielded by lesser Capra Demons. Though rough and heavy, it delivers terrifying power with every strike.
+-categoria_id: 4
+-raridade_id: 5
+-estabilidade: 54
+-dano_fisico: 580
+-dano_magico: 0
+-dano_fogo: 290
+-dano_eletrico: 0
+-dano_fisico_reducao: 62
+-dano_magico_reducao: 25
+-dano_fogo_reducao: 45
+-dano_eletrico_reducao: 25
+-effect: Demon weapon, high knockback
+
+-------------------------------------
+
+---Curved Swords---
+
+—Scimitar—
+
+-nome: Scimitar
+-descricao: A small curved sword with a narrow blade. Known for its speed and slash efficiency, but lacks in strength scaling.
+-categoria_id: 5
+-raridade_id: 1
+-estabilidade: 28
+-dano_fisico: 220
+-dano_magico: 160(180)
+-dano_fogo: 165(185)
+-dano_eletrico: 160(180)
+-dano_fisico_reducao: 40
+-dano_magico_reducao: 10
+-dano_fogo_reducao: 25
+-dano_eletrico_reducao: 25
+-effect: Fast slashes
+
+—Shotel—
+
+-nome: Shotel
+-descricao: A curved sword with a uniquely hooked blade. Its shape allows attacks to bypass shields and wound defenders directly.
+-categoria_id: 5
+-raridade_id: 1
+-estabilidade: 30
+-dano_fisico: 260
+-dano_magico: 180(200)
+-dano_fogo: 185(205)
+-dano_eletrico: 180(200)
+-dano_fisico_reducao: 42
+-dano_magico_reducao: 15
+-dano_fogo_reducao: 28
+-dano_eletrico_reducao: 28
+-effect: Bypasses shields
+
+—Falchion—
+
+-nome: Falchion
+-descricao: A broad curved sword used by eastern warriors. Its wide edge inflicts deep slashing wounds with speed and grace.
+-categoria_id: 5
+-raridade_id: 1
+-estabilidade: 29
+-dano_fisico: 280
+-dano_magico: 170(190)
+-dano_fogo: 175(195)
+-dano_eletrico: 170(190)
+-dano_fisico_reducao: 43
+-dano_magico_reducao: 12
+-dano_fogo_reducao: 27
+-dano_eletrico_reducao: 27
+-effect: High bleed buildup
+
+—Quelaag’s Furysword—
+
+-nome: Quelaag’s Furysword
+-descricao: A sword born from the soul of the Chaos Witch Quelaag. Its molten blade burns enemies with fire damage that scales with humanity.
+-categoria_id: 5
+-raridade_id: 3
+-estabilidade: 34
+-dano_fisico: 350
+-dano_magico: 0
+-dano_fogo: 460
+-dano_eletrico: 0
+-dano_fisico_reducao: 48
+-dano_magico_reducao: 20
+-dano_fogo_reducao: 55
+-dano_eletrico_reducao: 25
+-effect: Fire scales with Humanity
+
+—Painting Guardian Sword—
+
+-nome: Painting Guardian Sword
+-descricao: Curved sword wielded by the Painting Guardians of Anor Londo. Designed for rapid slashes and fluid movement.
+-categoria_id: 5
+-raridade_id: 1
+-estabilidade: 26
+-dano_fisico: 240
+-dano_magico: 180(200)
+-dano_fogo: 185(205)
+-dano_eletrico: 180(200)
+-dano_fisico_reducao: 38
+-dano_magico_reducao: 12
+-dano_fogo_reducao: 25
+-dano_eletrico_reducao: 25
+-effect: Rapid multi-hit
+
+—Jagged Ghost Blade—
+
+-nome: Jagged Ghost Blade
+-descricao: A cursed blade that can strike ethereal beings. Its jagged edge tears flesh, causing bleeding.
+-categoria_id: 5
+-raridade_id: 2
+-estabilidade: 30
+-dano_fisico: 270
+-dano_magico: 0
+-dano_fogo: 0
+-dano_eletrico: 0
+-dano_fisico_reducao: 40
+-dano_magico_reducao: 20
+-dano_fogo_reducao: 25
+-dano_eletrico_reducao: 25
+-effect: Hits ghosts, causes bleed
+
+—Gold Tracer—
+
+-nome: Gold Tracer
+-descricao: A golden curved sword wielded by the Lord’s Blade Ciaran. Elegant and deadly, its strikes inflict deep bleeding wounds.
+-categoria_id: 5
+-raridade_id: 2
+-estabilidade: 28
+-dano_fisico: 320
+-dano_magico: 0
+-dano_fogo: 0
+-dano_eletrico: 0
+-dano_fisico_reducao: 45
+-dano_magico_reducao: 15
+-dano_fogo_reducao: 25
+-dano_eletrico_reducao: 25
+-effect: High bleed rate
+
+
+-------------------------------------
+
+
+---Katanas---
+
+Nome: Uchigatana
+Descrição: Katana tradicional dos guerreiros orientais. Causa sangramento e possui ataques rápidos e precisos, mas consome muita durabilidade.
+categoria_id: 6
+raridade_id: 1
+dano_fisico: 90
+dano_magico: 0
+dano_fogo: 0
+dano_eletrico: 0
+dano_fisico_reducao: 45
+dano_magico_reducao: 30
+dano_fogo_reducao: 30
+dano_eletrico_reducao: 25
+effect: Sangramento (auxílio rápido)
+
+
+Nome: Washing Pole
+Descrição: Katana extremamente longa, oferecendo alcance superior, mas com baixa durabilidade.
+categoria_id: 6
+raridade_id: 1
+dano_fisico: 85
+dano_magico: 0
+dano_fogo: 0
+dano_eletrico: 0
+dano_fisico_reducao: 40
+dano_magico_reducao: 25
+dano_fogo_reducao: 25
+dano_eletrico_reducao: 20
+effect: Sangramento (lento, mas de longo alcance)
+
+
+Nome: Iaito
+Descrição: Katana elegante usada por espadachins que prezam pela precisão. Seu ataque de saque é letal.
+categoria_id: 6
+raridade_id: 1
+dano_fisico: 88
+dano_magico: 0
+dano_fogo: 0
+dano_eletrico: 0
+dano_fisico_reducao: 45
+dano_magico_reducao: 30
+dano_fogo_reducao: 30
+dano_eletrico_reducao: 25
+effect: Sangramento (ataques rápidos e técnicos)
+
+
+Nome: Chaos Blade
+Descrição: Katana forjada a partir de uma alma do caos. Inflige dano ao portador a cada golpe, mas causa dano devastador ao inimigo.
+categoria_id: 6
+raridade_id: 3
+dano_fisico: 100
+dano_magico: 0
+dano_fogo: 35
+dano_eletrico: 0
+dano_fisico_reducao: 50
+dano_magico_reducao: 35
+dano_fogo_reducao: 40
+dano_eletrico_reducao: 30
+effect: Sangramento + autoconsumo de HP
+
+---Curved Greatswords---
+
+Nome: Server
+Descrição: Espada curva que regenera HP ao causar dano. Favorece golpes amplos e varridos.
+categoria_id: 7
+raridade_id: 1
+dano_fisico: 95
+dano_magico: 0
+dano_fogo: 0
+dano_eletrico: 0
+dano_fisico_reducao: 50
+dano_magico_reducao: 30
+dano_fogo_reducao: 35
+dano_eletrico_reducao: 25
+effect: Regeneração de HP a cada acerto
+
+
+Nome: Murakumo
+Descrição: Espada gigantesca com lâmina curva, usada por mestres espadachins. Golpes lentos, mas destrutivos.
+categoria_id: 7
+raridade_id: 1
+dano_fisico: 130
+dano_magico: 0
+dano_fogo: 0
+dano_eletrico: 0
+dano_fisico_reducao: 55
+dano_magico_reducao: 30
+dano_fogo_reducao: 35
+dano_eletrico_reducao: 25
+effect: Ataques giratórios devastadores
+
+
+Nome: Gravelord Sword
+Descrição: Espada amaldiçoada que carrega o poder da morte. Envenena os inimigos com toxina mortal.
+categoria_id: 7
+raridade_id: 2
+dano_fisico: 120
+dano_magico: 0
+dano_fogo: 0
+dano_eletrico: 0
+dano_fisico_reducao: 60
+dano_magico_reducao: 40
+dano_fogo_reducao: 35
+dano_eletrico_reducao: 30
+effect: Envenenamento
+
+---------------------------------------
+
+---Piercing Swords---
+Nome: Rapier
+Descrição: Espada fina e leve usada para estocadas rápidas. Ideal para contra-ataques.
+categoria_id: 8
+raridade_id: 1
+dano_fisico: 80
+dano_magico: 0
+dano_fogo: 0
+dano_eletrico: 0
+dano_fisico_reducao: 40
+dano_magico_reducao: 25
+dano_fogo_reducao: 25
+dano_eletrico_reducao: 20
+effect: Aumenta dano crítico em ataques de estocada
+
+
+Nome: Estoc
+Descrição: Espada longa e afiada, ideal para furar defesas inimigas.
+categoria_id: 8
+raridade_id: 1
+dano_fisico: 85
+dano_magico: 0
+dano_fogo: 0
+dano_eletrico: 0
+dano_fisico_reducao: 45
+dano_magico_reducao: 25
+dano_fogo_reducao: 25
+dano_eletrico_reducao: 20
+effect: Perfuração aumenta dano contra inimigos com escudo
+
+
+Nome: Mail Breaker
+Descrição: Pequena espada projetada para perfurar armaduras e defesas pesadas.
+categoria_id: 8
+raridade_id: 1
+dano_fisico: 70
+dano_magico: 0
+dano_fogo: 0
+dano_eletrico: 0
+dano_fisico_reducao: 35
+dano_magico_reducao: 25
+dano_fogo_reducao: 20
+dano_eletrico_reducao: 20
+effect: Ignora parte da defesa física do inimigo
+
+
+Nome: Ricard's Rapier
+Descrição: Espada do habilidoso cavaleiro Ricard. Permite uma sequência de estocadas rápidas.
+categoria_id: 8
+raridade_id: 2
+dano_fisico: 90
+dano_magico: 0
+dano_fogo: 0
+dano_eletrico: 0
+dano_fisico_reducao: 40
+dano_magico_reducao: 25
+dano_fogo_reducao: 25
+dano_eletrico_reducao: 20
+effect: Combo rápido de múltiplas estocadas
+
+
+Nome: Velka's Rapier
+Descrição: Espada encantada usada pelos servos de Velka, a deusa do pecado. Escala com Inteligência.
+categoria_id: 8
+raridade_id: 2
+dano_fisico: 70
+dano_magico: 90
+dano_fogo: 0
+dano_eletrico: 0
+dano_fisico_reducao: 40
+dano_magico_reducao: 45
+dano_fogo_reducao: 25
+dano_eletrico_reducao: 25
+effect: Escala com Inteligência (dano mágico)
+
+------------------------------------------
+
+---Axes---
+
+Axes
+
+Nome: Hand Axe
+Descrição: Machado leve e comum entre aventureiros. Fácil de manejar e com ataques rápidos.
+categoria_id: 9
+raridade_id: 1
+dano_fisico: 85
+dano_magico: 0
+dano_fogo: 0
+dano_eletrico: 0
+dano_fisico_reducao: 45
+dano_magico_reducao: 25
+dano_fogo_reducao: 25
+dano_eletrico_reducao: 20
+effect: Nenhum efeito especial
+
+Nome: Gargoyle Tail Axe
+Descrição: Machado forjado a partir da cauda de um gárgula. Possui forma incomum e é mais leve que parece.
+categoria_id: 9
+raridade_id: 1
+dano_fisico: 95
+dano_magico: 0
+dano_fogo: 20
+dano_eletrico: 0
+dano_fisico_reducao: 50
+dano_magico_reducao: 30
+dano_fogo_reducao: 30
+dano_eletrico_reducao: 25
+effect: Escala levemente com Fé
+
+Nome: Battle Axe
+Descrição: Machado de combate padrão, usado por guerreiros e cavaleiros. Equilíbrio entre força e velocidade.
+categoria_id: 9
+raridade_id: 1
+dano_fisico: 100
+dano_magico: 0
+dano_fogo: 0
+dano_eletrico: 0
+dano_fisico_reducao: 55
+dano_magico_reducao: 30
+dano_fogo_reducao: 35
+dano_eletrico_reducao: 25
+effect: Golpes com bom stagger
+
+Nome: Butcher Knife
+Descrição: Grande faca usada por carniceiros. Absorve parte do HP dos inimigos ao causar dano.
+categoria_id: 9
+raridade_id: 1
+dano_fisico: 110
+dano_magico: 0
+dano_fogo: 0
+dano_eletrico: 0
+dano_fisico_reducao: 60
+dano_magico_reducao: 35
+dano_fogo_reducao: 40
+dano_eletrico_reducao: 30
+effect: Recupera HP a cada golpe
+
+Nome: Crescent Axe
+Descrição: Machado abençoado em formato de lua crescente. Fortalecido pela Fé do usuário.
+categoria_id: 9
+raridade_id: 2
+dano_fisico: 90
+dano_magico: 0
+dano_fogo: 0
+dano_eletrico: 70
+dano_fisico_reducao: 50
+dano_magico_reducao: 40
+dano_fogo_reducao: 35
+dano_eletrico_reducao: 45
+effect: Escala com Fé; dano elétrico adicional
+
+
+Nome: Golem Axe
+Descrição: Machado gigante empunhado pelos Golems de Anor Londo. Lança uma rajada de ar ao atacar.
+categoria_id: 9
+raridade_id: 3
+dano_fisico: 130
+dano_magico: 0
+dano_fogo: 0
+dano_eletrico: 0
+dano_fisico_reducao: 65
+dano_magico_reducao: 40
+dano_fogo_reducao: 40
+dano_eletrico_reducao: 35
+effect: Lança projétil de vento com ataque pesado
+
+Great Axes
+
+Nome: Demon’s Greataxe
+    Descrição: Machado forjado a partir da alma de um demônio. Extremamente pesado, mas destrutivo.
+    categoria_id: 
+    raridade_id: 4
+    dano_fisico: 140
+    dano_magico: 0
+    dano_fogo: 40
+    dano_eletrico: 0
+    dano_fisico_reducao: 70
+    dano_magico_reducao: 40
+    dano_fogo_reducao: 50
+    dano_eletrico_reducao: 35
+    effect: Golpe carregado explode em chamas demoníacas
+
+Nome: Greataxe
+    Descrição: Machado massivo usado por guerreiros brutais. Seu peso o torna devastador, mas lento.
+    categoria_id: 10
+    raridade_id: 1
+    dano_fisico: 135
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 65
+    dano_magico_reducao: 35
+    dano_fogo_reducao: 40
+    dano_eletrico_reducao: 30
+    effect: Golpe causa grande stagger
+
+Nome: Dragon King Greataxe
+    Descrição: Machado formado a partir da cauda de um dragão. Lança ondas de choque destrutivas.
+    categoria_id: 10
+    raridade_id: 4
+    dano_fisico: 135
+    dano_magico: 0
+    dano_fogo: 30
+    dano_eletrico: 0
+    dano_fisico_reducao: 70
+    dano_magico_reducao: 40
+    dano_fogo_reducao: 45
+    dano_eletrico_reducao: 35
+    effect: Lança uma onda de choque com ataque forte
+
+Nome: Black Knight Greataxe
+    Descrição: Machado empunhado pelos lendários Cavaleiros Negros. Envolto em chamas sombrias.
+    categoria_id: 10
+    raridade_id: 2
+    dano_fisico: 150
+    dano_magico: 0
+    dano_fogo: 50
+    dano_eletrico: 0
+    dano_fisico_reducao: 75
+    dano_magico_reducao: 45
+    dano_fogo_reducao: 55
+    dano_eletrico_reducao: 40
+    effect: Dano de fogo adicional + stagger elevado
+
+Nome: Stone Greataxe
+    Descrição: Machado de pedra usado por gigantes de pedra. Exige força descomunal para ser empunhado.
+    categoria_id: 10
+    raridade_id: 1
+    dano_fisico: 160
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 80
+    dano_magico_reducao: 45
+    dano_fogo_reducao: 50
+    dano_eletrico_reducao: 40
+    effect: Defesa física aumenta temporariamente após ataque
+
+---Hammers---
+
+nome: Club
+    Descrição: Um simples porrete de madeira. Cru e primitivo, mas eficaz para esmagar ossos e escudos.
+    caregoria_id: 11
+    raridade_id: 1
+    dano_fisico: 87
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 40
+    dano_magico_reducao: 15
+    dano_fogo_reducao: 20
+    dano_eletrico_reducao: 10
+    effect: Pode causar stagger em inimigos pequenos.
+
+nome: Reinforced Club
+    Descrição: Um porrete reforçado com pregos enferrujados. Ainda rudimentar, mas mortal em mãos habilidosas.
+    caregoria_id: 11
+    raridade_id: 1
+    dano_fisico: 97
+    dano_magico: 0
+    dano_fogo: 10
+    dano_eletrico: 0
+    dano_fisico_reducao: 45
+    dano_magico_reducao: 20
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 15
+    effect: Causa sangramento moderado.
+
+nome: Mace
+    Descrição: Uma maça de ferro usada por clérigos. Eficiente contra mortos-vivos e inimigos com armadura.
+    caregoria_id: 11
+    raridade_id: 1
+    dano_fisico: 91
+    dano_magico: 30
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 55
+    dano_magico_reducao: 35
+    dano_fogo_reducao: 20
+    dano_eletrico_reducao: 20
+    effect: Aumenta dano contra inimigos do tipo “Undead”.
+
+nome: Morning Star
+    Descrição: Uma maça com ponta de ferro. Seu impacto perfura carne e causa ferimentos severos.
+    caregoria_id: 11
+    raridade_id: 1
+    dano_fisico: 85
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 45
+    dano_magico_reducao: 25
+    dano_fogo_reducao: 20
+    dano_eletrico_reducao: 15
+    effect: Aplica sangramento leve.
+
+nome: Warpick
+    Descrição: Uma picareta de batalha projetada para penetrar armaduras pesadas.
+    caregoria_id: 11
+    raridade_id: 1
+    dano_fisico: 95
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 20
+    dano_fisico_reducao: 50
+    dano_magico_reducao: 20
+    dano_fogo_reducao: 15
+    dano_eletrico_reducao: 25
+    effect: Perfura defesa física de inimigos.
+
+nome: Pickaxe
+    Descrição: Uma ferramenta de mineração adaptada para o combate. Sua ponta é mortal quando usada com precisão.
+    caregoria_id: 11
+    raridade_id: 1
+    dano_fisico: 100
+    dano_magico: 0
+    dano_fogo: 10
+    dano_eletrico: 0
+    dano_fisico_reducao: 45
+    dano_magico_reducao: 20
+    dano_fogo_reducao: 20
+    dano_eletrico_reducao: 20
+    effect: Causa dano adicional em inimigos de armadura metálica.
+
+nome: Blacksmith Hammer
+    Descrição: Martelo de ferreiro. Criado para forjar, mas capaz de destruir. Um símbolo de força e precisão.
+    caregoria_id: 11
+    raridade_id: 2
+    dano_fisico: 90
+    dano_magico: 15
+    dano_fogo: 0
+    dano_eletrico: 15
+    dano_fisico_reducao: 60
+    dano_magico_reducao: 30
+    dano_fogo_reducao: 20
+    dano_eletrico_reducao: 25
+    effect: Pequena chance de atordoar inimigos ao acertar.
+
+nome: Blacksmith Giant Hammer
+    Descrição: O martelo colossal de um gigante ferreiro. Impossível de empunhar sem força titânica.
+    caregoria_id: 11
+    raridade_id: 2
+    dano_fisico: 170
+    dano_magico: 25
+    dano_fogo: 0
+    dano_eletrico: 30
+    dano_fisico_reducao: 70
+    dano_magico_reducao: 40
+    dano_fogo_reducao: 30
+    dano_eletrico_reducao: 35
+    effect: Pode derrubar inimigos grandes ao impacto.
+
+nome: Hammer of Vamos
+    Descrição: Martelo do ferreiro Vamos, forjado nas profundezas em meio a fogo e cinzas. Irradia calor e poder.
+    caregoria_id: 11
+    raridade_id: 2
+    dano_fisico: 140
+    dano_magico: 0
+    dano_fogo: 70
+    dano_eletrico: 0
+    dano_fisico_reducao: 60
+    dano_magico_reducao: 30
+    dano_fogo_reducao: 50
+    dano_eletrico_reducao: 25
+    effect: Converte parte do dano físico em dano de fogo.
+------------------------------------------
+
+---Great Hammers---
+
+Nome: Demon’s Great Hammer
+    Descrição: Um gigantesco martelo forjado de pedra demoníaca. Cada golpe é como o soco de um titã.
+    caregoria_id: 12
+    raridade_id: 5
+    dano_fisico: 180
+    dano_magico: 20
+    dano_fogo: 40
+    dano_eletrico: 0
+    dano_fisico_reducao: 75
+    dano_magico_reducao: 35
+    dano_fogo_reducao: 45
+    dano_eletrico_reducao: 30
+    effect: Golpes pesados podem derrubar oponentes e causar dano em área.
+
+Nome: Great Club
+    Descrição: Um tronco de árvore esculpido e usado como arma. Brutal e devastador, mas exige força monstruosa.
+    caregoria_id: 12
+    raridade_id: 1
+    dano_fisico: 155
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 65
+    dano_magico_reducao: 20
+    dano_fogo_reducao: 30
+    dano_eletrico_reducao: 20
+    effect: Aumenta chance de desequilibrar inimigos.
+
+Nome: Large Club
+    Descrição: Um enorme porrete com farpas naturais. Sua forma irregular causa dor extrema.
+    caregoria_id: 12
+    raridade_id: 1
+    dano_fisico: 140
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 60
+    dano_magico_reducao: 25
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 15
+    effect: Causa veneno leve.
+
+Nome: Dragon Tooth
+    Descrição: Um dente fossilizado de dragão, moldado em forma de martelo. Indestrutível e imbuído com o poder dos antigos.
+    caregoria_id: 12
+    raridade_id: 4
+    dano_fisico: 150
+    dano_magico: 30
+    dano_fogo: 0
+    dano_eletrico: 25
+    dano_fisico_reducao: 80
+    dano_magico_reducao: 45
+    dano_fogo_reducao: 40
+    dano_eletrico_reducao: 40
+    effect: Reduz dano recebido em 10% quando empunhado.
+
+Nome: Smough’s Hammer
+    Descrição: O colossal martelo do Carrasco Smough. Cada golpe reverbera como um trovão, esmagando tudo ao redor.
+    caregoria_id: 12
+    raridade_id: 3
+    dano_fisico: 185
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 50
+    dano_fisico_reducao: 80
+    dano_magico_reducao: 40
+    dano_fogo_reducao: 45
+    dano_eletrico_reducao: 50
+    effect: Recupera 5% de HP ao derrotar um inimigo.
+
+nome: Grant
+    Descrição: Martelo sagrado carregado com a luz da fé. Usado por paladinos para purificar o mal.
+    caregoria_id: 12
+    raridade_id: 2
+    dano_fisico: 160
+    dano_magico: 80
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 70
+    dano_magico_reducao: 50
+    dano_fogo_reducao: 30
+    dano_eletrico_reducao: 30
+    effect: Causa dano extra a inimigos do tipo “Abyssal”.
+
+--------------------------------------------
+
+---Fist & Claws---
+
+Nome: Caestus
+    Descrição: Um par de manoplas simples de ferro, usadas para golpear com força bruta. Eficaz em combate corpo a corpo e extremamente rápido.
+    caregoria_id: 13
+    raridade_id: 1
+    dano_fisico: 80
+    dano_magico: 0
+    dano_fogo: 10
+    dano_eletrico: 0
+    dano_fisico_reducao: 40
+    dano_magico_reducao: 20
+    dano_fogo_reducao: 20
+    dano_eletrico_reducao: 15
+    effect: Aumenta velocidade de ataque e permite parry com melhor tempo de reação.
+
+Nome: Claws
+    Descrição: Lâminas curvas usadas nas mãos para ataques rápidos e sangrentos. Favorecem assassinos e caçadores de sombras.
+    caregoria_id: 13
+    raridade_id: 1
+    dano_fisico: 90
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 25
+    dano_fisico_reducao: 35
+    dano_magico_reducao: 20
+    dano_fogo_reducao: 20
+    dano_eletrico_reducao: 25
+    effect: Aplica sangramento rápido e pode causar choque leve em golpes críticos.
+
+Nome: Dragon Bone Fist
+    Descrição: Uma arma lendária criada a partir de um osso de dragão. Transmite o poder ancestral dos grandes seres alados em cada soco.
+    caregoria_id: 13
+    raridade_id: 4
+    dano_fisico: 130
+    dano_magico: 0
+    dano_fogo: 40
+    dano_eletrico: 0
+    dano_fisico_reducao: 70
+    dano_magico_reducao: 30
+    dano_fogo_reducao: 40
+    dano_eletrico_reducao: 35
+    effect: Libera uma onda de impacto de fogo ao ataque forte; dano em área reduzido.
+
+Nome: Dark Hand
+    Descrição: Um artefato das trevas usado pelos servos de Kaathe. Rouba a essência vital de suas vítimas e serve como escudo etéreo.
+    caregoria_id: 13
+    raridade_id: 1
+    dano_fisico: 70
+    dano_magico: 80
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 75
+    dano_magico_reducao: 75
+    dano_fogo_reducao: 40
+    dano_eletrico_reducao: 45
+    effect: Drena HP do inimigo ao contato; pode ser usado como escudo que absorve energia mágica.
+--------------------------------------------
+
+---Spears--
+
+Nome: Spear
+    descrição: Uma lança simples e equilibrada, comum entre cavaleiros e soldados. Confiável em combate e facilmente imbuída com diferentes elementos.
+    categoria_id: 14
+    raridade_id: 1
+    dano_fisico: 85
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 45
+    dano_magico_reducao: 25
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 25
+    effect: Pode ser imbuída com magia, fogo ou eletricidade.
+
+Nome: Winged Spear
+    descrição: Uma lança leve com lâmina alada, excelente para perfurar armaduras.
+    categoria_id: 14
+    raridade_id: 1
+    dano_fisico: 110
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 50
+    dano_magico_reducao: 30
+    dano_fogo_reducao: 30
+    dano_eletrico_reducao: 30
+    effect: Golpes perfurantes têm chance de ignorar parte da defesa inimiga.
+
+Nome: Demon's Spear
+    descrição: Lança criada a partir do poder de um Demônio da Luz. Emanando energia elétrica, ela brilha com poder divino.
+    categoria_id: 14
+    raridade_id: 3
+    dano_fisico: 95
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 120
+    dano_fisico_reducao: 55
+    dano_magico_reducao: 40
+    dano_fogo_reducao: 40
+    dano_eletrico_reducao: 65
+    effect: Dano elétrico em área reduzida; não pode ser imbuída.
+
+Nome: Pike
+    descrição: Lança extremamente longa usada por guardas para manter distância de inimigos.
+    categoria_id: 14
+    raridade_id: 1
+    dano_fisico: 105
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 55
+    dano_magico_reducao: 25
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 25
+    effect: Aumenta o alcance, mas reduz a velocidade de ataque.
+
+Nome: Dragonslayer Spear
+    descrição: Forjada a partir da alma de Ornstein, o Matador de Dragões. Uma arma lendária que canaliza relâmpagos sagrados.
+    categoria_id: 14
+    raridade_id: 3
+    dano_fisico: 100
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 150
+    dano_fisico_reducao: 60
+    dano_magico_reducao: 45
+    dano_fogo_reducao: 45
+    dano_eletrico_reducao: 70
+    effect: Dispara relâmpagos ao realizar ataque forte; não pode ser imbuída.
+
+Nome: Partizan
+    descrição: Lança versátil com lâmina larga, capaz de ataques de corte e estocada.
+    categoria_id: 14
+    raridade_id: 1
+    dano_fisico: 115
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 55
+    dano_magico_reducao: 30
+    dano_fogo_reducao: 30
+    dano_eletrico_reducao: 30
+    effect: Pode ser imbuída com elementos; ataques amplos aumentam chance de acerto crítico.
+
+Nome: Channeler’s Trident
+    descrição: Um tridente mágico usado por canalizadores para amplificar feitiços.
+    categoria_id: 14
+    raridade_id: 2
+    dano_fisico: 90
+    dano_magico: 100
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 40
+    dano_magico_reducao: 60
+    dano_fogo_reducao: 30
+    dano_eletrico_reducao: 30
+    effect: Aumenta em 10% o poder de magias do usuário.
+
+Nome: Silver Knight Spear
+    descrição: Lança prateada usada pelos Cavaleiros de Anor Londo. Brilha com energia sagrada.
+    categoria_id: 14
+    raridade_id: 2
+    dano_fisico: 130
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 40
+    dano_fisico_reducao: 65
+    dano_magico_reducao: 40
+    dano_fogo_reducao: 40
+    dano_eletrico_reducao: 50
+    effect: Causa dano adicional em inimigos das trevas; não pode ser imbuída.
+
+Nome: Moonlight Butterfly Horn
+    descrição: Lança feita a partir da alma da Borboleta da Lua. Converte energia espiritual em poder mágico.
+    categoria_id: 14
+    raridade_id: 3
+    dano_fisico: 0
+    dano_magico: 150
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 30
+    dano_magico_reducao: 70
+    dano_fogo_reducao: 30
+    dano_eletrico_reducao: 30
+    effect: Escala apenas com Inteligência; não pode ser imbuída.
+
+Nome: Four-pronged Plow
+    descrição: Ferramenta agrícola adaptada para combate. Seus quatro dentes rasgam carne e armaduras igualmente.
+    categoria_id: 14
+    raridade_id: 1
+    dano_fisico: 100
+    dano_magico: 0
+    dano_fogo: 25
+    dano_eletrico: 0
+    dano_fisico_reducao: 45
+    dano_magico_reducao: 30
+    dano_fogo_reducao: 35
+    dano_eletrico_reducao: 30
+    effect: Ataques carregados têm chance de causar sangramento.
+
+-------------------------------------------
+
+---Halberds---
+
+Nome: Halberd
+    descrição: Uma alabarda balanceada que combina força e alcance.
+    categoria_id: 15
+    raridade_id: 1
+    dano_fisico: 120
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 60
+    dano_magico_reducao: 30
+    dano_fogo_reducao: 30
+    dano_eletrico_reducao: 30
+    effect: Pode ser imbuída com qualquer elemento.
+
+Nome: Gargoyle’s Halberd
+    descrição: Empunhada por gárgulas vivas. Um toque demoníaco permeia o metal.
+    categoria_id: 15
+    raridade_id: 1
+    dano_fisico: 135
+    dano_magico: 0
+    dano_fogo: 25
+    dano_eletrico: 0
+    dano_fisico_reducao: 60
+    dano_magico_reducao: 35
+    dano_fogo_reducao: 40
+    dano_eletrico_reducao: 35
+    effect: Chance de causar petrificação leve.
+
+Nome: Titanite Catch Pole
+    descrição: Uma estranha arma feita de titânio vivo, usada por Demônios Titanitas.
+    categoria_id: 15
+    raridade_id: 5
+    dano_fisico: 140
+    dano_magico: 0
+    dano_fogo: 50
+    dano_eletrico: 0
+    dano_fisico_reducao: 65
+    dano_magico_reducao: 45
+    dano_fogo_reducao: 50
+    dano_eletrico_reducao: 40
+    effect: Ataques pesados geram onda de fogo curta; não pode ser imbuída.
+
+Nome: Black Knight Halberd
+    descrição: Alabarda usada pelos Cavaleiros Negros que caçaram demônios nas chamas.
+    categoria_id: 15
+    raridade_id: 5
+    dano_fisico: 165
+    dano_magico: 0
+    dano_fogo: 100
+    dano_eletrico: 0
+    dano_fisico_reducao: 70
+    dano_magico_reducao: 50
+    dano_fogo_reducao: 65
+    dano_eletrico_reducao: 45
+    effect: Dano bônus contra demônios; não pode ser imbuída.
+
+Nome: Great Scythe
+    descrição: Uma enorme foice agrícola adaptada para combate. Leve e mortal, corta a vida com precisão cirúrgica.
+    categoria_id: 15
+    raridade_id: 2
+    dano_fisico: 140
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 50
+    dano_magico_reducao: 25
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 25
+    effect: Causa sangramento com ataques contínuos.
+
+Nome: Lifehunt Scythe
+    descrição: Foice amaldiçoada feita a partir da alma de Priscilla. Drena sangue e vitalidade.
+    categoria_id: 15
+    raridade_id: 3
+    dano_fisico: 180
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 55
+    dano_magico_reducao: 35
+    dano_fogo_reducao: 35
+    dano_eletrico_reducao: 35
+    effect: Drena HP do usuário e inimigo a cada golpe; não pode ser imbuída.
+
+Nome: Scythe
+    descrição: Uma foice simples, versátil e mortal nas mãos certas.
+    categoria_id: 15
+    raridade_id: 2
+    dano_fisico: 130
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 50
+    dano_magico_reducao: 25
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 25
+    effect: Pode ser imbuída; causa dano crítico quando usada pelas costas.
+
+Nome: Lucerne
+    descrição: Uma alabarda de ponta de martelo. Ideal para quebrar armaduras e escudos.
+    categoria_id: 15
+    raridade_id: 2
+    dano_fisico: 145
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 60
+    dano_magico_reducao: 35
+    dano_fogo_reducao: 35
+    dano_eletrico_reducao: 35
+    effect: Golpes pesados ignoram parte da defesa física.
+
+Nome: Giant’s Halberd
+    descrição: Arma colossal usada pelos Gigantes de Anor Londo. Requer força tremenda para ser manejada.
+    categoria_id: 15
+    raridade_id: 2
+    dano_fisico: 170
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 75
+    dano_magico_reducao: 45
+    dano_fogo_reducao: 45
+    dano_eletrico_reducao: 45
+    effect: Chance de atordoar inimigos com ataques fortes.
+
+----------------------------------------------
+
+---Whips---
+
+Nome: Whip
+    descrição: Um chicote simples feito de couro trançado. Usado mais para punir do que para guerrear, mas eficaz em mãos habilidosas.
+    categoria_id: 16
+    raridade_id: 1
+    dano_fisico: 85
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 30
+    dano_magico_reducao: 20
+    dano_fogo_reducao: 20
+    dano_eletrico_reducao: 20
+    effect: Pode ser imbuído com magia, fogo ou eletricidade; não pode ser usado para bloquear efetivamente.
+
+Nome: Notched Whip
+    descrição: Chicote com pontas metálicas afiadas, capaz de rasgar carne e causar ferimentos profundos.
+    categoria_id: 
+    raridade_id: 2
+    dano_fisico: 95
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 35
+    dano_magico_reducao: 20
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 25
+    effect: Causa sangramento em ataques contínuos; pode ser imbuído.
+
+Nome: Guardian Tail
+    descrição: Um chicote feito da cauda dos Guardiões da Floresta. Estranhamente vivo, se move como se tivesse vontade própria.
+    categoria_id: 
+    raridade_id: 4 (arma de boss)
+    dano_fisico: 120
+    dano_magico: 0
+    dano_fogo: 60
+    dano_eletrico: 0
+    dano_fisico_reducao: 40
+    dano_magico_reducao: 35
+    dano_fogo_reducao: 45
+    dano_eletrico_reducao: 30
+    effect: Dano de veneno passivo em ataques; não pode ser imbuído.
+
+-------------------------------------------
+
+---Bows---
+
+Nome: Short Bow
+    descrição: Um arco leve e rápido, ideal para ataques à distância em movimento.
+    categoria_id: 
+    raridade_id: 1
+    dano_fisico: 80
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 25
+    dano_magico_reducao: 15
+    dano_fogo_reducao: 15
+    dano_eletrico_reducao: 15
+    effect: Pode ser imbuído com flechas elementais; ataque rápido e com baixo consumo de stamina.
+
+Nome: Longbow
+    descrição: Um arco tradicional de longo alcance, usado por caçadores e cavaleiros para abater inimigos à distância.
+    categoria_id: 
+    raridade_id: 2
+    dano_fisico: 100
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 30
+    dano_magico_reducao: 20
+    dano_fogo_reducao: 20
+    dano_eletrico_reducao: 20
+    effect: Aumenta o alcance de disparo; pode ser imbuído.
+
+Nome: Composite Bow
+    descrição: Um arco compacto feito de materiais flexíveis e resistentes. Dispara mais rápido, mas com menor alcance.
+    categoria_id: 
+    raridade_id: 3
+    dano_fisico: 115
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 35
+    dano_magico_reducao: 20
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 25
+    effect: Aumenta a velocidade de disparo; pode ser imbuído com elementos.
+
+Nome: Black Bow of Pharis
+    descrição: Arco de um lendário caçador da floresta. Exige grande destreza para ser usado, mas recompensa com precisão mortal.
+    categoria_id: vazio
+    raridade_id: 4
+    dano_fisico: 125
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 40
+    dano_magico_reducao: 25
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 25
+    effect: Aumenta a distância e precisão dos tiros; dano crítico elevado com flechas de precisão.
+
+Nome: Darkmoon Bow
+    descrição: Arco sagrado criado a partir da alma de Gwyndolin. Transforma fé e magia em poder destrutivo.
+    categoria_id: vazio
+    raridade_id: 5 (arma de boss)
+    dano_fisico: 50
+    dano_magico: 150
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 25
+    dano_magico_reducao: 70
+    dano_fogo_reducao: 35
+    dano_eletrico_reducao: 35
+    effect: Escala com Inteligência e Fé; aumenta o dano de flechas lunares; não pode ser imbuído.
+
+------------------------------------------
+
+---Greatbows---
+
+Nome: Dragonslayer Greatbow
+    Descrição: Um arco gigantesco usado pelos cavaleiros de Gwyn. Cada flecha é capaz de atravessar escudos e corpos como se fossem papel.
+    caregoria_id: 
+    raridade_id: 2
+    dano_fisico: 180
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 80
+    dano_fisico_reducao: 70
+    dano_magico_reducao: 40
+    dano_fogo_reducao: 40
+    dano_eletrico_reducao: 50
+    effect: Atira grandes flechas com dano elétrico em área; alto recuo no disparo.
+
+Nome: Gough’s Greatbow
+    Descrição: Criado por Hawkeye Gough, este arco é feito para caçar dragões. Seu poder e alcance são lendários.
+    caregoria_id:
+    raridade_id: 2
+    dano_fisico: 200
+    dano_magico: 0
+    dano_fogo: 50
+    dano_eletrico: 0
+    dano_fisico_reducao: 75
+    dano_magico_reducao: 35
+    dano_fogo_reducao: 45
+    dano_eletrico_reducao: 30
+    effect: Disparo pesado que causa atordoamento e pode empurrar inimigos grandes.
+
+------------------------------------------
+
+
+---Crossbows---
+
+Nome: Light Crossbow
+    Descrição: Uma besta leve e versátil, fácil de manusear. Ideal para combate rápido e mobilidade.
+    caregoria_id:
+    raridade_id: 1
+    dano_fisico: 100
+    dano_magico: 0
+    dano_fogo: 10
+    dano_eletrico: 0
+    dano_fisico_reducao: 45
+    dano_magico_reducao: 20
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 20
+    effect: Recarrega rapidamente; pode ser imbuída com elementos.
+
+Nome: Heavy Crossbow
+    Descrição: Uma besta robusta e potente, projetada para perfurar armaduras. Mais lenta, mas devastadora.
+    caregoria_id: 
+    raridade_id: 1
+    dano_fisico: 130
+    dano_magico: 0
+    dano_fogo: 20
+    dano_eletrico: 0
+    dano_fisico_reducao: 60
+    dano_magico_reducao: 25
+    dano_fogo_reducao: 30
+    dano_eletrico_reducao: 25
+    effect: Disparo pesado com alto stagger; recarga lenta.
+
+Nome: Sniper Crossbow
+    Descrição: Uma besta de longo alcance criada para ataques precisos. Favorece tiros em pontos fracos.
+    caregoria_id: 
+    raridade_id: 2
+    dano_fisico: 120
+    dano_magico: 30
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 55
+    dano_magico_reducao: 30
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 30
+    effect: Aumenta precisão e alcance; headshots causam dano crítico aumentado.
+
+Nome: Avelyn
+    Descrição: Uma besta mecânica de origem antiga capaz de disparar múltiplos projéteis em rápida sucessão. Uma relíquia de guerra rara.
+    caregoria_id: 
+    raridade_id: 2
+    dano_fisico: 160
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 40
+    dano_fisico_reducao: 70
+    dano_magico_reducao: 35
+    dano_fogo_reducao: 30
+    dano_eletrico_reducao: 40
+    effect: Dispara três virotes seguidos; chance de dano elétrico em área.
+
+-------------------------------------------
+
+---Flames---
+
+Nome: Pyromancy Flame
+    Descrição: Chama mágica usada pelos piromantes para canalizar o poder do fogo. Cresce conforme a afinidade do portador com o caos.
+    caregoria_id: 
+    raridade_id: 1
+    dano_fisico: 30
+    dano_magico: 0
+    dano_fogo: 120
+    dano_eletrico: 0
+    dano_fisico_reducao: 25
+    dano_magico_reducao: 35
+    dano_fogo_reducao: 60
+    dano_eletrico_reducao: 30
+    effect: Amplifica o dano de feitiços de fogo; reduz resistência a gelo e eletricidade.
+
+Nome: Pyromancy Flame (Upgraded)
+    Descrição: Uma chama de piromancia fortalecida ao máximo, vibrando com o poder do Caos Primordial.
+    caregoria_id: 
+    raridade_id: 2
+    dano_fisico: 50
+    dano_magico: 0
+    dano_fogo: 180
+    dano_eletrico: 30
+    dano_fisico_reducao: 30
+    dano_magico_reducao: 45
+    dano_fogo_reducao: 75
+    dano_eletrico_reducao: 40
+    effect: Amplifica grandemente piromancias; chance de deixar rastro de fogo ao conjurar.
+
+-------------------------------------------
+
+---Catalysts---
+
+Nome: Sorcerer’s Catalyst
+    Descrição: Catalisador padrão usado por feiticeiros iniciantes. Concentra poder mágico puro.
+    caregoria_id: 
+    raridade_id: 1
+    dano_fisico: 40
+    dano_magico: 120
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 25
+    dano_magico_reducao: 55
+    dano_fogo_reducao: 30
+    dano_eletrico_reducao: 30
+    effect: Aumenta dano de feitiços básicos; escalona com Inteligência.
+
+Nome: Izalith Catalyst
+    Descrição: Criado pelos antigos piromantes de Izalith, mistura magia e fogo em sua condução arcana.
+    caregoria_id: 
+    raridade_id: 2
+    dano_fisico: 45
+    dano_magico: 90
+    dano_fogo: 40
+    dano_eletrico: 0
+    dano_fisico_reducao: 30
+    dano_magico_reducao: 50
+    dano_fogo_reducao: 45
+    dano_eletrico_reducao: 30
+    effect: Feitiços de fogo lançados por este catalisador causam mais dano, mas consomem mais stamina.
+
+Nome: Logan’s Catalyst
+    Descrição: O catalisador pessoal do Grande Mago Logan. Maximiza o poder mágico à custa de estabilidade.
+    caregoria_id: 
+    raridade_id: 2
+    dano_fisico: 35
+    dano_magico: 160
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 20
+    dano_magico_reducao: 65
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 25
+    effect: Amplifica o poder de feitiços em 25%, mas reduz defesa mágica.
+
+Nome: Beatrice’s Catalyst
+    Descrição: Catalisador de uma bruxa das florestas. Reage fortemente à energia espiritual.
+    caregoria_id: 
+    raridade_id: 2
+    dano_fisico: 30
+    dano_magico: 130
+    dano_fogo: 10
+    dano_eletrico: 0
+    dano_fisico_reducao: 25
+    dano_magico_reducao: 55
+    dano_fogo_reducao: 30
+    dano_eletrico_reducao: 35
+    effect: Feitiços espirituais e encantamentos de alma recebem bônus de dano.
+
+Nome: Oolacile Ivory Catalyst
+    Descrição: Feito de marfim puro e encantado por sábios de Oolacile. Melhora feitiços de luz e manipulação temporal.
+    caregoria_id: 
+    raridade_id: 2
+    dano_fisico: 35
+    dano_magico: 110
+    dano_fogo: 0
+    dano_eletrico: 25
+    dano_fisico_reducao: 25
+    dano_magico_reducao: 60
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 40
+    effect: Melhora magias de cura e feitiços de controle de tempo.
+
+Nome: Demon’s Catalyst
+    Descrição: Catalisador obtido da alma de um demônio do caos. Canaliza magia e fogo em igual intensidade.
+    caregoria_id: 
+    raridade_id: 2
+    dano_fisico: 50
+    dano_magico: 100
+    dano_fogo: 80
+    dano_eletrico: 0
+    dano_fisico_reducao: 35
+    dano_magico_reducao: 50
+    dano_fogo_reducao: 55
+    dano_eletrico_reducao: 35
+    effect: Feitiços de fogo lançados ganham dano em área; reduz mana máxima levemente.
+
+Nome: Tin Banishment Catalyst
+    Descrição: Um catalisador híbrido usado por clérigos exilados, permitindo o uso de feitiços e milagres.
+    caregoria_id: 
+    raridade_id: 2
+    dano_fisico: 40
+    dano_magico: 100
+    dano_fogo: 0
+    dano_eletrico: 30
+    dano_fisico_reducao: 30
+    dano_magico_reducao: 50
+    dano_fogo_reducao: 30
+    dano_eletrico_reducao: 40
+    effect: Permite conjurar feitiços e milagres; reduz ligeiramente o tempo de conjuração.
+
+Nome: Tin Crystallization Catalyst
+    Descrição: Catalisador forjado com a alma de Seath, o Descamado. Imensamente poderoso, mas instável.
+    caregoria_id: 
+    raridade_id: 2
+    dano_fisico: 25
+    dano_magico: 200
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 15
+    dano_magico_reducao: 75
+    dano_fogo_reducao: 20
+    dano_eletrico_reducao: 25
+    effect: Aumenta poder mágico em 30%, mas reduz mana máxima pela metade.
+
+Nome: Tin Darkmoon Catalyst
+    Descrição: Catalisador dos seguidores da Darkmoon Blade, banhado pela luz prateada de Gwyndolin.
+    caregoria_id: 
+    raridade_id: 3
+    dano_fisico: 35
+    dano_magico: 130
+    dano_fogo: 0
+    dano_eletrico: 20
+    dano_fisico_reducao: 25
+    dano_magico_reducao: 65
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 35
+    effect: Amplifica feitiços da aliança Darkmoon e concede leve regeneração de mana.
+
+Nome: Oolacile Catalyst
+    Descrição: Uma relíquia dos magos de Oolacile, especializado em feitiços de manipulação da luz e do espaço.
+    caregoria_id: 
+    raridade_id: 2
+    dano_fisico: 30
+    dano_magico: 100
+    dano_fogo: 0
+    dano_eletrico: 15
+    dano_fisico_reducao: 25
+    dano_magico_reducao: 55
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 30
+    effect: Feitiços de Oolacile têm 15% de dano extra e consomem menos mana.
+
+Nome: Manus Catalyst
+    Descrição: Catalisador criado da alma de Manus, Pai do Abismo. Transborda energia sombria e caos.
+    caregoria_id: 
+    raridade_id: 3
+    dano_fisico: 80
+    dano_magico: 160
+    dano_fogo: 50
+    dano_eletrico: 0
+    dano_fisico_reducao: 60
+    dano_magico_reducao: 70
+    dano_fogo_reducao: 55
+    dano_eletrico_reducao: 35
+    effect: Feitiços sombrios ganham grande bônus; chance de causar dano em área de caos após conjurar.
+
+-------------------------------------------
+
+---Talismans---
+
+Talisman
+    Descrição: Talisman comum usado por fiéis de todos os reinos. Serve como canal para milagres básicos.
+    caregoria_id: 1
+    raridade_id: 
+    dano_fisico: 40
+    dano_magico: 60
+    dano_fogo: 0
+    dano_eletrico: 10
+    dano_fisico_reducao: 30
+    dano_magico_reducao: 45
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 40
+    effect: Amplifica milagres básicos; escalona com Fé.
+
+Nome: Canvas Talisman
+    Descrição: Talisman feito de tecido sagrado. Amplifica o poder dos milagres de cura.
+    caregoria_id: 
+    raridade_id: 1
+    dano_fisico: 35
+    dano_magico: 70
+    dano_fogo: 0
+    dano_eletrico: 10
+    dano_fisico_reducao: 25
+    dano_magico_reducao: 50
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 40
+    effect: Cura aumenta em 20%; milagres ofensivos têm leve redução de dano.
+
+Nome: Thorolund Talisman
+    Descrição: Um talismã usado por clérigos de Thorolund. Estável e poderoso para conjurações longas.
+    caregoria_id: 
+    raridade_id: 2
+    dano_fisico: 40
+    dano_magico: 80
+    dano_fogo: 0
+    dano_eletrico: 20
+    dano_fisico_reducao: 35
+    dano_magico_reducao: 55
+    dano_fogo_reducao: 30
+    dano_eletrico_reducao: 45
+    effect: Aumenta a duração de buffs e proteções divinas.
+
+Nome: Ivory Talisman
+    Descrição: Feito de marfim sagrado, um símbolo de pureza. Amplifica a força da luz divina.
+    caregoria_id: 
+    raridade_id: 2
+    dano_fisico: 30
+    dano_magico: 90
+    dano_fogo: 0
+    dano_eletrico: 20
+    dano_fisico_reducao: 30
+    dano_magico_reducao: 60
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 45
+    effect: Milagres de luz causam 25% mais dano; concede resistência a maldições.
+
+Nome: Sunlight Talisman
+    Descrição: Talisman dos guerreiros da Luz Solar, inspirado no próprio Solaire. Brilha com poder dourado.
+    caregoria_id: 
+    raridade_id: 2
+    dano_fisico: 45
+    dano_magico: 100
+    dano_fogo: 20
+    dano_eletrico: 0
+    dano_fisico_reducao: 35
+    dano_magico_reducao: 55
+    dano_fogo_reducao: 40
+    dano_eletrico_reducao: 35
+    effect: Amplifica milagres da Sunlight Covenant; cura aliados próximos levemente.
+
+Nome: Velka’s Talisman
+    Descrição: Um talismã profano usado pelos seguidores de Velka, deusa do pecado. Converte inteligência em fé.
+    caregoria_id: 
+    raridade_id: 2
+    dano_fisico: 30
+    dano_magico: 110
+    dano_fogo: 0
+    dano_eletrico: 10
+    dano_fisico_reducao: 25
+    dano_magico_reducao: 65
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 35
+    effect: Escalona com Inteligência em vez de Fé; feitiços divinos se tornam híbridos mágicos.
+
+-------------------------------------------

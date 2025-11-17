@@ -1,0 +1,312 @@
+---Small Shields---
+
+Nome: Small Leather Shield
+    categoria_id:
+    raridade_id:
+    descricao: Pequeno escudo de couro leve, usado por viajantes e aventureiros iniciantes. Oferece defesa básica e fácil manuseio.
+    dano_fisico: 45
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 85
+    dano_magico_reducao: 35
+    dano_fogo_reducao: 30
+    dano_eletrico_reducao: 25
+    estabilidade: 38
+    effect: Leve e fácil de usar; pode aparar ataques inimigos, mas oferece pouca proteção contra elementos.
+
+Nome: Leather Shield:
+    descricao: Escudo de couro reforçado, usado por guerreiros que preferem leveza sem abrir mão de uma defesa decente.
+    dano_fisico: 50
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 88
+    dano_magico_reducao: 40
+    dano_fogo_reducao: 35
+    dano_eletrico_reducao: 30
+    estabilidade: 44
+    effect: Leve, com boa absorção física; permite parry rápido e manuseio ágil.
+
+Nome: Target Shield:
+    categoria_id:
+    raridade_id:
+    descricao: Escudo redondo leve, feito de metal fino. Projetado para aparar ataques com precisão em vez de bloquear grandes impactos.
+    dano_fisico: 40
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 80
+    dano_magico_reducao: 30
+    dano_fogo_reducao: 25
+    dano_eletrico_reducao: 20
+    estabilidade: 36
+    effect: Excelente para aparar ataques inimigos; leve, porém com baixa resistência contra golpes diretos.
+
+Nome: Buckler:
+    categoria_id:
+    raridade_id:
+    descricao: Pequeno escudo de metal fino, projetado quase exclusivamente para aparar ataques. Ineficaz para bloqueios prolongados.
+    dano_fisico: 35
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 78
+    dano_magico_reducao: 25
+    dano_fogo_reducao: 20
+    dano_eletrico_reducao: 18
+    estabilidade: 32
+    effect: Aumenta a janela de parry, tornando-o ideal para jogadores habilidosos que confiam em reflexos rápidos.
+
+Nome: Cracked Round Shield:
+    categoria_id:
+    raridade_id:
+    descricao: Escudo redondo antigo e danificado. Oferece proteção mínima, mas pode ser útil em emergências.
+    dano_fisico: 40
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 70
+    dano_magico_reducao: 25
+    dano_fogo_reducao: 20
+    dano_eletrico_reducao: 15
+    estabilidade: 28
+    effect: Extremamente leve, mas com estrutura comprometida; ideal apenas para iniciantes ou em falta de
+
+
+====================================
+
+---Standard Shields---
+
+Nome: Heater Shield:
+    categoria_id:
+    raridade_id:
+    categoria_id:
+    descricao: Escudo de metal leve e resistente, com formato clássico em “coração” (heater). Ótimo equilíbrio entre defesa, estabilidade e manobrabilidade.
+    dano_fisico: 55
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 90
+    dano_magico_reducao: 40
+    dano_fogo_reducao: 35
+    dano_eletrico_reducao: 30
+    estabilidade: 50
+    effect: Equilibrado para ataque e defesa; permite aparar golpes com segurança e oferece boa proteção física.
+
+Nome: Knight Shield:
+    categoria_id:
+    raridade_id:
+    descricao: Escudo de metal sólido usado por cavaleiros experientes. Boa proteção contra ataques físicos e estabilidade confiável.
+    dano_fisico: 60
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 95
+    dano_magico_reducao: 45
+    dano_fogo_reducao: 40
+    dano_eletrico_reducao: 35
+    estabilidade: 55
+    effect: Excelente para defesa e aparar ataques; equilibrado entre peso e proteção.
+
+Nome: Tower Kite Shield
+    categoria_id:
+    raridade_id:
+    descricao: Escudo grande de metal, com formato alongado tipo “kite”. Projetado para máxima proteção em combate, ideal para bloquear ataques pesados.
+    dano_fisico: 50
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 98
+    dano_magico_reducao: 50
+    dano_fogo_reducao: 45
+    dano_eletrico_reducao: 40
+    estabilidade: 70
+    effect: Máxima defesa física; muito estável, mas reduz a velocidade de ataque e esquiva.
+
+
+Nome: Caduceus Kite Shield:
+    categoria_id:
+    raridade_id:
+    descricao: Escudo metálico com formato alongado e detalhes gravados. Bom equilíbrio entre defesa e mobilidade.
+    dano_fisico: 55
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 96
+    dano_magico_reducao: 45
+    dano_fogo_reducao: 40
+    dano_eletrico_reducao: 35
+    estabilidade: 65
+    effect: Fornece excelente proteção física e estabilidade; ainda permite ataques de empurrão com efeito moderado.
+
+Nome: Hollow Soldier Shield:
+    categoria_id:
+    raridade_id:
+    descricao: Escudo simples usado por soldados Hollow. Leve e fácil de manusear, fornece proteção básica.
+    dano_fisico: 45
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 82
+    dano_magico_reducao: 35
+    dano_fogo_reducao: 30
+    dano_eletrico_reducao: 25
+    estabilidade: 38
+    effect: Escudo leve que permite ataques rápidos e aparar golpes de forma eficiente, mas oferece proteção limitada.
+
+Nome: Balder Shield:
+    categoria_id:
+    raridade_id:
+    descricao: Escudo de metal leve da linha Balder, usado por cavaleiros e soldados. Ótimo equilíbrio entre proteção e agilidade.
+    dano_fisico: 50
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 90
+    dano_magico_reducao: 40
+    dano_fogo_reducao: 35
+    dano_eletrico_reducao: 30
+    estabilidade: 50
+    effect: Bom para aparar ataques e atacar rapidamente; leve e ágil em combate.
+
+
+Nome: Sunlight Shield:
+    categoria_id:
+    raridade_id:
+    descricao: Escudo metálico leve, decorado com símbolos solares. Proporciona boa defesa física e resistência mágica, mantendo mobilidade.
+    dano_fisico: 55
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 92
+    dano_magico_reducao: 45
+    dano_fogo_reducao: 35
+    dano_eletrico_reducao: 30
+    estabilidade: 55
+    effect: Equilibrado entre ataque e defesa; oferece resistência confiável contra ataques físicos e mágicos.
+
+
+Nome: Iron Round Shield:
+    categoria_id:
+    raridade_id:
+    descricao: Escudo redondo de ferro leve, usado por iniciantes ou soldados comuns. Fornece proteção básica e ataque moderado com empurrão.
+    dano_fisico: 50
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 88
+    dano_magico_reducao: 40
+    dano_fogo_reducao: 35
+    dano_eletrico_reducao: 30
+    estabilidade: 45
+    effect: Leve e fácil de manusear; permite aparar ataques menores e causar dano com ataques de empurrão.
+
+======================================
+
+---Great Shields---
+
+Nome: Tower Shield:
+    categoria_id:
+    raridade_id:
+    descricao: Escudo gigante de metal, projetado para absorver praticamente qualquer ataque físico. Ideal para defesa total, mas muito pesado.
+    dano_fisico: 60
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 99
+    dano_magico_reducao: 50
+    dano_fogo_reducao: 45
+    dano_eletrico_reducao: 40
+    estabilidade: 80
+    effect: Proteção máxima; excelente para bloqueios frontais prolongados, mas reduz significativamente a velocidade de esquiva e ataque.
+
+Nome: Stone Greatshield:
+    categoria_id:
+    raridade_id:
+    descricao: Escudo gigante de pedra, extremamente resistente. Proporciona proteção física e elemental máxima, mas reduz drasticamente mobilidade.
+    dano_fisico: 50
+    dano_magico: 0
+    dano_fogo: 0
+    dano_eletrico: 0
+    dano_fisico_reducao: 100
+    dano_magico_reducao: 55
+    dano_fogo_reducao: 50
+    dano_eletrico_reducao: 45
+    estabilidade: 90
+    effect: Bloqueio quase perfeito; excelente para defesa frontal prolongada, mas muito pesado para ataques rápidos ou esquivas.
+
+Nome: Black Iron Greatshield:
+    categoria_id:
+    raridade_id:
+    descricao: Escudo gigante de ferro negro, extremamente resistente. Proporciona proteção física excepcional e boa estabilidade, ideal para bloqueios pesados.
+    dano_fisico: 55
+    dano_magico: 0
+    dano_fogo: 5
+    dano_eletrico: 0
+    dano_fisico_reducao: 100
+    dano_magico_reducao: 50
+    dano_fogo_reducao: 45
+    dano_eletrico_reducao: 40
+    estabilidade: 95
+    effect: Excelente para bloqueios frontais; muito pesado, mas permite empurrar inimigos com ataques de escudo.
+
+Nome: Havel's Greatshield:
+    categoria_id:
+    raridade_id:
+    descricao: Escudo gigantesco de pedra e metal, lendário por sua resistência quase total. Proporciona máxima proteção física e elemental.
+    dano_fisico: 60
+    dano_magico: 10
+    dano_fogo: 10
+    dano_eletrico: 10
+    dano_fisico_reducao: 100
+    dano_magico_reducao: 60
+    dano_fogo_reducao: 55
+    dano_eletrico_reducao: 50
+    estabilidade: 100
+    effect: Bloqueio absoluto contra praticamente qualquer ataque; extremamente pesado e exige força máxima, mas permite empurrar inimigos com ataques de escudo.
+
+Nome: Greatshield of Artorias:
+    categoria_id:
+    raridade_id:
+    descricao: Escudo gigantesco e lendário, usado pelo cavaleiro Artorias. Proporciona proteção quase total contra ataques físicos e elementais.
+    dano_fisico: 65
+    dano_magico: 10
+    dano_fogo: 10
+    dano_eletrico: 10
+    dano_fisico_reducao: 100
+    dano_magico_reducao: 60
+    dano_fogo_reducao: 55
+    dano_eletrico_reducao: 50
+    estabilidade: 100
+    effect: Bloqueio absoluto; ideal para defesa total e empurrões poderosos; extremamente pesado, requer força máxima.
+
+Nome: Giant Shield:
+    categoria_id:
+    raridade_id:
+    descricao: Escudo gigantesco de metal pesado, projetado para máxima proteção em combate. Excelente para bloquear ataques poderosos.
+    dano_fisico: 60
+    dano_magico: 10
+    dano_fogo: 10
+    dano_eletrico: 10
+    dano_fisico_reducao: 100
+    dano_magico_reducao: 55
+    dano_fogo_reducao: 50
+    dano_eletrico_reducao: 50
+    estabilidade: 95
+    effect: Bloqueio quase absoluto; muito pesado, reduz mobilidade, mas permite empurrar inimigos com ataques de escudo.
+
+Nome: Cleansing Greatshield:
+    categoria_id:
+    raridade_id:
+    descricao: Escudo grande e resistente, com propriedades equilibradas para absorver ataques físicos e elementais. Ideal para defesa sólida e empurrões moderados.
+    dano_fisico: 55
+    dano_magico: 5
+    dano_fogo: 5
+    dano_eletrico: 5
+    dano_fisico_reducao: 98
+    dano_magico_reducao: 50
+    dano_fogo_reducao: 45
+    dano_eletrico_reducao: 40
+    estabilidade: 85
+    effect: Bloqueio confiável; pesado, mas permite empurrões e defesa sólida contra ataques múltiplos.

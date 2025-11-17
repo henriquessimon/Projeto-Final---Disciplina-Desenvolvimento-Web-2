@@ -1,3 +1,7 @@
+body {
+    margin: 0 !important;
+}
+
 .page_cad_log {
    width: 100%;
    min-height: 100vh;

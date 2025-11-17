@@ -1,0 +1,21 @@
+Raridades
+
+id: 1
+nome: Comum
+nvl_max: 15;
+
+id: 2
+nome: Único
+nvl_max: 10
+
+id: 3
+nome: Boss
+nvl_max: 5
+
+id: 4
+nome: Dragão
+nvl_mx: 5
+
+id: 5
+nome: Demon
+nvl_mx: 5

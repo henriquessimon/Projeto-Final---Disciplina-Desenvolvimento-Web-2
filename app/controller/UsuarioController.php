@@ -2,26 +2,24 @@
 
 class UsuarioController {
     public function cadastrarUsuario() {
-        $pdo = connection();
+        $data = [
+            "name"  => $_POST['name'],
+            "email" => $_POST['email'],
+            "pass"  => $_POST['pass'],
+            "phone" => $_POST['phone'],
+            "sys_termos_uso" => $_POST['sys_termos_uso'],
+            "sys_ativo" => 1
+        ];
 
         $usuario = new Usuario();
+        $userId = $usuario->cadastrar($data);
 
-        $usuario->setNomeCompleto($_POST['name']);
-        $usuario->setEmail($_POST['email']);
-        $usuario->setSenha($_POST['pass']);
-        $usuario->setTelefone($_POST['phone']);
-        if (!empty($_POST['sys_termos_uso'])) {
-            $data = date('Y-m-d H:i:s');
-            $usuario->setSysTermosDeUso($data);
-        }
 
-        $usuario->setSysAtivo(1);
+        $_SESSION['user_id'] = $userId;
+        $_SESSION['logged_in'] = true;
 
-        $dao = new UsuarioDAO($pdo);
-        $dao->salvar($usuario);
+        header("Location: " . BASE_URL . "?controller=auth&method=mainPage");
+        exit;
     }
 }
-
-$controller = new UsuarioController();
-
 ?>

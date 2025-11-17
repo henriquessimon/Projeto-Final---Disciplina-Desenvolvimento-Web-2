@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DS Equip Wiki</title>
-    <link rel="stylesheet" type="text/css" href="../../public/assets/style/global.css" />
-    <link rel="stylesheet" type="text/css" href="../../public/assets/style/cad_log.css" />
-    <script src="../../public/assets/js/login.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?=BASE_URL ?>public/assets/style/global.css" />
+    <link rel="stylesheet" type="text/css" href="<?=BASE_URL ?>public/assets/style/cad_log.css" />
+    <script src="<?=BASE_URL ?>public/assets/js/login.js"></script>
 </head>
 <body>
     <section class="page_cad_log">
         <div class="image_div">
             <div class="filter_img"><h2 class="title_log_cad">Dark Souls<br>Equipment Wiki</h2></div>
-            <img src="../../public/assets/img/espadafire.jpg" class="img_cad_log"/>
+            <img src="<?=BASE_URL ?>public/assets/img/espadafire.jpg" class="img_cad_log"/>
         </div>
         <div class="container_cad_log">
             <div class="content_cad_log">
@@ -34,7 +34,6 @@
                         <div class="display_none_error_login message_error_login_container"><span class="text_error_login">E-mail ou senha incorreto</span></div>
                         <div class="div_send">
                             <button type="submit" class="button_send">Entrar</button>
-                            <a class="cad_redirect" href="cadastro.html">Cadastrar-se</a>
                         </div>
                     </form>
                 </div>

@@ -8,7 +8,7 @@ class Router {
             http_response_code(404);
             echo json_encode([
                 'success' => false,
-                'm;essage' => 'Rota não encontrada'
+                'message' => 'Rota não encontrada'
             ]);
             exit;
         }
@@ -30,7 +30,8 @@ class Router {
             http_response_code(500);
             echo json_encode([
                 'success' => false,
-                'message' => 'Method não encontrado'
+                'message' => 'Method não encontrado',
+                'method'    => $method
             ]);
             exit;
         }

@@ -12,9 +12,22 @@ class Usuario {
     private $sysTermosDeUso;
     private $sysAtivo;
 
-    public static function findNameById($id) {
-        $conn = connection();
+    public function cadastrar($data) {
+        $usuario = new Usuario();
 
+        $usuario->setNomeCompleto($data['name']);
+        $usuario->setEmail($data['email']);
+        $usuario->setSenha($data['pass']);
+        $usuario->setTelefone($data['phone']);
+        $usuario->setSysTermosDeUso($data['sys_termos_uso']);
+        $usuario->setSysAtivo($data['sys_ativo']);
+
+        $dao = new UsuarioDAO(connection());
+        $dao->salvar($usuario);
+    }
+
+    public static function findEmailById($id) {
+        $conn = connection();
         $sql = "SELECT nomeCompleto FROM usuario WHERE id = :id";
 
         $stmt = $conn->prepare($sql);
@@ -26,7 +39,7 @@ class Usuario {
         if (!$row) {
             return null;
         } else {
-            return $row['nomeCompleto'];
+            return $row['email'];
         }
     }
 }

@@ -1,5 +1,4 @@
 <?php
-
 class AuthController {
     public function login() {
         $conn = connection();
@@ -15,14 +14,11 @@ class AuthController {
 
         $stmt->execute();
 
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);        
+        $row = $stmt->fetch(PDO::FETCH_ASSOC); 
 
         if($row) {
             if($row['sys_ativo'] == 1) {
                 $_SESSION['user_id'] = $row['id'];
-                $_SESSION['nome'] = $row['nome_completo'];
-                $_SESSION['email'] = $row['email'];
-                $_SESSION['senha'] = $row['senha'];
                 $_SESSION['logged_in'] = true;
 
                 echo json_encode([
@@ -48,10 +44,9 @@ class AuthController {
     }
 
     public function verifica_login() {
-        session_start();
         header("Content-Type: application/json");
 
-        $inactive = 60; //1 MINUTO
+        $inactive = 999999999999999990; 
 
         if(isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > $inactive)) {
             session_unset();
@@ -64,12 +59,14 @@ class AuthController {
             exit;
         }
 
-        $_SESSION['last_activity'] = time();
+        if(!isset($_SESSION['last_activity'])) {
+            $_SESSION['last_activity'] = time();
+        }
 
         if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
             echo json_encode([
                 "logged_in" => true,
-                "expirou"   => false
+                "expirou"   => false,
             ]);
         } else {
             echo json_encode([

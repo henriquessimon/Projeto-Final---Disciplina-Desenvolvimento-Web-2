@@ -15,15 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const data = await resp.json();
 
-        console.log(data);
-
         if(data.success == false) {
             const message = document.querySelector('.display_none_error_login');
             console.log(message);
             message.classList.remove('display_none_error_login');
             message.classList.add('display_block_error_login');
         } else {
-            window.location.href = "http://localhost/sys_login/app/Views/mainPage.php"
+            console.log('Meu pau');
+            window.location.href = 'http://localhost/sys_login?controller=equipamento&method=listarEquipamentos'
         }
     })
 });

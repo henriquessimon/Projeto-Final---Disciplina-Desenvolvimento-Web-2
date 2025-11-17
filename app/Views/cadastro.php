@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DS Equip Wiki</title>
-    <link rel="stylesheet" type="text/css" href="../../public/assets/style/global.css" />
-    <link rel="stylesheet" type="text/css" href="../../public/assets/style/cad_log.css" />
+    <link rel="stylesheet" type="text/css" href="<?=BASE_URL ?>public/assets/style/global.css" />
+    <link rel="stylesheet" type="text/css" href="<?=BASE_URL ?>public/assets/style/cad_log.css" />
 
 </head>
 <body>
     <section class="page_cad_log">
         <div class="image_div">
             <div class="filter_img"><h2 class="title_log_cad">Dark Souls<br>Equipment Wiki</h2></div>
-            <img src="../../public/assets/img/espadafire.jpg" class="img_cad_log"/>
+            <img src="<?=BASE_URL ?>public/assets/img/espadafire.jpg" class="img_cad_log"/>
         </div>
         <div class="container_cad_log">
             <div class="content_cad_log">
@@ -20,7 +20,7 @@
                     <h2 class="title_page">Cadastro de usuário</h2>
                 </div>
                 <div class="divFormating">
-                    <form method="POST" class="form_cad_log" action="../../index.php?controller=usuario&method=cadastrarUsuario">
+                    <form method="POST" class="form_cad_log" action="?controller=usuario&method=cadastrarUsuario">
                         <input type="hidden" name="action" value="cadastro" />
                         <div class="container_half_fields">
                             <label>Nome Completo</label>

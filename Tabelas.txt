@@ -28,12 +28,6 @@ CREATE TABLE Categoria_armas (
     nome VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE Categoria_armaduras (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    parte VARCHAR(50) NOT NULL,
-    nome VARCHAR(100) NOT NULL
-);
-
 CREATE TABLE Categoria_escudos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL
@@ -46,8 +40,8 @@ CREATE TABLE Equipamento (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     descricao VARCHAR(255),
-    custo_upgrade INT DEFAULT 0,
     raridade_id INT,
+    effect TEXT,
     FOREIGN KEY (raridade_id) REFERENCES Raridade_eqp(id)
 );
 
@@ -55,7 +49,7 @@ CREATE TABLE Equipamento (
 -- Equipamentos de combate
 -- ============================================
 CREATE TABLE EquipamentoCombate (
-    id_eqp INT PRIMARY KEY,
+    id_eqp_combate INT PRIMARY KEY,
     dano_fisico INT DEFAULT 0,
     dano_magico INT DEFAULT 0,
     dano_fogo INT DEFAULT 0,
@@ -64,7 +58,7 @@ CREATE TABLE EquipamentoCombate (
     dano_magico_reducao INT DEFAULT 0,
     dano_fogo_reducao INT DEFAULT 0,
     dano_eletrico_reducao INT DEFAULT 0,
-    effect TEXT,
+    estabilidade INT DEFAULT 0,
     FOREIGN KEY (id_eqp) REFERENCES Equipamento(id)
 );
 
@@ -73,8 +67,7 @@ CREATE TABLE EquipamentoCombate (
 -- ============================================
 CREATE TABLE Arma (
     id_eqp INT PRIMARY KEY,
-    categoria_id INT,
-    estabilidade INT DEFAULT 0,
+    categoria_id
     FOREIGN KEY (id_eqp) REFERENCES EquipamentoCombate(id_eqp),
     FOREIGN KEY (categoria_id) REFERENCES Categoria_armas(id)
 );
@@ -84,20 +77,9 @@ CREATE TABLE Arma (
 -- ============================================
 CREATE TABLE Escudo (
     id_eqp INT PRIMARY KEY,
-    categoria_id INT,
-    estabilidade INT DEFAULT 0,
+    categoria_id
     FOREIGN KEY (id_eqp) REFERENCES EquipamentoCombate(id_eqp),
     FOREIGN KEY (categoria_id) REFERENCES Categoria_escudos(id)
-);
-
--- ============================================
--- Armaduras
--- ============================================
-CREATE TABLE Armadura (
-    id_eqp INT PRIMARY KEY,
-    categoria_id INT,
-    FOREIGN KEY (id_eqp) REFERENCES EquipamentoCombate(id_eqp),
-    FOREIGN KEY (categoria_id) REFERENCES Categoria_armaduras(id)
 );
 
 -- ============================================
@@ -106,22 +88,6 @@ CREATE TABLE Armadura (
 CREATE TABLE Aneis (
     id_eqp INT PRIMARY KEY,
     effect TEXT,
-    FOREIGN KEY (id_eqp) REFERENCES Equipamento(id)
-);
-
--- ============================================
--- Set de armaduras
--- ============================================
-CREATE TABLE Set_armor (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL
-);
-
-CREATE TABLE Set_equipamento (
-    id_set_armor INT,
-    id_eqp INT,
-    PRIMARY KEY (id_set_armor, id_eqp),
-    FOREIGN KEY (id_set_armor) REFERENCES Set_armor(id),
     FOREIGN KEY (id_eqp) REFERENCES Equipamento(id)
 );
 

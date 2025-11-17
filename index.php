@@ -11,8 +11,10 @@ require_once __DIR__ . '/core/Autoloader.php';
 
 require_once __DIR__ . '/core/Router.php';
 
+require_once __DIR__ . '/config/config.php';
+
 $controller = $_GET['controller'] ?? 'home';
-$method     = $_GET['method'] ?? 'index';
+$method     = !empty($_GET['method']) ? $_GET['method'] : 'index';
 
 $router = new Router();
 $router->routeContorler($controller, $method);
