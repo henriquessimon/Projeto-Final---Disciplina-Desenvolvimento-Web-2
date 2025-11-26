@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     const categorias = {
         arma: [
             { id: 1, nome: "Daggers" },
@@ -45,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', async function(e) {
         if (e.target.closest('#favoritar')) {
             estrela_button = e.target.closest('#favoritar');
             eqp_id = e.target.closest('.status_eqp_list').getAttribute('id');
@@ -55,22 +54,98 @@ document.addEventListener('DOMContentLoaded', () => {
                 estrela_svg.setAttribute('fill', favoritou ? 'gold' : '');
             });
         }
+        if (e.target.closest('.btn-save')) {
+            e.preventDefault();
 
-        if(e.target.closest('#addEqp')) {
-            const modalAddEqp = document.getElementById('modalAddEqp');
-            modalAddEqp.style.display = 'flex';
-        }
+            const form = document.getElementById('formAddEqp');
 
-        if(e.target.closest('#closeModal')) {
-            document.getElementById('modalAddEqp').style.display = 'none';
-        }
+            let msg = form.querySelector('.message_error, .message_success');
 
-        if(document.getElementById("modalAddEqp")) {
-            document.getElementById("modalAddEqp").addEventListener("click", (e) => {
-                if (e.target.id === "modalAddEqp") {
-                    e.target.style.display = "none";
+            if (!msg) {
+                msg = document.createElement('p');
+                form.appendChild(msg);
+            }
+            const nome = form.querySelector('[name="nome"]').value.trim();
+            const descricao = form.querySelector('[name="descricao"]').value.trim();
+            const dano_fisico = form.querySelector('[name="dano_fisico"]').value;
+            const dano_magico = form.querySelector('[name="dano_magico"]').value;
+            const dano_fogo = form.querySelector('[name="dano_fogo"]').value;
+            const dano_eletrico = form.querySelector('[name="dano_eletrico"]').value;
+            const dano_fisico_reducao = form.querySelector('[name="dano_fisico_reducao"]').value;
+            const dano_magico_reducao = form.querySelector('[name="dano_magico_reducao"]').value;
+            const dano_fogo_reducao = form.querySelector('[name="dano_fogo_reducao"]').value;
+            const dano_eletrico_reducao = form.querySelector('[name="dano_eletrico_reducao"]').value;
+            const estabilidade = form.querySelector('[name="estabilidade"]').value;
+            const effect = form.querySelector('[name="effect"]').value.trim();
+
+            const raridade = form.querySelector('.select_add_eqp').value;
+            const tipo = document.getElementById('selectTipo').value;
+
+            let categoria = null;
+            if (tipo !== 'anel') {
+                categoria = document.getElementById('selectCategoria').value;
+            }
+
+            if (!nome || !descricao || !raridade || !tipo || !effect) {
+                msg.className = 'message_error';
+                msg.style.color = "#990000";
+                msg.textContent = "Algum campo obrigatório não está preenchido.";
+                return;
+            }
+
+            if (tipo !== 'anel') {
+                const numCampos = [
+                    dano_fisico, dano_magico, dano_fogo, dano_eletrico,
+                    dano_fisico_reducao, dano_magico_reducao,
+                    dano_fogo_reducao, dano_eletrico_reducao, estabilidade
+                ];
+
+                if (numCampos.some(v => v === "")) {
+                    msg.className = 'message_error';
+                    msg.style.color = "#990000";
+                    msg.textContent = "Preencha todos os campos de dano / redução / estabilidade.";
+                    return;
                 }
-            });
+            }
+
+            const data = {
+                nome,
+                descricao,
+                raridade,
+                tipo,
+                effect,
+                ...(tipo !== 'anel' && {
+                    dano_fisico,
+                    dano_magico,
+                    dano_fogo,
+                    dano_eletrico,
+                    dano_fisico_reducao,
+                    dano_magico_reducao,
+                    dano_fogo_reducao,
+                    dano_eletrico_reducao,
+                    estabilidade,
+                    categoria
+                })
+            };
+
+            console.log(data);
+
+            const response = await createEqp(data);
+
+            msg.className = 'message_success';
+            msg.style.color = "#009900";
+            msg.textContent = response.message;
+
+            const container = document.querySelector('.equip_list_container');
+
+            if (container) {
+                const div = document.createElement('div');
+                div.classList.add('equip_list_item');
+                div.innerHTML = `<h3>${data.nome}</h3>`;
+                container.appendChild(div);
+            }
+
+            //setTimeout(() => window.location.reload(), 600);
         }
     });
 
@@ -102,4 +177,19 @@ document.addEventListener('DOMContentLoaded', () => {
             selectCatLabel.style.display = 'block';
         });
     }
+
+    async function createEqp(data) {
+        const resp = await fetch('?controller=equipamento&method=createEqp', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(data)
+        });
+        try {
+            return await resp.json();
+        } catch(err) {
+            console.error("Erro inesperado no retorno:", err);
+            return { message: "Erro inesperado." };
+        }
+    }
+
 })

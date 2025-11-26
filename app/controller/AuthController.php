@@ -75,5 +75,9 @@ class AuthController {
             ]);
         }
     }
+
+    public function cadastroPage() {
+        include_once __DIR__ . '/../Views/cadastro.php';
+    }
 }
 ?>

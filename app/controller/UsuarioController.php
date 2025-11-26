@@ -21,5 +21,15 @@ class UsuarioController {
         header("Location: " . BASE_URL . "?controller=auth&method=mainPage");
         exit;
     }
+
+    public function getOneUser() {
+        $user_id = $_SESSION['user_id'];
+
+        $results = (new Usuario())->getOneUser($user_id);
+
+        echo json_encode([
+            'results' => $results
+        ]);
+    }
 }
 ?>

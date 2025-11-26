@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 -- Usuário
 CREATE TABLE usuario (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -103,3 +104,4 @@ CREATE TABLE favoritos (
     FOREIGN KEY (equipamento_id) REFERENCES equipamento(id),
     UNIQUE (usuario_id, equipamento_id)
 );
+============

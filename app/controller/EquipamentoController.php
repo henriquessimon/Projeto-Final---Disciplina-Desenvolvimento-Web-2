@@ -8,11 +8,6 @@ class EquipamentoController {
 
         $equipamento = new Equipamento();
         $equipamentos = $equipamento->getAllArmasEscudos($_SESSION['user_id']);
-?>
-        <script>
-            console.log(<?php echo json_encode($equipamentos)?>);
-        </script>
-<?php
         $equipamentosPorCategoria = [];
 
         foreach ($equipamentos as $equip) {
@@ -36,6 +31,19 @@ class EquipamentoController {
 
         include  __DIR__ . '/../Views/mainPage.php';
     }
-}
 
+    public function createEqp() {
+        if (empty($_SESSION['logged_in'])) {
+            header("Location: ?controller=home&index");
+            exit;
+        }
+
+        $data = json_decode(file_get_contents('php://input'), true);
+
+        $result = (new Equipamento())->createEqp($data);
+
+        echo json_encode($result);
+
+    }
+}
 ?>

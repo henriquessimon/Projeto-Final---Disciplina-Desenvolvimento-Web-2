@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="<?= BASE_URL ?>public/assets/style/eqp_list.css" />
     <?php include_once __DIR__ . '/components/importCssHF.php' ?>
     <script src="<?= BASE_URL ?>public/assets/js/verificaLogin.js"></script>
+    <script src="<?= BASE_URL ?>public/assets/js/modal.js"></script>
     <script src="<?= BASE_URL ?>public/assets/js/mainPage.js"></script>
 </head>
 <body>

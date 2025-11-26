@@ -20,7 +20,7 @@
             <div class="menu_container">
                 <ul class="menu_opt">
                     <li id="favs_header">Favoritos</li>
-                    <li>Atualizar Cadastro</li>
+                    <li id="attPage">Atualizar Cadastro</li>
                 </ul>
             </div>
         </div>
@@ -31,6 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const favs_header = document.getElementById('favs_header');
     favs_header.addEventListener('click', () => {
         window.location.href = '<?=BASE_URL ?>?controller=favoritos&method=listarFavoritos';
+    });
+
+    const attPage = document.getElementById('attPage');
+    attPage.addEventListener('click', () => {
+        window.location.href = `<?= BASE_URL ?>?controller=atualiza&method=attPage`;
     });
 });
 </script>

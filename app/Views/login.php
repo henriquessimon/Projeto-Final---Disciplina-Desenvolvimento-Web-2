@@ -36,6 +36,7 @@
                             <button type="submit" class="button_send">Entrar</button>
                         </div>
                     </form>
+                    <p><a href="<?= BASE_URL ?>?controller=auth&method=cadastroPage">Cadastrar-se</a></p>
                 </div>
             </div>
         </div>

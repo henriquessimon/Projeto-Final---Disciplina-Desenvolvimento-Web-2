@@ -92,5 +92,109 @@ class Equipamento {
         return $results;
     }
 
+    public function createEqp($data) {
+        $conn = connection();
+
+        try {
+
+            $conn->beginTransaction();
+
+            $stmt = $conn->prepare("
+                INSERT INTO equipamento (nome, descricao, raridade_id, effect)
+                VALUES (:nome, :descricao, :raridade, :effect)
+            ");
+
+            $stmt->execute([
+                ':nome'      => $data['nome'],
+                ':descricao' => $data['descricao'],
+                ':raridade'  => $data['raridade'],
+                ':effect'    => $data['effect']
+            ]);
+
+            $eqpId = $conn->lastInsertId();
+
+            if ($data['tipo'] === 'anel') {
+
+                $stmt = $conn->prepare("
+                    INSERT INTO aneis (id_eqp) VALUES (:id)
+                ");
+                $stmt->execute([':id' => $eqpId]);
+
+                // Commit final
+                $conn->commit();
+
+                return [
+                    'message' => 'Anel criado com sucesso!',
+                    'eqp_id' => $eqpId
+                ];
+            }
+
+            $stmt = $conn->prepare("
+                INSERT INTO equipamentocombate (
+                    id_eqp, dano_fisico, dano_magico, dano_fogo, dano_eletrico,
+                    dano_fisico_reducao, dano_magico_reducao, dano_fogo_reducao,
+                    dano_eletrico_reducao, estabilidade
+                )
+                VALUES (
+                    :id, :df, :dm, :dfg, :de,
+                    :rdf, :rdm, :rdfg, :rde,
+                    :est
+                )
+            ");
+
+            $stmt->execute([
+                ':id'   => $eqpId,
+                ':df'   => $data['dano_fisico'],
+                ':dm'   => $data['dano_magico'],
+                ':dfg'  => $data['dano_fogo'],
+                ':de'   => $data['dano_eletrico'],
+
+                ':rdf'  => $data['dano_fisico_reducao'],
+                ':rdm'  => $data['dano_magico_reducao'],
+                ':rdfg' => $data['dano_fogo_reducao'],
+                ':rde'  => $data['dano_eletrico_reducao'],
+
+                ':est'  => $data['estabilidade']
+            ]);
+
+            if ($data['tipo'] === 'arma') {
+
+                $stmt = $conn->prepare("
+                    INSERT INTO arma (id_eqp, categoria_id)
+                    VALUES (:id, :cat)
+                ");
+                $stmt->execute([
+                    ':id'  => $eqpId,
+                    ':cat' => $data['categoria']
+                ]);
+
+            } elseif ($data['tipo'] === 'escudo') {
+
+                $stmt = $conn->prepare("
+                    INSERT INTO escudo (id_eqp, categoria_id)
+                    VALUES (:id, :cat)
+                ");
+                $stmt->execute([
+                    ':id'  => $eqpId,
+                    ':cat' => $data['categoria_id']
+                ]);
+            }
+
+            $conn->commit();
+
+            return [
+                'message' => ucfirst($data['tipo']) . ' criado com sucesso!',
+                'eqp_id' => $eqpId
+            ];
+        }
+
+        catch (Exception $e) {
+            $conn->rollBack();
+            return [
+                'message' => 'Erro ao criar equipamento: ' . $e->getMessage(),
+                'eqp_id' => null
+            ];
+        }
+    }
 }
 ?>

@@ -3,7 +3,8 @@ function connection() {
         $host = "mysql:host=localhost;dbname=php_atv";
         $user = "root";
         $password = 'Zinzoomzada2004$';
-
+        //username localweb:lhsimonClk
+        //senha: Henrique2004#
         try {
             $conn = new PDO($host, $user, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
