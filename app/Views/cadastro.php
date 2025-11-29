@@ -41,7 +41,7 @@
                             </div>
                         </div>
                         <div class="div_containers_complete">
-                            <div class="container_complete_fields">
+                            <div class="terms_div">
                                 <label>Li e aceito os <span class="termo_uso">Termos de Uso<span></label>
                                 <input type="checkbox" name="sys_termos_uso" />
                             </div>
