@@ -1,4 +1,21 @@
 document.addEventListener('click', async function(e) {
+
+    if(e.target.closest('.dlt_local')) {
+        e.stopPropagation();
+        const local_id = e.target.closest('.local_list_item').getAttribute('id');
+
+        const data = await deleteLocal(local_id);
+
+        if(data.success == true) {
+            const local_list_container = document.querySelector('.local_list_container');
+            const local = document.getElementById(local_id);
+            
+            local_list_container.removeChild(local);
+        }
+
+        return;
+    }
+
     if (e.target.closest('.btn-save')) {
         e.preventDefault();
 
@@ -39,25 +56,9 @@ document.addEventListener('click', async function(e) {
         setTimeout(() => window.location.reload(), 600);
     }
 
-    if(e.target.closest('.local_list_item')) {
+    if(e.target.closest('.local_list_item') && !e.target.closest('.dlt_local')) {
         const local_id = e.target.closest('.local_list_item').getAttribute('id');
         window.location.href = `?controller=local&method=getOneLocal&local_id=${local_id}`;
-    }
-
-    if(e.target.closest('.dlt_local')) {
-        e.stopPropagation();
-        const local_id = e.target.closest('.local_list_item').getAttribute('id');
-
-        const data = await deleteLocal(local_id);
-
-        if(data.success == true) {
-            const local_list_container = document.querySelector('.local_list_container');
-            const local = document.getElementById(local_id);
-            
-            local_list_container.removeChild(local);
-        }
-
-        return
     }
 });
 
