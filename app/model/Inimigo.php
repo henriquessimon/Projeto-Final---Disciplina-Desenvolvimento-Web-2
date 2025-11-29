@@ -168,5 +168,13 @@ class Inimigo {
         ]);
     }
 
+    public function deleteInimigo($id) {
+        $conn = connection();
+
+        $stmt = $conn->prepare("DELETE FROM enemy WHERE id = :id");
+        $stmt->bindParam(":id", $id);
+
+        return  $stmt->execute();
+    }
 }
 ?>

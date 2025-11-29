@@ -47,5 +47,20 @@ class InimigoController {
         exit;
     }
 
+    public function deleteInimigo() {
+        if (empty($_SESSION['logged_in'])) {
+            header("Location: ?controller=home&index");
+            exit;
+        }
+
+        $id = (int)$_GET['id'];
+
+        $result = new Inimigo()->deleteInimigo($id);
+
+        echo json_encode([
+            'success' => $result,
+            'message' => $result ? 'Sucesso ao deletar inimigo' : 'Erro ao deletar inimigo'
+        ]);
+    }
 }
 ?>

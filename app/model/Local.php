@@ -116,7 +116,7 @@ class Local {
             $stmt->bindParam(":id", $id, PDO::PARAM_INT);
             
             return $stmt->execute();
-            
+
         } catch (PDOException $e) {
             error_log("Erro ao deletar local: " . $e->getMessage());
             return false;

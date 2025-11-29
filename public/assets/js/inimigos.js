@@ -1,4 +1,28 @@
 document.addEventListener('click', async function(e) {
+
+    if(e.target.closest('.dlt_enemy')) {
+        e.stopPropagation();
+        const enemy_id = e.target.closest('.enemy_list_item').getAttribute('id');
+
+        const data = await deleteInimigo(enemy_id);
+
+        if(data.success == true) {
+            const enemy = document.getElementById(enemy_id);
+            
+            if(enemy) {
+                enemy.remove()
+            }
+        }
+
+        return;
+    }
+           
+    if(e.target.closest('.click_item') && !e.target.closest('.dlt_enemy')) {
+        const enemy_id = e.target.closest('.click_item').getAttribute('id');
+        window.location.href = `<?= BASE_URL ?>?controller=inimigo&method=getOneInimigo&enemy_id=${enemy_id}`;
+        
+    }
+
     if (e.target.closest('.btn-save')) {
         console.log('crico');
         const nome = document.querySelector('[name="nome"]').value;
@@ -64,6 +88,14 @@ async function createInimigo(data) {
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data)
     });
+
+    return await resp.json();
+}
+
+async function deleteInimigo(id) {
+    const resp = await fetch(`?controller=inimigo&method=deleteInimigo&id=${id}`, {
+        method: 'POST',
+    })
 
     return await resp.json();
 }

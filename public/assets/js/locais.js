@@ -3,17 +3,15 @@ document.addEventListener('click', async function(e) {
     if(e.target.closest('.dlt_local')) {
         e.stopPropagation();
         const local_id = e.target.closest('.local_list_item').getAttribute('id');
-        console.log(local_id)
 
         const data = await deleteLocal(local_id);
 
-        console.log(data);
-
         if(data.success == true) {
-            const local_list_container = document.querySelector('.local_list_container');
             const local = document.getElementById(local_id);
             
-            local_list_container.removeChild(local);
+            if(local) {
+                local.remove()
+            }
         }
 
         return;
