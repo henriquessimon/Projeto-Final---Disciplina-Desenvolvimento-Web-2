@@ -112,7 +112,7 @@ class Local {
         $conn = connection();
 
         try {            
-            $stmt = $conn->prepare("DELETE FROM locais WHERE id = :id");
+            $stmt = $conn->prepare("DELETE FROM local WHERE id = :id");
             $stmt->bindParam(":id", $id, PDO::PARAM_INT);
             
             return $stmt->execute();
