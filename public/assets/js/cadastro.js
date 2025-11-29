@@ -31,8 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if(resposta.erro) {
             resposta.erros_campos.forEach(campo => {
-                const field = document.querySelector(`[name="${campo}"]`)
-                field.classList.add('erro_field');
+                if(!campo == 'sys_termos_uso') {
+                    const field = document.querySelector(`[name="${campo}"]`)
+                    field.classList.add('erro_field');
+                } else {
+                    const sys_term = document.querySelector(`.terms_div`);
+                    sys_term.classList.add('erro_field');
+                }
             });
 
             return

@@ -147,3 +147,7 @@ body {
     text-decoration: underline;
     cursor: pointer;
 }
+
+.erro_field {
+    border-bottom: 3px solid #991111;
+}
