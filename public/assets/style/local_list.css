@@ -16,7 +16,7 @@
     text-decoration: underline;
 }
 
-.local_list_item:hover svg{
+.local_list_item svg{
     position: relative;
-    top: 20px;
+    top: 13px;
 }

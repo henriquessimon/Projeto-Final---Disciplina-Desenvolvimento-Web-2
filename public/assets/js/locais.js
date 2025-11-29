@@ -6,6 +6,8 @@ document.addEventListener('click', async function(e) {
 
         const data = await deleteLocal(local_id);
 
+        console.log(data);
+
         if(data.success == true) {
             const local_list_container = document.querySelector('.local_list_container');
             const local = document.getElementById(local_id);
