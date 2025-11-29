@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.addEventListener('click', async function(e) {
-        if(e.target.closest('.dlt_local')) {
+        if(e.target.closest('.dlt_eqp')) {
             e.stopPropagation();
             const eqp_id = e.target.closest('.status_eqp_list').getAttribute('id');
 
