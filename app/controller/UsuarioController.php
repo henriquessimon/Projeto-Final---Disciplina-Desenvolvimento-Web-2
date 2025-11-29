@@ -35,6 +35,8 @@ class UsuarioController {
                 'erros_campos' => $erros_campos,
                 'erro' => true
             ]);
+
+            return;
         }
 
         $usuario = new Usuario();

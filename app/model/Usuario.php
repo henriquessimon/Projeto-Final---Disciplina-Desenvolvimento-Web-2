@@ -19,8 +19,8 @@ class Usuario {
         $stmt->bindParam(':senha', $data['pass'], PDO::PARAM_STR);
         $stmt->bindParam(':nome_completo', $data['name'], PDO::PARAM_STR);
         $stmt->bindParam(':telefone', $data['phone'], PDO::PARAM_STR);
-        $stmt->bindParam(':sys_termos_uso', $timestamp, PDO::PARAM_BOOL);
-        $stmt->bindParam(':sys_ativo', $ativo, PDO::PARAM_BOOL);
+        $stmt->bindParam(':sys_termos_uso', $timestamp);
+        $stmt->bindParam(':sys_ativo', $ativo);
         $stmt->bindParam(':role_user', $data['role_user'], PDO::PARAM_STR);
 
         $stmt->execute();
