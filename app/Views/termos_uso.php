@@ -8,10 +8,6 @@
 </head>
 <body>
     <section class="page_cad_log">
-        <div class="image_div">
-            <div class="filter_img"><h2 class="title_log_cad">Dark Souls<br>Equipment Wiki</h2></div>
-            <img src="<?=BASE_URL ?>public/assets/img/espadafire.jpg" class="img_cad_log"/>
-        </div>
         <div class="container_cad_log">
             <h1>Termos de uso</h1>
         </div>

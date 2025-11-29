@@ -139,6 +139,10 @@ body {
     color: #cc0000;
 }
 
-.termo_uso span {
+.terms_div {
+    margin: 3% 20px;
+}
+
+.termo_uso {
     text-decoration: underline;
 }
