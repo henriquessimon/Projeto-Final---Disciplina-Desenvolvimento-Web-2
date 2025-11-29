@@ -41,10 +41,11 @@ document.addEventListener('click', async function(e) {
 
     if(e.target.closest('.local_list_item')) {
         const local_id = e.target.closest('.local_list_item').getAttribute('id');
-        window.location.href = `<?= BASE_URL ?>?controller=local&method=getOneLocal&local_id=${local_id}`;
+        window.location.href = `?controller=local&method=getOneLocal&local_id=${local_id}`;
     }
 
     if(e.target.closest('.dlt_local')) {
+        e.stopPropagation();
         const local_id = e.target.closest('.local_list_item').getAttribute('id');
 
         const data = await deleteLocal(local_id);
@@ -55,6 +56,8 @@ document.addEventListener('click', async function(e) {
             
             local_list_container.removeChild(local);
         }
+
+        return
     }
 });
 

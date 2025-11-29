@@ -116,6 +116,5 @@ class Local {
 
         return $stmt->execute();
     }
-
 }
 ?>
