@@ -145,4 +145,5 @@ body {
 
 .termo_uso {
     text-decoration: underline;
+    cursor: pointer;
 }

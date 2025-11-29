@@ -6,6 +6,7 @@
     <title>DS Equip Wiki</title>
     <link rel="stylesheet" type="text/css" href="<?=BASE_URL ?>public/assets/style/global.css" />
     <link rel="stylesheet" type="text/css" href="<?=BASE_URL ?>public/assets/style/cad_log.css" />
+    <script src="<?= BASE_URL ?>public/assets/js/cadastro.js"></script>
 
 </head>
 <body>
@@ -20,7 +21,7 @@
                     <h2 class="title_page">Cadastro de usuário</h2>
                 </div>
                 <div class="divFormating">
-                    <form method="POST" class="form_cad_log" action="?controller=usuario&method=cadastrarUsuario">
+                    <form class="form_cad_log">
                         <input type="hidden" name="action" value="cadastro" />
                         <div class="container_half_fields">
                             <label>Nome Completo</label>
@@ -47,7 +48,7 @@
                             </div>
                         </div>
                         <div class="div_send">
-                            <button type="submit" class="button_send">Cadastrar-se</button>
+                            <button type="button" class="button_send">Cadastrar-se</button>
                         </div>
                     </form>
                 </div>

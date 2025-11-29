@@ -1,29 +1,33 @@
 <?php
 
 class Usuario {
-    use DataAccess;
-
-    private $id;
-    private $nomeCompleto;
-    private $senha;
-    private $email;
-    private $cpf;
-    private $telefone;
-    private $sysTermosDeUso;
-    private $sysAtivo;
-
     public function cadastrar($data) {
-        $usuario = new Usuario();
+        $conn = connection();
 
-        $usuario->setNomeCompleto($data['name']);
-        $usuario->setEmail($data['email']);
-        $usuario->setSenha($data['pass']);
-        $usuario->setTelefone($data['phone']);
-        $usuario->setSysTermosDeUso($data['sys_termos_uso']);
-        $usuario->setSysAtivo($data['sys_ativo']);
+        $stmt = $conn->prepare("
+            INSERT INTO usuario 
+            (email, senha, nome_completo, telefone, sys_termos_uso, sys_ativo, role_user) 
+            VALUES 
+            (:email, :senha, :nome_completo, :telefone, :sys_termos_uso, :sys_ativo, :role_user)
+        ");
 
-        $dao = new UsuarioDAO(connection());
-        $dao->salvar($usuario);
+        $timestamp = (new DateTime())->format('Y-m-d H:i:s');
+
+        $ativo = 1;
+
+        $stmt->bindParam(':email', $data['email'], PDO::PARAM_STR);
+        $stmt->bindParam(':senha', $data['pass'], PDO::PARAM_STR);
+        $stmt->bindParam(':nome_completo', $data['name'], PDO::PARAM_STR);
+        $stmt->bindParam(':telefone', $data['phone'], PDO::PARAM_STR);
+        $stmt->bindParam(':sys_termos_uso', $timestamp, PDO::PARAM_BOOL);
+        $stmt->bindParam(':sys_ativo', $ativo, PDO::PARAM_BOOL);
+        $stmt->bindParam(':role_user', $data['role_user'], PDO::PARAM_STR);
+
+        $stmt->execute();
+
+        return [
+            'user_id' => $conn->lastInsertId()
+        ];
     }
 
     public static function findEmailById($id) {
