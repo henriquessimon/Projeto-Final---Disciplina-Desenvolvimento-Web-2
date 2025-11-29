@@ -171,13 +171,24 @@ class Inimigo {
     public function dltInimigo($id) {
         $conn = connection();
 
-        $stmt = $conn->prepare("DELETE FROM locais_enemys WHERE enemy_id = :id");
-        $stmt->bindParam(":id", $id);
+        try {
+            $conn->beginTransaction();
 
-        $stmt = $conn->prepare("DELETE FROM enemy WHERE id = :id");
-        $stmt->bindParam(":id", $id);
+            $stmt = $conn->prepare("DELETE FROM locais_enemys WHERE enemy_id = :id");
+            $stmt->bindParam(":id", $id);
+            $stmt->execute();
 
-        return $stmt->execute();
+            $stmt2 = $conn->prepare("DELETE FROM enemy WHERE id = :id");
+            $stmt2->bindParam(":id", $id);
+            $result = $stmt2->execute();
+            
+            $conn->commit();
+            return $result;
+
+        } catch (Exception $e) {
+            $conn->rollBack();
+            throw $e;
+        }
     }
 }
 ?>
