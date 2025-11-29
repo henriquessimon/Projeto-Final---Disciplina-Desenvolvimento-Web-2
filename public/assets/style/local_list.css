@@ -8,6 +8,8 @@
 .local_list_item {
     border-bottom: 3px #DC4413 solid;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 }
 
 .local_list_item:hover h3{

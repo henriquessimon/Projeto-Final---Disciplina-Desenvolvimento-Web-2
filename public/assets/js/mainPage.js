@@ -136,16 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
             msg.style.color = "#009900";
             msg.textContent = response.message;
 
-            const container = document.querySelector('.equip_list_container');
-
-            if (container) {
-                const div = document.createElement('div');
-                div.classList.add('equip_list_item');
-                div.innerHTML = `<h3>${data.nome}</h3>`;
-                container.appendChild(div);
-            }
-
-            //setTimeout(() => window.location.reload(), 600);
+            setTimeout(() => window.location.reload(), 600);
         }
     });
 

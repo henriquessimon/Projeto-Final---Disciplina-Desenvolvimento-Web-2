@@ -9,14 +9,12 @@ document.addEventListener('click', async function(e) {
 
         const formAddEqp = document.getElementById('formAddEqp');
 
-        // ======== SISTEMA DE MENSAGEM ÚNICA ========
         let msg = document.querySelector('.message_error, .message_success');
 
         if (!msg) {
             msg = document.createElement('p');
             formAddEqp.appendChild(msg);
         }
-        // ===========================================
 
         if (!nome || !descricao || !link_img || !dificuldade) {
             msg.className = 'message_error';
@@ -37,16 +35,26 @@ document.addEventListener('click', async function(e) {
         msg.className = 'message_success';
         msg.textContent = response.message;
         msg.style.color = "#009900";
-
-        // Atualiza dinamicamente a lista
-        const local_list_container = document.querySelector('.local_list_container');
-        const div = document.createElement('div');
-        div.classList.add('local_list_item');
-        div.innerHTML = `<h3>${data.nome}</h3>`;
-        local_list_container.appendChild(div);
-
-        // Se quiser recarregar, mas espere um pouco pro usuário ver:
+        
         setTimeout(() => window.location.reload(), 600);
+    }
+
+    if(e.target.closest('.local_list_item')) {
+        const local_id = e.target.closest('.local_list_item').getAttribute('id');
+        window.location.href = `<?= BASE_URL ?>?controller=local&method=getOneLocal&local_id=${local_id}`;
+    }
+
+    if(e.target.closest('.dlt_local')) {
+        const local_id = e.target.closest('.local_list_item').getAttribute('id');
+
+        const data = await deleteLocal(local_id);
+
+        if(data.success == true) {
+            const local_list_container = document.querySelector('.local_list_container');
+            const local = document.getElementById(local_id);
+            
+            local_list_container.removeChild(local);
+        }
     }
 });
 
@@ -60,7 +68,15 @@ async function createLocal(data) {
     try {
         return await resp.json();
     } catch(err) {
-        console.error('Algo de errado não está certo: ', err);
+        console.error('Algo de errado não está certo no create: ', err);
         return {message: "Erro inesperado"}
     }
+}
+
+async function deleteLocal(id) {
+    const resp = await fetch(`?controller=local&method=deleteLocal&id=${id}`, {
+        method: 'POST',
+    })
+
+    return await resp.json();
 }

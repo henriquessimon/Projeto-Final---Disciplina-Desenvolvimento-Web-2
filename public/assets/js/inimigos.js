@@ -54,20 +54,7 @@ document.addEventListener('click', async function(e) {
             formAddEqp.appendChild(p);
         }
 
-        const enemy_list_container = document.querySelector('.enemy_list_container');
-
-        const ul = document.createElement('ul');
-        ul.classList.add('enemy_list_item', 'click_item');
-
-        ul.innerHTML = `
-            <li>${data.nome}</li>
-            <li>${data.res_fisica}</li>
-            <li>${data.res_magica}</li>
-            <li>${data.res_fogo}</li>
-            <li>${data.res_eletrico}</li>
-        `;
-
-        enemy_list_container.appendChild(ul);
+        setTimeout(() => window.location.reload(), 600);
     }
 });
 

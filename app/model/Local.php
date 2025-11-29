@@ -107,5 +107,15 @@ class Local {
             'message' => 'Erro ao realizar cadastro'
         ]);
     }
+
+    public function deleteLocal($id) {
+        $conn = connection();
+
+        $stmt = $conn->prepare("DELETE FROM nome_da_tabela WHERE id = :id");
+        $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+
+        return $stmt->execute();
+    }
+
 }
 ?>

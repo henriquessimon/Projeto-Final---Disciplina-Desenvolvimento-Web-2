@@ -45,5 +45,26 @@ class LocalController {
             'message' => $newLocal['message']
         ]);
     }
+
+    public function deleteLocal() {
+        if(empty($_SESSION['logged_in'])) {
+            header("Location: ?controller=home&index");
+            exit;
+        }
+
+        if (!isset($_GET['id'])) {
+            echo json_encode(['message' => 'ID não enviado']);
+            return;
+        }
+
+        $id = $_GET['id'];
+
+        $result = (new Local())->deleteLocal($id);
+
+        echo json_encode([
+            'success' => $result,
+            'message' => $result ? 'Local deletado com sucesso' : 'Erro ao deletar'
+        ]);
+    }
 }
 ?>
