@@ -4,10 +4,14 @@ document.addEventListener('click', async function(e) {
         e.stopPropagation();
         const enemy_id = e.target.closest('.enemy_list_item').getAttribute('id');
 
-        const data = await deleteInimigo(enemy_id);
+        console.log(enemy_id)
+
+        const data = await deleteInimigo(enemy_id)
+
+        console.log(data)
 
         if(data.success == true) {
-            const enemy = document.getElementById(enemy_id);
+            const enemy = document.getElementById(enemy_id)
             
             if(enemy) {
                 enemy.remove()
