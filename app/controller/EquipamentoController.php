@@ -45,5 +45,21 @@ class EquipamentoController {
         echo json_encode($result);
 
     }
+
+    public function deleteEqp() {
+        if (empty($_SESSION['logged_in'])) {
+            header("Location: ?controller=home&index");
+            exit;
+        }
+
+        $id = (int)$_GET['id'];
+
+        $result = (new Equipamento())->delete($id);
+
+        echo json_encode([
+            'success' => $result['success'],
+            'message' => $result['message']
+        ]);
+    }
 }
 ?>

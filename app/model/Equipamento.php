@@ -196,5 +196,51 @@ class Equipamento {
             ];
         }
     }
+
+    public function delete($id) {
+        $conn = connection();
+
+        try {
+            $conn->beginTransaction();
+
+            // 1. Deleta arma (se existir)
+            $stmt = $conn->prepare("DELETE FROM arma WHERE id_eqp = :id");
+            $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+            $stmt->execute();
+
+            // 2. Deleta escudo (se existir)
+            $stmt = $conn->prepare("DELETE FROM escudo WHERE id_eqp = :id");
+            $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+            $stmt->execute();
+
+            // 3. Deleta equipamentocombate (se existir)
+            $stmt = $conn->prepare("DELETE FROM equipamentocombate WHERE id_eqp = :id");
+            $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+            $stmt->execute();
+
+            // 4. Deleta aneis (se existir)
+            $stmt = $conn->prepare("DELETE FROM aneis WHERE id_eqp = :id");
+            $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+            $stmt->execute();
+
+            // 5. Deleta dos favoritos (se existir)
+            $stmt = $conn->prepare("DELETE FROM favoritos WHERE equipamento_id = :id");
+            $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+            $stmt->execute();
+
+            // 6. Finalmente deleta o equipamento
+            $stmt = $conn->prepare("DELETE FROM equipamento WHERE id = :id");
+            $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+            $stmt->execute();
+
+            $conn->commit();
+
+            return ["success" => true, "message" => "Equipamento deletado com sucesso"];
+
+        } catch (Exception $e) {
+            $conn->rollBack();
+            return ["success" => false, "message" => $e->getMessage()];
+        }
+    }
 }
 ?>

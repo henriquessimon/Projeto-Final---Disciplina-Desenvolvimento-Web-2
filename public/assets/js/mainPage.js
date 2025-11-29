@@ -45,6 +45,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     document.addEventListener('click', async function(e) {
+        if(e.target.closest('.dlt_local')) {
+            e.stopPropagation();
+            const eqp_id = e.target.closest('.status_eqp_list').getAttribute('id');
+
+            const data = await deleteEqp(eqp_id);
+
+            if(data.success == true) {
+                const eqp = document.getElementById(eqp_id);
+                
+                if(eqp) {
+                    eqp.remove()
+                }
+            }
+
+            return;
+        }
+
         if (e.target.closest('#favoritar')) {
             estrela_button = e.target.closest('#favoritar');
             eqp_id = e.target.closest('.status_eqp_list').getAttribute('id');
@@ -184,3 +201,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 })
+
+async function deleteEqp(id) {
+    const resp = await fetch(`?controller=equipamento&method=deleteEqp&id=${id}`, {
+        method: 'POST',
+    })
+
+    return await resp.json();
+}
