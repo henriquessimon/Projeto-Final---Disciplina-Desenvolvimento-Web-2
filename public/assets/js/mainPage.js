@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //FAVORITAR
     async function favoritar(eqp_id) {
         try {
-            resp = await fetch(`http://localhost/sys_login/index.php?controller=favoritos&method=Favoritar&eqp_id=${eqp_id}`);
+            resp = await fetch(`https://lhsimonclk.provisorio.ws/index.php?controller=favoritos&method=Favoritar&eqp_id=${eqp_id}`);
             data = await resp.json();
 
             return data.favorito

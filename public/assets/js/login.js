@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             email: document.querySelector('input[name="email"]').value,
             senha: document.querySelector('input[name="pass"]').value
         }
-        const resp = await fetch('http://localhost/sys_login/index.php?controller=auth&method=login', {
+        const resp = await fetch('https://lhsimonclk.provisorio.ws/index.php?controller=auth&method=login', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(fields)
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             message.classList.add('display_block_error_login');
         } else {
             console.log('Meu pau');
-            window.location.href = 'http://localhost/sys_login?controller=equipamento&method=listarEquipamentos'
+            window.location.href = 'https://lhsimonclk.provisorio.ws?controller=equipamento&method=listarEquipamentos'
         }
     })
 });
