@@ -55,7 +55,7 @@ class InimigoController {
 
         $id = (int)$_GET['id'];
 
-        $result = new Inimigo()->deleteInimigo($id);
+        $result = (new Inimigo())->deleteInimigo($id);
 
         echo json_encode([
             'success' => $result,
