@@ -1,3 +1,3 @@
 <?php
-define('BASE_URL', '/sys_login/');
+define('BASE_URL', '/public_html/');
 ?>
