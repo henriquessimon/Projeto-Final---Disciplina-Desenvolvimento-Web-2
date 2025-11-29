@@ -1,4 +1,5 @@
 <?php
+//Conexão
 function connection() {
         $host = "mysql:host=localhost;dbname=php_atv";
         $user = "root";
