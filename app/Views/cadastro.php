@@ -41,8 +41,8 @@
                             </div>
                         </div>
                         <div class="div_containers_complete">
-                            <div class="">
-                                <label>Termos de Uso</label>
+                            <div class="container_complete_fields">
+                                <label>Li e aceito os <span class="termo_uso">Termos de Uso<span></label>
                                 <input type="checkbox" name="sys_termos_uso" />
                             </div>
                         </div>
@@ -54,5 +54,10 @@
             </div>
         </div>
     </section>
+    <script>
+        document.querySelector('.termo_uso').addEventListener('click', () => {
+            window.location.href = "?controller=auth&method=termosUsoPage";
+        });
+    </script>
 </body>
 </html>

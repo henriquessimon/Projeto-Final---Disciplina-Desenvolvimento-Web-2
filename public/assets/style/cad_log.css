@@ -138,3 +138,7 @@ body {
 .text_error_login {
     color: #cc0000;
 }
+
+.termo_uso span {
+    text-decoration: underline;
+}

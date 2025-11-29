@@ -79,5 +79,9 @@ class AuthController {
     public function cadastroPage() {
         include_once __DIR__ . '/../Views/cadastro.php';
     }
+
+    public function termosUsoPage() {
+        include_once __DIR__ . '/../Views/termos_uso.php';
+    }
 }
 ?>
