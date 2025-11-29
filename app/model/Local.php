@@ -111,10 +111,16 @@ class Local {
     public function deleteLocal($id) {
         $conn = connection();
 
-        $stmt = $conn->prepare("DELETE FROM nome_da_tabela WHERE id = :id");
-        $stmt->bindParam(":id", $id, PDO::PARAM_INT);
-
-        return $stmt->execute();
+        try {            
+            $stmt = $conn->prepare("DELETE FROM locais WHERE id = :id");
+            $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+            
+            return $stmt->execute();
+            
+        } catch (PDOException $e) {
+            error_log("Erro ao deletar local: " . $e->getMessage());
+            return false;
+        }
     }
 }
 ?>

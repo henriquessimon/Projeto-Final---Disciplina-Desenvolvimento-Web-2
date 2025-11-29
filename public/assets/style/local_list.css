@@ -15,3 +15,8 @@
 .local_list_item:hover h3{
     text-decoration: underline;
 }
+
+.local_list_item:hover svg{
+    position: relative;
+    top: 20px;
+}

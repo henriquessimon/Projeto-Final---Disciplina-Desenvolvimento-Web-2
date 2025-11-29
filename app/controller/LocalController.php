@@ -53,11 +53,14 @@ class LocalController {
         }
 
         if (!isset($_GET['id'])) {
-            echo json_encode(['message' => 'ID não enviado']);
+            echo json_encode([
+                'success' => false,
+                'message' => 'ID não enviado'
+            ]);
             return;
         }
 
-        $id = $_GET['id'];
+        $id = (int)$_GET['id'];
 
         $result = (new Local())->deleteLocal($id);
 
