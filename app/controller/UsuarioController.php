@@ -1,6 +1,6 @@
 <?php
 
-loadEnv(__DIR__ . '/../.env');
+loadEnv(__DIR__ . '/../../.env');
 
 class UsuarioController {
 
