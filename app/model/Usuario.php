@@ -1,5 +1,4 @@
 <?php
-
 class Usuario {
 
     /* ============================
@@ -48,10 +47,6 @@ class Usuario {
         return $stmt->fetch(PDO::FETCH_ASSOC) ?: null;
     }
 
-
-    /* ============================
-       ATUALIZAR USUÁRIO
-    ============================ */
     public function att($data) {
         $conn = connection();
 
@@ -74,10 +69,6 @@ class Usuario {
         return $stmt->execute();
     }
 
-
-    /* ============================
-       DELETAR USUÁRIO LOGADO
-    ============================ */
     public function deleteUser() {
         $conn = connection();
         $userId = $_SESSION['user_id'];
@@ -99,24 +90,6 @@ class Usuario {
                 'error' => $e->getMessage()
             ];
         }
-    }
-
-
-    /* ============================
-       BUSCAR E-MAIL POR ID
-       (função da outra versão)
-    ============================ */
-    public static function findEmailById($id) {
-        $conn = connection();
-        $sql = "SELECT email FROM usuario WHERE id = :id";
-
-        $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':id', $id);
-        $stmt->execute();
-
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        return $row ? $row['email'] : null;
     }
 }
 ?>

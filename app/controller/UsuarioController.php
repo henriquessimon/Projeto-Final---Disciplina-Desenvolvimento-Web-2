@@ -1,4 +1,4 @@
-v<?php
+<?php
 
 class UsuarioController {
 
@@ -50,10 +50,6 @@ class UsuarioController {
         ]);
     }
 
-
-    /* ===============================
-       ATUALIZAR USUÁRIO
-    =============================== */
     public function attUser() {
         $data = json_decode(file_get_contents('php://input'), true);
 

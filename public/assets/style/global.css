@@ -77,13 +77,14 @@ ul {
 
 .content_page form input {
     background-color: #111;
+    padding: 15px 10px;
     border-radius: 7px;
     border-bottom: 3px solid #f17929;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
     color: #f2f2f2;
-    width: 300px;
+    width: 200px;
     margin: 15px 0px;
 }
 
@@ -91,7 +92,18 @@ ul {
     background-color: #DC4413;
     color: #f2f2f2;
     padding: 15px 20px;
-    width: 300px;
+    border-radius: 7px;
+    border-color: #DC4413;
+    width: 200px;
+}
+
+.content_page #excluir_conta {
+    background-color: #990000;
+    color: #f2f2f2;
+    padding: 15px 20px;
+    border-radius: 7px;
+    border-color: #990000;
+    width: 200px;
 }
 
 .addEqp {
