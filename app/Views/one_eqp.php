@@ -21,69 +21,127 @@
                 if($_SESSION['role_user'] == 'adm') {
 
             ?>
-                <div id="modalAddEqp" class="modal-overlay">
-                    <div class="modal">
-                        <h2><?= isset($eqp['id']) ? 'Editar Equipamento' : 'Adicionar Equipamento' ?></h2>
-                        <form id="formAddEqp">
-                            <?php if(isset($eqp['id'])): ?>
-                                <input type="hidden" name="id" value="<?= $eqp['id'] ?>">
-                            <?php endif; ?>
+                    <div id="modalAddEqp" class="modal-overlay">
+                        <div class="modal">
+                            <h2><?= isset($eqp['equipamento_id']) ? 'Editar Equipamento' : 'Adicionar Equipamento' ?></h2>
+                            <form id="formAddEqp">
+                                <?php if(isset($eqp['equipamento_id'])): ?>
+                                    <input type="hidden" name="id" value="<?= $eqp['equipamento_id'] ?>">
+                                <?php endif; ?>
 
-                            <label class="form_label">Nome</label>
-                            <input type="text" name="nome" value="<?= isset($eqp['equipamento_nome']) ? htmlspecialchars($eqp['equipamento_nome']) : '' ?>" required>
+                                <label class="form_label">Nome</label>
+                                <input type="text" name="nome" value="<?= isset($eqp['equipamento_nome']) ? htmlspecialchars($eqp['equipamento_nome']) : '' ?>" required>
 
-                            <label class="form_label">Descrição</label>
-                            <input type="text" name="descricao" value="<?= isset($eqp['descricao']) ? htmlspecialchars($eqp['descricao']) : '' ?>" required>
+                                <label class="form_label">Descrição</label>
+                                <input type="text" name="descricao" value="<?= isset($eqp['descricao']) ? htmlspecialchars($eqp['descricao']) : '' ?>" required>
 
-                            <label class="form_label">Resistência Física</label>
-                            <input type="number" name="res_fisica" value="<?= isset($eqp['res_fisica']) ? $eqp['res_fisica'] : (isset($eqp['dano_fisico_reducao']) ? $eqp['dano_fisico_reducao'] : '0') ?>" required>
+                                <!-- Seção de Danos -->
+                                <div class="form-section">
+                                    <h3>Dano</h3>
+                                    <div class="form-grid">
+                                        <label class="form_label">Dano Físico</label>
+                                        <input type="number" name="dano_fisico" value="<?= isset($eqp['dano_fisico']) ? $eqp['dano_fisico'] : '0' ?>" required>
 
-                            <label class="form_label">Resistência Mágica</label>
-                            <input type="number" name="res_magico" value="<?= isset($eqp['res_magico']) ? $eqp['res_magico'] : (isset($eqp['dano_magico_reducao']) ? $eqp['dano_magico_reducao'] : '0') ?>" required>
-                            
-                            <label class="form_label">Resistência ao Fogo</label>
-                            <input type="number" name="res_fogo" value="<?= isset($eqp['res_fogo']) ? $eqp['res_fogo'] : (isset($eqp['dano_fogo_reducao']) ? $eqp['dano_fogo_reducao'] : '0') ?>" required>
+                                        <label class="form_label">Dano Mágico</label>
+                                        <input type="number" name="dano_magico" value="<?= isset($eqp['dano_magico']) ? $eqp['dano_magico'] : '0' ?>" required>
+                                        
+                                        <label class="form_label">Dano de Fogo</label>
+                                        <input type="number" name="dano_fogo" value="<?= isset($eqp['dano_fogo']) ? $eqp['dano_fogo'] : '0' ?>" required>
 
-                            <label class="form_label">Resistência Elétrica</label>
-                            <input type="number" name="res_eletrico" value="<?= isset($eqp['res_eletrico']) ? $eqp['res_eletrico'] : (isset($eqp['dano_eletrico_reducao']) ? $eqp['dano_eletrico_reducao'] : '0') ?>" required>
+                                        <label class="form_label">Dano Elétrico</label>
+                                        <input type="number" name="dano_eletrico" value="<?= isset($eqp['dano_eletrico']) ? $eqp['dano_eletrico'] : '0' ?>" required>
+                                    </div>
+                                </div>
 
-                            <label class="form_label">Tipo</label>
-                            <select class="select_add_eqp tipo" name="tipo">
-                                <option value="Normal" <?= (isset($eqp['tipo']) && $eqp['tipo'] == 'Normal') ? 'selected' : '' ?>>Normal</option>
-                                <option value="especial" <?= (isset($eqp['tipo']) && $eqp['tipo'] == 'especial') ? 'selected' : '' ?>>Especial</option>
-                                <option value="boss" <?= (isset($eqp['tipo']) && $eqp['tipo'] == 'boss') ? 'selected' : '' ?>>Boss</option>
-                                <option value="normal/especial" <?= (isset($eqp['tipo']) && $eqp['tipo'] == 'normal/especial') ? 'selected' : '' ?>>Normal/Especial</option>
-                                <option value="normal/npc" <?= (isset($eqp['tipo']) && $eqp['tipo'] == 'normal/npc') ? 'selected' : '' ?>>Normal/NPC</option>
-                                <option value="Online" <?= (isset($eqp['tipo']) && $eqp['tipo'] == 'Online') ? 'selected' : '' ?>>Online</option>
-                                <option value="boss/normal" <?= (isset($eqp['tipo']) && $eqp['tipo'] == 'boss/normal') ? 'selected' : '' ?>>Boss/Normal</option>
-                            </select>
+                                <!-- Seção de Reduções -->
+                                <div class="form-section">
+                                    <h3>Redução de Dano</h3>
+                                    <div class="form-grid">
+                                        <label class="form_label">Redução Dano Físico</label>
+                                        <input type="number" name="dano_fisico_reducao" value="<?= isset($eqp['dano_fisico_reducao']) ? $eqp['dano_fisico_reducao'] : '0' ?>" required>
 
-                            <label class="form_label">Locais</label>
-                            <select class="select_add_eqp local" name="locais[]" multiple>
-                                <?php foreach($locais as $loc): ?>
-                                    <option value="<?= $loc['id'] ?>" 
-                                        <?php 
-                                        if(isset($eqp['locais_ids']) && in_array($loc['id'], $eqp['locais_ids'])) {
-                                            echo 'selected';
-                                        } elseif(isset($eqp_locais) && is_array($eqp_locais)) {
-                                            foreach($eqp_locais as $eqp_local) {
-                                                if($eqp_local['local_id'] == $loc['id']) {
-                                                    echo 'selected';
-                                                    break;
-                                                }
-                                            }
-                                        }
-                                        ?>>
-                                        <?= htmlspecialchars($loc['nome']) ?>
-                                    </option>
-                                <?php endforeach ?>
-                            </select>
+                                        <label class="form_label">Redução Dano Mágico</label>
+                                        <input type="number" name="dano_magico_reducao" value="<?= isset($eqp['dano_magico_reducao']) ? $eqp['dano_magico_reducao'] : '0' ?>" required>
 
-                            <button type="submit" class="btn-save"><?= isset($eqp['id']) ? 'Atualizar' : 'Salvar' ?></button>
-                            <button type="button" class="btn-close" id="closeModal">Fechar</button>
-                        </form>
+                                        <label class="form_label">Redução Dano de Fogo</label>
+                                        <input type="number" name="dano_fogo_reducao" value="<?= isset($eqp['dano_fogo_reducao']) ? $eqp['dano_fogo_reducao'] : '0' ?>" required>
+
+                                        <label class="form_label">Redução Dano Elétrico</label>
+                                        <input type="number" name="dano_eletrico_reducao" value="<?= isset($eqp['dano_eletrico_reducao']) ? $eqp['dano_eletrico_reducao'] : '0' ?>" required>
+                                    </div>
+                                </div>
+
+                                <!-- Outras Estatísticas -->
+                                <div class="form-grid-2">
+                                    <div>
+                                        <label class="form_label">Estabilidade</label>
+                                        <input type="number" name="estabilidade" value="<?= isset($eqp['estabilidade']) ? $eqp['estabilidade'] : '0' ?>" required>
+                                    </div>
+                                    
+                                    <div>
+                                        <label class="form_label">Effect</label>
+                                        <input type="text" name="effect" value="<?= isset($eqp['effect']) ? htmlspecialchars($eqp['effect']) : '' ?>" required>
+                                    </div>
+                                </div>
+
+                                <!-- Raridade -->
+                                <label class="form_label">Raridade</label>
+                                <select class="select_add_eqp" name="raridade_id">
+                                    <option value="1" <?= (isset($eqp['raridade_id']) && $eqp['raridade_id'] == 1) ? 'selected' : '' ?>>Comum</option>
+                                    <option value="2" <?= (isset($eqp['raridade_id']) && $eqp['raridade_id'] == 2) ? 'selected' : '' ?>>Único</option>
+                                    <option value="3" <?= (isset($eqp['raridade_id']) && $eqp['raridade_id'] == 3) ? 'selected' : '' ?>>Boss</option>
+                                    <option value="4" <?= (isset($eqp['raridade_id']) && $eqp['raridade_id'] == 4) ? 'selected' : '' ?>>Dragão</option>
+                                    <option value="5" <?= (isset($eqp['raridade_id']) && $eqp['raridade_id'] == 5) ? 'selected' : '' ?>>Demon</option>
+                                </select>
+
+                                <!-- Tipo de Equipamento -->
+                                <label class="form_label">Tipo de Equipamento</label>
+                                <select id="selectTipo" class="select_add_eqp" name="tipo_equipamento">
+                                    <option value="">Selecione o Tipo</option>
+                                    <option value="arma" <?= (isset($eqp['arma_categoria_id']) && !empty($eqp['arma_categoria_id'])) ? 'selected' : '' ?>>Arma</option>
+                                    <option value="escudo" <?= (isset($eqp['escudo_categoria_id']) && !empty($eqp['escudo_categoria_id'])) ? 'selected' : '' ?>>Escudo</option>
+                                    <option value="anel" <?= (isset($eqp['tipo']) && $eqp['tipo'] == 'anel') ? 'selected' : '' ?>>Anel</option>
+                                </select>
+
+                                <!-- Categoria do equipamento (dinâmico) -->
+                                <label class="slc_cat_label">Categoria do equipamento</label>
+                                <select id="selectCategoria" class="select_add_eqp slc_cat" name="categoria_id">
+                                    <?php 
+                                    // Preencher categoria baseada no tipo atual
+                                    if(isset($eqp['arma_categoria_id']) && !empty($eqp['arma_categoria_id'])) {
+                                        // Se for arma, buscar categorias de armas
+                                        $stmt_cat = $conn->prepare("SELECT id, nome FROM categoria_armas");
+                                        $stmt_cat->execute();
+                                        $categorias = $stmt_cat->fetchAll(PDO::FETCH_ASSOC);
+                                        
+                                        foreach($categorias as $cat): ?>
+                                            <option value="<?= $cat['id'] ?>" <?= ($eqp['arma_categoria_id'] == $cat['id']) ? 'selected' : '' ?>>
+                                                <?= htmlspecialchars($cat['nome']) ?>
+                                            </option>
+                                        <?php endforeach;
+                                        
+                                    } elseif(isset($eqp['escudo_categoria_id']) && !empty($eqp['escudo_categoria_id'])) {
+                                        // Se for escudo, buscar categorias de escudos
+                                        $stmt_cat = $conn->prepare("SELECT id, nome FROM categoria_escudos");
+                                        $stmt_cat->execute();
+                                        $categorias = $stmt_cat->fetchAll(PDO::FETCH_ASSOC);
+                                        
+                                        foreach($categorias as $cat): ?>
+                                            <option value="<?= $cat['id'] ?>" <?= ($eqp['escudo_categoria_id'] == $cat['id']) ? 'selected' : '' ?>>
+                                                <?= htmlspecialchars($cat['nome']) ?>
+                                            </option>
+                                        <?php endforeach;
+                                    }
+                                    ?>
+                                </select>
+
+                                <div class="form-buttons">
+                                    <button type="submit" class="btn-save"><?= isset($eqp['equipamento_id']) ? 'Atualizar' : 'Salvar' ?></button>
+                                    <button type="button" class="btn-close" id="closeModal">Fechar</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                </div>
             <?php 
                 }
             ?>
@@ -198,5 +256,33 @@
             </div>
         </section>
     </main>
+    <script>
+        // Controle das categorias dinâmicas
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectTipo = document.getElementById('selectTipo');
+            const selectCategoria = document.getElementById('selectCategoria');
+            
+            selectTipo.addEventListener('change', function() {
+                const tipo = this.value;
+                carregarCategorias(tipo);
+            });
+            
+            function carregarCategorias(tipo) {
+                // Fazer requisição AJAX para buscar categorias baseadas no tipo
+                fetch(`buscar_categorias.php?tipo=${tipo}`)
+                    .then(response => response.json())
+                    .then(categorias => {
+                        selectCategoria.innerHTML = '';
+                        categorias.forEach(cat => {
+                            const option = document.createElement('option');
+                            option.value = cat.id;
+                            option.textContent = cat.nome;
+                            selectCategoria.appendChild(option);
+                        });
+                    })
+                    .catch(error => console.error('Erro:', error));
+            }
+        });
+    </script>
 </body>
 </html>
