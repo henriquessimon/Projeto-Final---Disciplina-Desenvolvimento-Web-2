@@ -72,7 +72,6 @@ class Usuario {
     public function deleteUser() {
         $conn = connection();
         $userId = $_SESSION['user_id'];
-        var_dump($_SESSION['user_id']);
 
         try {
             $stmt = $conn->prepare("
