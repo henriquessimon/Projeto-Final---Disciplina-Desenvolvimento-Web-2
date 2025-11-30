@@ -26,11 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error("Erro na requisição de carregamento do usuario", err);
         });
 
-
-    // ===== EVENTOS DE CLIQUE =====
     document.addEventListener('click', async function(e) {
 
-        // ===== ATUALIZAR USUÁRIO =====
         if (e.target.closest('#attButton')) {
 
             const data = {
@@ -44,16 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const formUser = document.getElementById('form_user');
 
-            // Remove mensagem anterior
             const msgAntiga = formUser.querySelector('.msgResposta');
             if (msgAntiga) msgAntiga.remove();
 
-            // Criar elemento de mensagem
             const msg = document.createElement('div');
             msg.classList.add('msgResposta');
             msg.style.marginTop = '10px';
 
-            // Caso erro
             if (!resposta.success) {
                 msg.style.color = 'red';
 
@@ -67,18 +61,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Caso sucesso
             msg.style.color = 'green';
             msg.innerText = "Usuário atualizado com sucesso!";
             formUser.appendChild(msg);
 
-            // Recarrega a página
             setTimeout(() => window.location.reload(), 1000);
         }
 
-
-        // ===== EXCLUIR USUÁRIO =====
-        if (e.target.closest('#excluir_user')) {
+        if (e.target.closest('#excluir_conta')) {
             const resposta = await excUser();
 
             if (resposta.success) {

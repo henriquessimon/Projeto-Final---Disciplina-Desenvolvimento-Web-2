@@ -91,18 +91,9 @@ ul {
 .content_page form button {
     background-color: #DC4413;
     color: #f2f2f2;
-    padding: 15px 20px;
+    padding: 10px 20px;
     border-radius: 7px;
     border-color: #DC4413;
-    width: 200px;
-}
-
-.content_page #excluir_conta {
-    background-color: #990000;
-    color: #f2f2f2;
-    padding: 15px 20px;
-    border-radius: 7px;
-    border-color: #990000;
     width: 200px;
 }
 

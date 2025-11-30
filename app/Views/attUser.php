@@ -38,9 +38,9 @@
                         <input type="senha" name="senha" />
 
                         <button type="button" id="attButton">Atualizar dados</button>
+                        <button type="button" id="excluir_conta">Excluir conta</button>
                     </form>
 
-                    <button type="button" id="excluir_conta">Excluir conta</button>
                 </div>
             </div>
         </section>
