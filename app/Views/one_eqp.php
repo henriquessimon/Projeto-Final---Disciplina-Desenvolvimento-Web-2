@@ -23,45 +23,67 @@
             ?>
                 <div id="modalAddEqp" class="modal-overlay">
                     <div class="modal">
-                        <h2>Adicionar Equipamento</h2>
-                        <form id="formAddEqp">
-                            <label class="form_label">Nome</label>
-                            <input type="text" name="nome" required>
+                        <h2><?= isset($eqp['id']) ? 'Editar Equipamento' : 'Adicionar Equipamento' ?></h2>
+                        <form id="formAddEqp" action="<?= isset($eqp['id']) ? 'atualizar_equipamento.php' : 'cadastrar_equipamento.php' ?>" method="POST">
+                            
+                            <!-- Campo hidden para ID se for edição -->
+                            <?php if(isset($eqp['id'])): ?>
+                                <input type="hidden" name="id" value="<?= $eqp['id'] ?>">
+                            <?php endif; ?>
 
-                            <label class="form_label">Descricao</label>
-                            <input type="text" name="descricao" required>
+                            <label class="form_label">Nome</label>
+                            <input type="text" name="nome" value="<?= isset($eqp['nome']) ? htmlspecialchars($eqp['nome']) : '' ?>" required>
+
+                            <label class="form_label">Descrição</label>
+                            <input type="text" name="descricao" value="<?= isset($eqp['descricao']) ? htmlspecialchars($eqp['descricao']) : '' ?>" required>
 
                             <label class="form_label">Resistência Física</label>
-                            <input type="number" name="res_fisica" required>
+                            <input type="number" name="res_fisica" value="<?= isset($eqp['res_fisica']) ? $eqp['res_fisica'] : (isset($eqp['dano_fisico_reducao']) ? $eqp['dano_fisico_reducao'] : '0') ?>" required>
 
                             <label class="form_label">Resistência Mágica</label>
-                            <input type="number" name="res_magico" required>
+                            <input type="number" name="res_magico" value="<?= isset($eqp['res_magico']) ? $eqp['res_magico'] : (isset($eqp['dano_magico_reducao']) ? $eqp['dano_magico_reducao'] : '0') ?>" required>
                             
                             <label class="form_label">Resistência ao Fogo</label>
-                            <input type="number" name="res_fogo" required>
+                            <input type="number" name="res_fogo" value="<?= isset($eqp['res_fogo']) ? $eqp['res_fogo'] : (isset($eqp['dano_fogo_reducao']) ? $eqp['dano_fogo_reducao'] : '0') ?>" required>
 
-                            <label class="form_label">Resistência elétrica</label>
-                            <input type="number" name="res_eletrico" required>
+                            <label class="form_label">Resistência Elétrica</label>
+                            <input type="number" name="res_eletrico" value="<?= isset($eqp['res_eletrico']) ? $eqp['res_eletrico'] : (isset($eqp['dano_eletrico_reducao']) ? $eqp['dano_eletrico_reducao'] : '0') ?>" required>
 
                             <label class="form_label">Tipo</label>
-                            <select class="select_add_eqp tipo">
-                                <option value="Normal">Normal</option>
-                                <option value="especial">Especial</option>
-                                <option value="boss">Boss</option>
-                                <option value="normal/especial">Normal/Especial</option>
-                                <option value="normal/npc">Normal/NPC</option>
-                                <option value="Online">Online</option>
-                                <option value="boss/normal">Boss/Normal</option>
+                            <select class="select_add_eqp tipo" name="tipo">
+                                <option value="Normal" <?= (isset($eqp['tipo']) && $eqp['tipo'] == 'Normal') ? 'selected' : '' ?>>Normal</option>
+                                <option value="especial" <?= (isset($eqp['tipo']) && $eqp['tipo'] == 'especial') ? 'selected' : '' ?>>Especial</option>
+                                <option value="boss" <?= (isset($eqp['tipo']) && $eqp['tipo'] == 'boss') ? 'selected' : '' ?>>Boss</option>
+                                <option value="normal/especial" <?= (isset($eqp['tipo']) && $eqp['tipo'] == 'normal/especial') ? 'selected' : '' ?>>Normal/Especial</option>
+                                <option value="normal/npc" <?= (isset($eqp['tipo']) && $eqp['tipo'] == 'normal/npc') ? 'selected' : '' ?>>Normal/NPC</option>
+                                <option value="Online" <?= (isset($eqp['tipo']) && $eqp['tipo'] == 'Online') ? 'selected' : '' ?>>Online</option>
+                                <option value="boss/normal" <?= (isset($eqp['tipo']) && $eqp['tipo'] == 'boss/normal') ? 'selected' : '' ?>>Boss/Normal</option>
                             </select>
 
                             <label class="form_label">Locais</label>
-                            <select class="select_add_eqp local" multiple>
+                            <select class="select_add_eqp local" name="locais[]" multiple>
                                 <?php foreach($locais as $loc): ?>
-                                    <option value="<?= $loc['id'] ?>"><?= $loc['nome'] ?></option>
+                                    <option value="<?= $loc['id'] ?>" 
+                                        <?php 
+                                        // Verifica se este local está associado ao equipamento
+                                        if(isset($eqp['locais_ids']) && in_array($loc['id'], $eqp['locais_ids'])) {
+                                            echo 'selected';
+                                        } elseif(isset($eqp_locais) && is_array($eqp_locais)) {
+                                            // Ou verifica em um array de locais do equipamento
+                                            foreach($eqp_locais as $eqp_local) {
+                                                if($eqp_local['local_id'] == $loc['id']) {
+                                                    echo 'selected';
+                                                    break;
+                                                }
+                                            }
+                                        }
+                                        ?>>
+                                        <?= htmlspecialchars($loc['nome']) ?>
+                                    </option>
                                 <?php endforeach ?>
                             </select>
 
-                            <button type="button" class="btn-save">Salvar</button>
+                            <button type="submit" class="btn-save"><?= isset($eqp['id']) ? 'Atualizar' : 'Salvar' ?></button>
                             <button type="button" class="btn-close" id="closeModal">Fechar</button>
                         </form>
                     </div>
@@ -74,7 +96,7 @@
                     <div class="eqp_title_div">
                         <h1><?= htmlspecialchars($eqp['equipamento_nome']) ?></h1>
                         <?php if($_SESSION['role_user'] == 'adm'): ?>
-                            <button class="addEqp" id="addEqp">Adicionar Inimigo</button>
+                            <button class="addEqp" id="addEqp">Atualizar arma</button>
                         <?php endif; ?>
                     </div>
                 </div>

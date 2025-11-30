@@ -247,3 +247,24 @@
     color: #ff8c00;
     text-shadow: 0 0 5px rgba(255, 140, 0, 0.3);
 }
+
+.select_add_eqp.local {
+    height: 120px;
+    width: 100%;
+    padding: 8px;
+    background: rgba(20, 10, 5, 0.8);
+    border: 1px solid #5c2e0a;
+    color: #d4af37;
+    font-family: 'Times New Roman', serif;
+}
+
+.select_add_eqp.local option {
+    padding: 5px;
+    background: #1a0a0a;
+    color: #d4af37;
+}
+
+.select_add_eqp.local option:checked {
+    background: #5c2e0a;
+    color: #ff8c00;
+}
