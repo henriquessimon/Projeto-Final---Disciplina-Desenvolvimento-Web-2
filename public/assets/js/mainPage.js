@@ -155,6 +155,68 @@ document.addEventListener('DOMContentLoaded', () => {
 
             setTimeout(() => window.location.reload(), 600);
         }
+
+
+        if(e.target.closest('#addCat')) {
+            const modalAddCat = document.getElementById('modalAddCat');
+            modalAddCat.style.display = 'flex';
+        }
+
+        if(e.target.closest('#closeModalCat')) {
+            document.getElementById('modalAddCat').style.display = 'none';
+        }
+
+        if (e.target.closest('#salvarCat')) {
+            e.preventDefault();
+
+            const form = document.getElementById('formAddCat'); // supondo que você tenha um form para categorias
+
+            // Verifica se já existe uma mensagem, senão cria
+            let msg = form.querySelector('.message_error, .message_success');
+            if (!msg) {
+                msg = document.createElement('p');
+                form.appendChild(msg);
+            }
+
+            const nome_cat = form.querySelector('[name="nome_cat"]').value.trim();
+            const select_tipo_categoria = document.getElementById('select_tipo_categoria').value;
+
+            if (!nome_cat || !select_tipo_categoria) {
+                msg.className = 'message_error';
+                msg.style.color = "#990000";
+                msg.textContent = "Todos os campos obrigatórios devem ser preenchidos.";
+                return;
+            }
+
+            const data = {
+                nome_cat: nome_cat,
+                tipo_categoria: select_tipo_categoria
+            };
+
+            // Chamada assíncrona para adicionar categoria
+            const resposta = await addCat(data);
+
+            if (resposta.success) {
+                msg.className = 'message_success';
+                msg.style.color = "#009900";
+            } else {
+                msg.className = 'message_error';
+                msg.style.color = "#990000";
+            }
+            msg.textContent = resposta.message;
+
+            // Opcional: recarregar a página após 0,6s, igual ao outro exemplo
+            setTimeout(() => window.location.reload(), 600);
+        }
+
+
+        if(document.getElementById("modalAddCat")) {
+            document.getElementById("modalAddCat").addEventListener("click", (e) => {
+                if (e.target.id === "modalAddCat") {
+                    e.target.style.display = "none";
+                }
+            });
+        }
     });
 
     selectTipo = document.getElementById('selectTipo');
@@ -206,6 +268,16 @@ async function deleteEqp(id) {
     const resp = await fetch(`?controller=equipamento&method=deleteEqp&id=${id}`, {
         method: 'POST',
     })
+
+    return await resp.json();
+}
+
+async function addCat(data) {
+    const resp = await fetch("?controller=categoria?method=addCat", {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    });
 
     return await resp.json();
 }

@@ -90,6 +90,30 @@
             <?php 
                 }
             ?>
+             <?php
+                if($_SESSION['role_user']) {
+
+            ?>
+                <div id="modalAddCat" class="modal-overlay">
+                    <div class="modal">
+                        <h2>Adicionar Equipamento</h2>
+                        <form id="formAddCat">
+                            <label class="form_label">Nome</label>
+                            <input type="text" name="nome_cat" required>
+
+                            <select id="select_tipo_categoria">
+                                <option value="arma">Arma</option>
+                                <option value="escudo">Escudo</option>
+                            </select>
+
+                            <button type="button" id="salvarCat">Salvar</button>
+                            <button type="button" id="btn-close" id="closeModalCat">Fechar</button>
+                        </form>
+                    </div>
+                </div>
+            <?php 
+                }
+            ?>
             <div class="main_container">
                 <div class="title_page">
                     <div class="eqp_title_div">
@@ -98,6 +122,7 @@
                             if($_SESSION['role_user'] == 'adm') {
                         ?>
                                 <button class="addEqp" id="addEqp">Adicionar Equipamento</button>
+                                <button class="addEqp" id="addCat">Adicionar categoria</button>
                         <?php    
                             }
                         ?>
