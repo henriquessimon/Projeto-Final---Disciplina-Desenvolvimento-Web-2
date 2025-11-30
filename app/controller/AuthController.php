@@ -5,7 +5,7 @@ class AuthController {
         $data = json_decode(file_get_contents('php://input'), true);
         $email = $data['email'] ?? '';
         $senha = $data['senha'] ?? '';
-        $sql = 'SELECT id, nome_completo, email, senha, sys_ativo FROM usuario WHERE email = :email AND senha = :senha';
+        $sql = 'SELECT id, sys_ativo, role_user FROM usuario WHERE email = :email AND senha = :senha';
 
         $stmt = $conn->prepare($sql);
 
@@ -20,6 +20,7 @@ class AuthController {
             if($row['sys_ativo'] == 1) {
                 $_SESSION['user_id'] = $row['id'];
                 $_SESSION['logged_in'] = true;
+                $_SESSION['role_user'] = $row['row_user'];
 
                 echo json_encode([
                     "success" => true,
@@ -46,7 +47,7 @@ class AuthController {
     public function verifica_login() {
         header("Content-Type: application/json");
 
-        $inactive = 999999999999999990; 
+        $inactive = 1; 
 
         if(isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > $inactive)) {
             session_unset();
