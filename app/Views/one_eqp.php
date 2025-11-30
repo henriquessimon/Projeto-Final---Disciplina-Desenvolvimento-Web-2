@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DS Equip Wiki</title>
     <link rel="stylesheet" type="text/css" href="<?= BASE_URL ?>public/assets/style/global.css" />
-    <link rel="stylesheet" type="text/css" href="<?= BASE_URL ?>public/assets/style/eqp.css.css" />
+    <link rel="stylesheet" type="text/css" href="<?= BASE_URL ?>public/assets/style/eqp.css" />
     <?php include_once __DIR__ . '/components/importCssHF.php' ?>
     <script src="<?= BASE_URL ?>public/assets/js/verificaLogin.js"></script>
     <script src="<?= BASE_URL ?>public/assets/js/modal.js"></script>
