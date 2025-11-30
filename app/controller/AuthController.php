@@ -20,7 +20,7 @@ class AuthController {
             if($row['sys_ativo'] == 1) {
                 $_SESSION['user_id'] = $row['id'];
                 $_SESSION['logged_in'] = true;
-                $_SESSION['role_user'] = $row['row_user'];
+                $_SESSION['role_user'] = $row['role_user'];
 
                 echo json_encode([
                     "success" => true,
@@ -47,7 +47,7 @@ class AuthController {
     public function verifica_login() {
         header("Content-Type: application/json");
 
-        $inactive = 1; 
+        $inactive = 60; 
 
         if(isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > $inactive)) {
             session_unset();
