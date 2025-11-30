@@ -92,7 +92,6 @@ class Usuario {
 
         } catch (PDOException $e) {
 
-            // Desfaz qualquer ação parcialmente feita
             if ($conn->inTransaction()) {
                 $conn->rollback();
             }

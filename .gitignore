@@ -1,0 +1,14 @@
+# Arquivo de variáveis de ambiente
+.env
+
+# Credenciais
+config_email.php
+
+# Pastas de vendor caso não use composer
+/lib/PHPMailer/
+
+# Arquivos temporários
+*.log
+
+# Cache
+cache/

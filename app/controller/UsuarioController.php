@@ -1,5 +1,7 @@
 <?php
 
+loadEnv(__DIR__ . '/../.env');
+
 class UsuarioController {
 
     public function cadastrarUsuario() {
@@ -51,8 +53,8 @@ class UsuarioController {
     }
 
     public function attUser() {
-        $data = json_decode(file_get_contents('php://input'), true);
 
+        $data = json_decode(file_get_contents('php://input'), true);
         $data['user_id'] = $_SESSION['user_id'];
 
         $erros_campos = [];
@@ -70,7 +72,42 @@ class UsuarioController {
             return;
         }
 
+        // Atualiza usuário
         $success = (new Usuario())->att($data);
+
+        if ($success) {
+
+            require_once './lib/PHPMailer/PHPMailer.php';
+            require_once './lib/PHPMailer/SMTP.php';
+            require_once './lib/PHPMailer/Exception.php';
+
+            $mail = new PHPMailer\PHPMailer\PHPMailer(true);
+
+            try {
+                $mail->isSMTP();
+                $mail->Host = 'smtp.gmail.com';
+                $mail->SMTPAuth = true;
+
+                $mail->Username = $_ENV['MAIL_USER'];
+                $mail->Password = $_ENV['MAIL_PASSWORD'];
+
+                $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_STARTTLS;
+                $mail->Port = 587;
+
+                $mail->setFrom($_ENV['MAIL_USER'], 'ds1_wiki');
+                $mail->addAddress($data['email'], $data['nome_completo']);
+
+                $mail->Subject = 'Dados da conta atualizados';
+                $mail->Body = 
+                    "Olá {$data['nome_completo']},\n\n" .
+                    "Seus dados foram atualizados com sucesso!";
+
+                $mail->send();
+
+            } catch (Exception $e) {
+                error_log($mail->ErrorInfo);
+            }
+        }
 
         echo json_encode(['success' => $success]);
     }
