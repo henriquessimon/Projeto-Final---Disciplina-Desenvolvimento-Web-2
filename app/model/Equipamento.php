@@ -92,6 +92,53 @@ class Equipamento {
         return $results;
     }
 
+    public function getOne($id) {
+        $conn = connection();
+
+        $stmt = $conn->prepare("
+            SELECT 
+                e.id AS equipamento_id,
+                e.nome AS equipamento_nome,
+                e.descricao,
+                e.effect,
+                r.id AS raridade_id,
+                r.nome AS raridade_nome,
+                r.nvl_max AS raridade_nivel_max,
+
+                ec.dano_fisico,
+                ec.dano_magico,
+                ec.dano_fogo,
+                ec.dano_eletrico,
+                ec.dano_fisico_reducao,
+                ec.dano_magico_reducao,
+                ec.dano_fogo_reducao,
+                ec.dano_eletrico_reducao,
+                ec.estabilidade,
+
+                a.categoria_id AS arma_categoria_id,
+                ca.nome AS arma_categoria_nome,
+
+                s.categoria_id AS escudo_categoria_id,
+                cs.nome AS escudo_categoria_nome
+
+            FROM equipamento e
+            LEFT JOIN equipamentocombate ec ON ec.id_eqp = e.id
+            LEFT JOIN arma a ON a.id_eqp = ec.id_eqp
+            LEFT JOIN categoria_armas ca ON ca.id = a.categoria_id
+            LEFT JOIN escudo s ON s.id_eqp = ec.id_eqp
+            LEFT JOIN categoria_escudos cs ON cs.id = s.categoria_id
+            LEFT JOIN raridade_eqp r ON r.id = e.raridade_id
+            WHERE e.id = :id
+        ");
+
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+
+        $equipment = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $equipment;
+    }
+
     public function createEqp($data) {
         $conn = connection();
 

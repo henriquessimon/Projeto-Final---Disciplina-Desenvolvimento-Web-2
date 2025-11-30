@@ -47,7 +47,7 @@ class AuthController {
     public function verifica_login() {
         header("Content-Type: application/json");
 
-        $inactive = 120; 
+        $inactive = 360; 
 
         if(isset($_SESSION['last_activity']) && (time() - $_SESSION['last_activity'] > $inactive)) {
             session_unset();

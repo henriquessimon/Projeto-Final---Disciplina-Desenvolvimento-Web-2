@@ -32,6 +32,20 @@ class EquipamentoController {
         include  __DIR__ . '/../Views/mainPage.php';
     }
 
+    public function getOneEqp() {
+        if(empty($_SESSION['logged_in'])) {
+            header("Location: ?controller=home&index");
+            exit;
+        }
+
+        $eqp_id = $_GET['eqp_id'];
+
+        $equipamento = new Equipamento();
+        $eqp = $equipamento->getOne($eqp_id);
+
+        include_once __DIR__ . '/../Views/one_eqp.php';
+    }
+
     public function createEqp() {
         if (empty($_SESSION['logged_in'])) {
             header("Location: ?controller=home&index");

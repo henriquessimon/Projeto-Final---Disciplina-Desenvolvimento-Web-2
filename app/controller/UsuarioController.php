@@ -74,7 +74,6 @@ class UsuarioController {
 
         // Atualiza usuário
         $success = (new Usuario())->att($data);
-        //foda
         if ($success) {
 
             require_once './lib/PHPMailer/PHPMailer.php';

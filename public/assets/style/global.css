@@ -95,6 +95,8 @@ ul {
     border-radius: 7px;
     border-color: #DC4413;
     width: 200px;
+    cursor: pointer;
+    margin: 10px 0px;
 }
 
 .addEqp {

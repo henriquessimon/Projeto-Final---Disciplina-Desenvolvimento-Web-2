@@ -71,6 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 estrela_svg.setAttribute('fill', favoritou ? 'gold' : '');
             });
         }
+
+        if(e.target.closest('.status_eqp_list') && !e.target.closest('.dlt_eqp') && !e.target.closest('#favoritar')) {
+            const eqp_id = e.target.closest('.status_eqp_list').getAttribute('id');
+            window.location.href = `?controller=equipamento&method=getOneEqp&eqp_id=${eqp_id}`;
+        }
+
         if (e.target.closest('.btn-save')) {
             e.preventDefault();
 

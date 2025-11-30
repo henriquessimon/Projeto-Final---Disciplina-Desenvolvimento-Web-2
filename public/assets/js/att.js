@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = document.querySelector('[name="email"]');
     const senha = document.querySelector('[name="senha"]');
 
-    // ===== CARREGAR DADOS DO USUÁRIO =====
     fetch('?controller=usuario&method=getOneUser', { method: 'GET' })
         .then(resp => {
             if (!resp.ok) throw new Error("Erro ao procurar usuario");
