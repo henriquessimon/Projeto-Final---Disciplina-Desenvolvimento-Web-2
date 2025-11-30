@@ -44,7 +44,7 @@
 
                                         <label class="form_label">Dano Mágico</label>
                                         <input type="number" name="dano_magico" value="<?= isset($eqp['dano_magico']) ? $eqp['dano_magico'] : '0' ?>" required>
-                                        
+
                                         <label class="form_label">Dano de Fogo</label>
                                         <input type="number" name="dano_fogo" value="<?= isset($eqp['dano_fogo']) ? $eqp['dano_fogo'] : '0' ?>" required>
 
@@ -106,33 +106,17 @@
                                 <!-- Categoria do equipamento (dinâmico) -->
                                 <label class="slc_cat_label">Categoria do equipamento</label>
                                 <select id="selectCategoria" class="select_add_eqp slc_cat" name="categoria_id">
-                                    <?php 
-                                    // Preencher categoria baseada no tipo atual
-                                    if(isset($eqp['arma_categoria_id']) && !empty($eqp['arma_categoria_id'])) {
-                                        // Se for arma, buscar categorias de armas
-                                        $stmt_cat = $conn->prepare("SELECT id, nome FROM categoria_armas");
-                                        $stmt_cat->execute();
-                                        $categorias = $stmt_cat->fetchAll(PDO::FETCH_ASSOC);
-                                        
-                                        foreach($categorias as $cat): ?>
-                                            <option value="<?= $cat['id'] ?>" <?= ($eqp['arma_categoria_id'] == $cat['id']) ? 'selected' : '' ?>>
-                                                <?= htmlspecialchars($cat['nome']) ?>
-                                            </option>
-                                        <?php endforeach;
-                                        
-                                    } elseif(isset($eqp['escudo_categoria_id']) && !empty($eqp['escudo_categoria_id'])) {
-                                        // Se for escudo, buscar categorias de escudos
-                                        $stmt_cat = $conn->prepare("SELECT id, nome FROM categoria_escudos");
-                                        $stmt_cat->execute();
-                                        $categorias = $stmt_cat->fetchAll(PDO::FETCH_ASSOC);
-                                        
-                                        foreach($categorias as $cat): ?>
-                                            <option value="<?= $cat['id'] ?>" <?= ($eqp['escudo_categoria_id'] == $cat['id']) ? 'selected' : '' ?>>
-                                                <?= htmlspecialchars($cat['nome']) ?>
-                                            </option>
-                                        <?php endforeach;
-                                    }
-                                    ?>
+                                    <?php if(isset($eqp['arma_categoria_id']) && !empty($eqp['arma_categoria_id'])): ?>
+                                        <option value="<?= $eqp['arma_categoria_id'] ?>" selected>
+                                            <?= htmlspecialchars($eqp['arma_categoria_nome']) ?>
+                                        </option>
+                                    <?php elseif(isset($eqp['escudo_categoria_id']) && !empty($eqp['escudo_categoria_id'])): ?>
+                                        <option value="<?= $eqp['escudo_categoria_id'] ?>" selected>
+                                            <?= htmlspecialchars($eqp['escudo_categoria_nome']) ?>
+                                        </option>
+                                    <?php else: ?>
+                                        <option value="">Selecione uma categoria</option>
+                                    <?php endif; ?>
                                 </select>
 
                                 <div class="form-buttons">
