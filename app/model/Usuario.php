@@ -2,6 +2,9 @@
 
 class Usuario {
 
+    /* ============================
+       CADASTRAR USUÁRIO
+    ============================ */
     public function cadastrar($data) {
         $conn = connection();
 
@@ -13,12 +16,15 @@ class Usuario {
                 (:email, :senha, :nome_completo, :telefone, :sys_termos_uso, :sys_ativo, :role_user)
             ");
 
+            $timestamp = (new DateTime())->format('Y-m-d H:i:s');
+            $ativo = 1;
+
             $stmt->bindParam(':email', $data['email'], PDO::PARAM_STR);
             $stmt->bindParam(':senha', $data['pass'], PDO::PARAM_STR);
             $stmt->bindParam(':nome_completo', $data['name'], PDO::PARAM_STR);
             $stmt->bindParam(':telefone', $data['phone'], PDO::PARAM_STR);
-            $stmt->bindParam(':sys_termos_uso', $data['sys_termos_uso'], PDO::PARAM_STR);
-            $stmt->bindParam(':sys_ativo', $data['sys_ativo'], PDO::PARAM_INT);
+            $stmt->bindParam(':sys_termos_uso', $timestamp, PDO::PARAM_STR);
+            $stmt->bindParam(':sys_ativo', $ativo, PDO::PARAM_INT);
             $stmt->bindParam(':role_user', $data['role_user'], PDO::PARAM_STR);
 
             $stmt->execute();
@@ -31,6 +37,9 @@ class Usuario {
     }
 
 
+    /* ============================
+       BUSCAR UM USUÁRIO POR ID
+    ============================ */
     public function getOne($id) {
         $conn = connection();
 
@@ -40,11 +49,13 @@ class Usuario {
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
 
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        return $row ?: null;
+        return $stmt->fetch(PDO::FETCH_ASSOC) ?: null;
     }
 
+
+    /* ============================
+       ATUALIZAR USUÁRIO
+    ============================ */
     public function att($data) {
         $conn = connection();
 
@@ -67,10 +78,12 @@ class Usuario {
         return $stmt->execute();
     }
 
+
+    /* ============================
+       DELETAR USUÁRIO LOGADO
+    ============================ */
     public function deleteUser() {
         $conn = connection();
-
-        // Pegamos o ID diretamente da sessão
         $userId = $_SESSION['user_id'];
 
         try {
@@ -82,9 +95,7 @@ class Usuario {
             $stmt->bindParam(':id', $userId, PDO::PARAM_INT);
             $stmt->execute();
 
-            return [
-                'success' => true
-            ];
+            return ['success' => true];
 
         } catch (PDOException $e) {
             return [
@@ -94,5 +105,22 @@ class Usuario {
         }
     }
 
+
+    /* ============================
+       BUSCAR E-MAIL POR ID
+       (função da outra versão)
+    ============================ */
+    public static function findEmailById($id) {
+        $conn = connection();
+        $sql = "SELECT email FROM usuario WHERE id = :id";
+
+        $stmt = $conn->prepare($sql);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        return $row ? $row['email'] : null;
+    }
 }
 ?>

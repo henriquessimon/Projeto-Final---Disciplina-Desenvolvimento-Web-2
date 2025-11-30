@@ -1,59 +1,58 @@
-<?php
+v<?php
 
 class UsuarioController {
+
+    /* ===============================
+       CADASTRAR USUÁRIO
+    =============================== */
     public function cadastrarUsuario() {
         $data = json_decode(file_get_contents('php://input'), true);
 
         $erros_campos = [];
 
-        if(empty($data['name'])) {
-            $erros_campos[] = 'name';
-        }
-
-        if(empty($data['email'])) {
-            $erros_campos[] = 'email';
-        }
-
-        if(empty($data['pass'])) {
-            $erros_campos[] = 'pass';
-        }
-
-        if(empty($data['sys_termos_uso'])) {
-            $erros_campos[] = 'sys_termos_uso';
-        }
-
-        if(empty($data['phone'])) {
-            $erros_campos[] = 'phone';
-        }
-
-        if(empty($data['role_user'])) {
-            $erros_campos[] = 'role_user';
-        }
+        if(empty($data['name'])) $erros_campos[] = 'name';
+        if(empty($data['email'])) $erros_campos[] = 'email';
+        if(empty($data['pass'])) $erros_campos[] = 'pass';
+        if(empty($data['sys_termos_uso'])) $erros_campos[] = 'sys_termos_uso';
+        if(empty($data['phone'])) $erros_campos[] = 'phone';
+        if(empty($data['role_user'])) $erros_campos[] = 'role_user';
 
         if(!empty($erros_campos)) {
             echo json_encode([
                 'erros_campos' => $erros_campos,
                 'erro' => true
             ]);
-
             return;
         }
 
         $usuario = new Usuario();
-        $userId = $usuario->cadastrar($data);
+        $result = $usuario->cadastrar($data);
 
-        $_SESSION['user_id'] = $userId;
+        if(isset($result['error'])) {
+            echo json_encode([
+                'success' => false,
+                'error' => $result['error']
+            ]);
+            return;
+        }
+
+        // CORREÇÃO IMPORTANTE:
+        // $result possui ['user_id' => id]
+        $_SESSION['user_id'] = $result['user_id'];
         $_SESSION['logged_in'] = true;
         $_SESSION['role_user'] = $data['role_user'];
 
-        echo json_encode([
-            'success' => true
-        ]);
+        echo json_encode(['success' => true]);
     }
 
+
+    /* ===============================
+       PEGAR DADOS DO USUÁRIO LOGADO
+    =============================== */
     public function getOneUser() {
         $user_id = $_SESSION['user_id'];
 
+        // usa o método mais completo
         $results = (new Usuario())->getOne($user_id);
 
         echo json_encode([
@@ -61,30 +60,21 @@ class UsuarioController {
         ]);
     }
 
-    public function attUser() {
 
+    /* ===============================
+       ATUALIZAR USUÁRIO
+    =============================== */
+    public function attUser() {
         $data = json_decode(file_get_contents('php://input'), true);
 
         $data['user_id'] = $_SESSION['user_id'];
 
         $erros_campos = [];
 
-        // validações
-        if (empty($data['nome_completo'])) {
-            $erros_campos[] = 'nome_completo';
-        }
-
-        if (empty($data['email'])) {
-            $erros_campos[] = 'email';
-        }
-
-        if (empty($data['senha'])) {
-            $erros_campos[] = 'senha';
-        }
-
-        if (empty($data['telefone'])) {
-            $erros_campos[] = 'telefone';
-        }
+        if (empty($data['nome_completo'])) $erros_campos[] = 'nome_completo';
+        if (empty($data['email'])) $erros_campos[] = 'email';
+        if (empty($data['senha'])) $erros_campos[] = 'senha';
+        if (empty($data['telefone'])) $erros_campos[] = 'telefone';
 
         if (!empty($erros_campos)) {
             echo json_encode([
@@ -94,13 +84,15 @@ class UsuarioController {
             return;
         }
 
-        // chama o model
         $success = (new Usuario())->att($data);
 
         echo json_encode(['success' => $success]);
     }
 
 
+    /* ===============================
+       DELETAR USUÁRIO
+    =============================== */
     public function deleteUser() {
         $model = new Usuario();
         $result = $model->deleteUser();
@@ -114,6 +106,6 @@ class UsuarioController {
         echo json_encode(['success' => false]);
         exit;
     }
-
 }
+
 ?>
