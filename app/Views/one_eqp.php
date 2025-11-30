@@ -83,14 +83,18 @@
 
                     <div class="eqp_section">
                         <h2>Descrição</h2>
-                        <p><?= htmlspecialchars($eqp['descricao']) ?></p>
+                        <p><?= !empty($eqp['descricao']) ? htmlspecialchars($eqp['descricao']) : 'Sem descrição' ?></p>
                     </div>
 
                     <div class="eqp_section">
                         <h2>Raridade</h2>
-                        <p><?= htmlspecialchars($eqp['raridade_nome']) ?> (Nivel Máx: <?= $eqp['raridade_nivel_max'] ?>)</p>
+                        <p>
+                            <?= !empty($eqp['raridade_nome']) ? htmlspecialchars($eqp['raridade_nome']) : 'Comum' ?> 
+                            (Nível Máx: <?= !empty($eqp['raridade_nivel_max']) ? $eqp['raridade_nivel_max'] : '1' ?>)
+                        </p>
                     </div>
-                    <?php if(!empty($eqp['dano_fisico'])): ?>
+
+                    <?php if(!empty($eqp['dano_fisico']) || !empty($eqp['dano_magico']) || !empty($eqp['dano_fogo']) || !empty($eqp['dano_eletrico'])): ?>
                     <div class="eqp_section">
                         <h2>Estatísticas de Combate</h2>
                         <table class="eqp_stats_table">
@@ -98,45 +102,64 @@
                                 <th>Tipo</th>
                                 <th>Valor</th>
                             </tr>
+                            <?php if(!empty($eqp['dano_fisico'])): ?>
                             <tr>
                                 <td>Dano Físico</td>
                                 <td><?= $eqp['dano_fisico'] ?></td>
                             </tr>
+                            <?php endif; ?>
+                            <?php if(!empty($eqp['dano_magico'])): ?>
                             <tr>
                                 <td>Dano Mágico</td>
                                 <td><?= $eqp['dano_magico'] ?></td>
                             </tr>
+                            <?php endif; ?>
+                            <?php if(!empty($eqp['dano_fogo'])): ?>
                             <tr>
                                 <td>Dano Fogo</td>
                                 <td><?= $eqp['dano_fogo'] ?></td>
                             </tr>
+                            <?php endif; ?>
+                            <?php if(!empty($eqp['dano_eletrico'])): ?>
                             <tr>
                                 <td>Dano Elétrico</td>
                                 <td><?= $eqp['dano_eletrico'] ?></td>
                             </tr>
+                            <?php endif; ?>
+                            <?php if(!empty($eqp['dano_fisico_reducao'])): ?>
                             <tr>
                                 <td>Redução Dano Físico</td>
                                 <td><?= $eqp['dano_fisico_reducao'] ?></td>
                             </tr>
+                            <?php endif; ?>
+                            <?php if(!empty($eqp['dano_magico_reducao'])): ?>
                             <tr>
                                 <td>Redução Dano Mágico</td>
                                 <td><?= $eqp['dano_magico_reducao'] ?></td>
                             </tr>
+                            <?php endif; ?>
+                            <?php if(!empty($eqp['dano_fogo_reducao'])): ?>
                             <tr>
                                 <td>Redução Dano Fogo</td>
                                 <td><?= $eqp['dano_fogo_reducao'] ?></td>
                             </tr>
+                            <?php endif; ?>
+                            <?php if(!empty($eqp['dano_eletrico_reducao'])): ?>
                             <tr>
                                 <td>Redução Dano Elétrico</td>
                                 <td><?= $eqp['dano_eletrico_reducao'] ?></td>
                             </tr>
+                            <?php endif; ?>
+                            <?php if(!empty($eqp['estabilidade'])): ?>
                             <tr>
                                 <td>Estabilidade</td>
                                 <td><?= $eqp['estabilidade'] ?></td>
                             </tr>
+                            <?php endif; ?>
                         </table>
                     </div>
                     <?php endif; ?>
+
                     <?php if(!empty($eqp['arma_categoria_nome'])): ?>
                     <div class="eqp_section">
                         <h2>Categoria da Arma</h2>
@@ -150,12 +173,10 @@
                         <p><?= htmlspecialchars($eqp['escudo_categoria_nome']) ?></p>
                     </div>
                     <?php endif; ?>
-
                     <div class="eqp_section">
                         <h2>Efeito</h2>
-                        <p><?= nl2br(htmlspecialchars($eqp['effect'])) ?></p>
+                        <p><?= !empty($eqp['effect']) ? nl2br(htmlspecialchars($eqp['effect'])) : 'Sem efeitos especiais' ?></p>
                     </div>
-
                 </div>
             </div>
         </section>
