@@ -72,24 +72,37 @@ class Usuario {
     public function deleteUser() {
         $conn = connection();
         $userId = $_SESSION['user_id'];
-        var_dump($userId);
-        try {
-            $stmt = $conn->prepare("
-                DELETE FROM usuario 
-                WHERE id = :id
-            ");
 
+        try {
+            $conn->beginTransaction();
+
+            // Remove favoritos do usuário
+            $stmt = $conn->prepare("DELETE FROM favoritos WHERE usuario_id = :id");
             $stmt->bindParam(':id', $userId, PDO::PARAM_INT);
             $stmt->execute();
+
+            // Remove o próprio usuário
+            $stmt = $conn->prepare("DELETE FROM usuario WHERE id = :id");
+            $stmt->bindParam(':id', $userId, PDO::PARAM_INT);
+            $stmt->execute();
+
+            $conn->commit();
 
             return ['success' => true];
 
         } catch (PDOException $e) {
+
+            // Desfaz qualquer ação parcialmente feita
+            if ($conn->inTransaction()) {
+                $conn->rollback();
+            }
+
             return [
                 'success' => false,
                 'error' => $e->getMessage()
             ];
         }
     }
+
 }
 ?>
