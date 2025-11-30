@@ -1,0 +1,129 @@
+1.  id: 1,   nome: Crystal Lizard,                   res_fisica: 10, res_magica: 20, res_fogo: 5,  res_eletrico: 0, Criatura pequena que foge ao ser vista, deixando materiais raros ao ser derrotada.
+2.  id: 2,   nome: Parasitic Wall Hugger,            res_fisica: 30, res_magica: 15, res_fogo: 25, res_eletrico: 10, Parasita gigante grudado em paredes, imóvel e ameaçador, com aparência grotesca.
+3.  id: 3,   nome: Oscar of Astora (Hollowed),        res_fisica: 50, res_magica: 40, res_fogo: 30, res_eletrico: 20, Cavaleiro que ajuda no início do jogo, mas depois aparece corrompido e hostil.
+4.  id: 4,   nome: Black Knight,                      res_fisica: 60, res_magica: 25, res_fogo: 20, res_eletrico: 35, Guerreiros poderosos que vagam por Lordran, com ataques fortes e armadura imponente. 
+5.  id: 5,   nome: Blowdart Sniper,                   res_fisica: 20, res_magica: 10, res_fogo: 15, res_eletrico: 5, Inimigos escondidos que atacam com dardos venenosos, perigosos pela furtividade.
+6.  id: 6,   nome: Darkmoon Soldiers,                 res_fisica: 40, res_magica: 50, res_fogo: 35, res_eletrico: 25, Guardiões mágicos da tumba de Gwyndolin, usam feitiços e combate corpo a corpo.
+7.  id: 7,   nome: Mass of Souls,                     res_fisica: 5,  res_magica: 60, res_fogo: 40, res_eletrico: 30, Amontoado de almas corrompidas, flutua e ataca com energia sombria. 
+8.  id: 8,   nome: Possessed Tree,                    res_fisica: 55, res_magica: 30, res_fogo: 45, res_eletrico: 15, Árvore viva que tenta agarrar e esmagar o jogador, encontrada em áreas florestais
+9.  id: 9,   nome: Giant Cat,                         res_fisica: 35, res_magica: 10, res_fogo: 10, res_eletrico: 5, Felinos enormes que patrulham o Jardim de Darkroot, atacam com agilidade e força.
+10. id: 10,  nome: Mimic,                             res_fisica: 45, res_magica: 20, res_fogo: 25, res_eletrico: 10, Baús falsos que se transformam em monstros ao serem abertos, surpreendendo jogadores desatentos.
+11. id: 11,  nome: The Channeler,                     res_fisica: 25, res_magica: 55, res_fogo: 30, res_eletrico: 20, Magos que fortalecem inimigos próximos e atacam com feitiços à distância.
+12. id: 12,  nome: Vagrants,                           res_fisica: 15, res_magica: 10, res_fogo: 5,  res_eletrico: 0, Criaturas raras que surgem de itens abandonados, com aparência estranha e comportamento imprevisível.
+
+13. id: 13,  nome: Basilisk,                           res_fisica: 30, res_magica: 20, res_fogo: 10, res_eletrico: 10, Criatura com olhos falsos e respiração amaldiçoada que pode petrificar o jogador rapidamente.  
+14. id: 14,  nome: Tree Lizard,                        res_fisica: 10, res_magica: 15, res_fogo: 5,  res_eletrico: 0, Lagarto ágil que habita áreas florestais, ataca com mordidas rápidas e movimentos furtivos.
+15. id: 15,  nome: Ents,                              res_fisica: 50, res_magica: 25, res_fogo: 30, res_eletrico: 10, Árvores animadas que atacam com golpes pesados e resistem bem a dano físico.
+16. id: 16,  nome: Frog-Ray,                          res_fisica: 20, res_magica: 10, res_fogo: 5,  res_eletrico: 15, Mistura de sapo com arraia, inimigo incomum que aparece em áreas pantanosas.
+17. id: 17,  nome: Small Mushroom People,             res_fisica: 10, res_magica: 5,  res_fogo: 5,  res_eletrico: 0, Cogumelos humanoides pequenos e pacíficos, geralmente não atacam.
+18. id: 18,  nome: Large Mushroom People,             res_fisica: 30, res_magica: 15, res_fogo: 10, res_eletrico: 5, Versão maior e agressiva dos cogumelos, com socos extremamente fortes.
+19. id: 19,  nome: Man-Eater Shell,                    res_fisica: 40, res_magica: 20, res_fogo: 15, res_eletrico: 10, Molusco gigante com casca dura, ataca com investidas e mordidas
+20. id: 20,  nome: Small Rats,                          res_fisica: 5,  res_magica: 0,  res_fogo: 0,   res_eletrico: 0, Ratos comuns que aparecem em esgotos, fracos mas podem causar veneno.
+21. id: 21,  nome: Large Rats,                          res_fisica: 15, res_magica: 5,  res_fogo: 5,   res_eletrico: 0, Versão maior dos ratos, mais resistentes e perigosos em grupo.
+22. id: 22,  nome: Snow Rat,                            res_fisica: 20, res_magica: 10, res_fogo: 0,   res_eletrico: 0,  Rato adaptado ao frio, encontrado em áreas geladas, com comportamento similar aos demais.
+23. id: 23,  nome: Drake,                              res_fisica: 35, res_magica: 20, res_fogo: 25, res_eletrico: 10, Dragão menor que patrulha pontes e áreas abertas, dispara fogo e voa.
+24. id: 24,  nome: Giant Leech,                        res_fisica: 25, res_magica: 15, res_fogo: 10, res_eletrico: 5, Sanguessugas enormes que atacam em grupo, sugando vida do jogador.
+25. id: 25,  nome: Giant Mosquito,                     res_fisica: 10, res_magica: 5,  res_fogo: 0,   res_eletrico: 0, Insetos voadores que drenam vida e são difíceis de acertar em movimento.
+26. id: 26,  nome: Cragspider,                          res_fisica: 30, res_magica: 10, res_fogo: 15, res_eletrico: 5, Aranha rochosa que cospe fogo e se move rapidamente em áreas íngremes.
+27. id: 27,  nome: Chaos Bug,                           res_fisica: 20, res_magica: 40, res_fogo: 20, res_eletrico: 15, Inseto flamejante que habita Izalith, alguns são pacíficos, outros atacam com fogo.  
+28. id: 28,  nome: Man Serpent,                          res_fisica: 45, res_magica: 10, res_fogo: 20, res_eletrico: 10, Criaturas meio humanas meio serpentes, armadas e agressivas, comuns em Sen’s Fortress. 
+29. id: 29,  nome: Serpent Mage,                        res_fisica: 25, res_magica: 50, res_fogo: 30, res_eletrico: 20, Versão mágica dos Man Serpents, usam feitiços e ataques à distância.
+30. id: 30,  nome: Burrowing Rockworm,                  res_fisica: 40, res_magica: 15, res_fogo: 25, res_eletrico: 0, Verme que se enterra e ataca com investidas, encontrado em áreas de lava.
+31. id: 31,  nome: Slime,                               res_fisica: 10, res_magica: 20, res_fogo: 5,  res_eletrico: 5, Massa gelatinosa que cai do teto, resistente a dano físico e vulnerável a fogo
+32. id: 32,  nome: Minor Moonlight Butterfly,          res_fisica: 5,  res_magica: 10, res_fogo: 0,  res_eletrico: 0, Versão menor da borboleta mágica, menos perigosa e mais frágil.
+
+33. id: 33,  nome: Ghost,                              res_fisica: 15, res_magica: 30, res_fogo: 10, res_eletrico: 0, Aparições etéreas que só podem ser atingidas com armas encantadas ou temporariamente amaldiçoadas.
+34. id: 34,  nome: Banshee,                            res_fisica: 20, res_magica: 40, res_fogo: 15, res_eletrico: 5, Espíritos femininos que atacam com gritos mágicos e feitiços à distância.
+35. id: 35,  nome: Phalanx,                            res_fisica: 60, res_magica: 20, res_fogo: 25, res_eletrico: 30, Grupo de pequenos inimigos com lanças e escudos, formam uma defesa coletiva difícil de romper.
+36. id: 36,  nome: Wisp,                               res_fisica: 5,  res_magica: 20, res_fogo: 0,  res_eletrico: 10, Esferas flutuantes que explodem ao se aproximar, causando dano mágico ou elemental. 
+37. id: 37,  nome: Vile Maggot,                        res_fisica: 10, res_magica: 5,  res_fogo: 5,  res_eletrico: 0, Larvas deformadas que atacam em grupo, geralmente encontradas em áreas corrompidas.
+38. id: 38,  nome: Egg Carrier,                         res_fisica: 15, res_magica: 10, res_fogo: 5,  res_eletrico: 0, Humanos infectados por ovos nas costas, geralmente passivos, mas perturbadores.
+39. id: 39,  nome: Chaos Eater,                         res_fisica: 30, res_magica: 60, res_fogo: 40, res_eletrico: 20, Criatura grotesca com múltiplas bocas, ataca com mordidas e absorve tudo ao redor.
+40. id: 40,  nome: Silver Knight,                      res_fisica: 55, res_magica: 25, res_fogo: 20, res_eletrico: 30, Cavaleiros de elite de Anor Londo, habilidosos com espadas e lanças, muito resistentes.
+41. id: 41,  nome: Painting Guardian,                   res_fisica: 50, res_magica: 30, res_fogo: 20, res_eletrico: 10, Guardiões ágeis da pintura de Ariamis, atacam com rapidez e precisão.
+42. id: 42,  nome: Clan of Forest Protectors, res_fisica: 45, res_magica: 35, res_fogo: 20, res_eletrico: 15, Grupo de NPCs hostis que defendem a floresta de invasores, cada um com estilo próprio.
+43. id: 43,  nome: Pisaca,                              res_fisica: 20, res_magica: 50, res_fogo: 30, res_eletrico: 10, Criaturas deformadas que choram e atacam com magia, resultado de experimentos falhos.
+44. id: 44,  nome: Pinwheel Servant,                    res_fisica: 25, res_magica: 55, res_fogo: 35, res_eletrico: 20, Servos do Pinwheel que usam magias necromânticas e aparecem em áreas próximas a Nito.
+
+45. id: 45,  nome: Stone Guardian,                     res_fisica: 65, res_magica: 30, res_fogo: 40, res_eletrico: 20, Golems de pedra que protegem o Jardim de Oolacile, lentos mas extremamente resistentes.
+46. id: 46,  nome: Wild Dog,                            res_fisica: 20, res_magica: 5,  res_fogo: 5,  res_eletrico: 0, Cães selvagens que atacam em grupo, rápidos e perigosos em emboscadas.
+47. id: 47,  nome: Oolacile Resident,                   res_fisica: 30, res_magica: 20, res_fogo: 10, res_eletrico: 5, Humanos corrompidos pela escuridão, atacam com agressividade e desespero.
+48. id: 48,  nome: Oolacile Sorceress,                 res_fisica: 15, res_magica: 60, res_fogo: 25, res_eletrico: 15, Feiticeiras que usam magias do Abismo, perigosas pela distância e dano mágico.
+49. id: 49,  nome: Chained Prisoner,                   res_fisica: 40, res_magica: 30, res_fogo: 20, res_eletrico: 10, Prisioneiros enlouquecidos e acorrentados, atacam com força bruta e movimentos erráticos.
+50. id: 50,  nome: Giant Humanity,                     res_fisica: 55, res_magica: 45, res_fogo: 35, res_eletrico: 25, Manifestação física da humanidade corrompida, encontrada nas profundezas do Abismo.
+
+51. id: 51,  nome: Great Stone Knight,                 res_fisica: 70, res_magica: 35, res_fogo: 45, res_eletrico: 30, Golem de pedra imenso que protege as florestas, resistente e com ataques pesados.
+52. id: 52,  nome: Giant,                              res_fisica: 60, res_magica: 20, res_fogo: 30, res_eletrico: 15, Criaturas enormes que aparecem em Anor Londo, lentas mas com golpes devastadores.
+53. id: 53,  nome: Crystal Golem,                      res_fisica: 65, res_magica: 25, res_fogo: 35, res_eletrico: 20, Golems cristalinos criados por Seath, resistentes e capazes de aprisionar inimigos.
+54. id: 54,  nome: Sentinel,                            res_fisica: 50, res_magica: 30, res_fogo: 25, res_eletrico: 20, Guardiões de Anor Londo, grandes cavaleiros dourados que patrulham as entradas da cidade.
+55. id: 55,  nome: Royal Sentinel,                       res_fisica: 55, res_magica: 35, res_fogo: 30, res_eletrico: 25, Versão mais forte dos Sentinels, com armadura reforçada e ataques ainda mais perigosos.
+
+56. id: 56,  nome: Hollows,                             res_fisica: 30, res_magica: 10, res_fogo: 10, res_eletrico: 5, Humanos amaldiçoados que perderam a sanidade, inimigos básicos encontrados em todo Lordran.
+57. id: 57,  nome: Torch Hollows,                        res_fisica: 35, res_magica: 15, res_fogo: 15, res_eletrico: 5, Hollows armados com tochas, atacam em grupo e podem causar dano de fogo.
+58. id: 58,  nome: Hollow Warrior,                     res_fisica: 40, res_magica: 20, res_fogo: 20, res_eletrico: 10, Versão mais equipada dos Hollows, usam espadas e escudos em combate direto.
+59. id: 59,  nome: Undead Assassin,                      res_fisica: 45, res_magica: 25, res_fogo: 15, res_eletrico: 10, Hollows ágeis que atacam com adagas, perigosos pela velocidade e furtividade.
+60. id: 60,  nome: Undead Soldier,                        res_fisica: 50, res_magica: 30, res_fogo: 20, res_eletrico: 15, Soldados mortos-vivos com armaduras pesadas, mais resistentes que guerreiros comuns.
+61. id: 61,  nome: Balder Knight,                         res_fisica: 55, res_magica: 25, res_fogo: 20, res_eletrico: 10, Cavaleiros de Balder que sucumbiram à maldição, habilidosos com espadas e lanças.
+62. id: 62,  nome: Undead Knight Archer,                  res_fisica: 45, res_magica: 20, res_fogo: 25, res_eletrico: 15, Arqueiros mortos-vivos que atacam à distância, geralmente em locais estratégicos.
+63. id: 63,  nome: Engorged Hollow,                      res_fisica: 35, res_magica: 15, res_fogo: 10, res_eletrico: 5, Hollows deformados e inchados, mais lentos mas com ataques fortes.
+64. id: 64,  nome: Infested Barbarian (Club),             res_fisica: 50, res_magica: 10, res_fogo: 30, res_eletrico: 10, Bárbaros infectados que usam grandes porretes, atacam com força bruta.
+65. id: 65,  nome: Infested Barbarian (Boulder),           res_fisica: 60, res_magica: 15, res_fogo: 35, res_eletrico: 10, Versão que carrega enormes pedras, capazes de esmagar o jogador.
+66. id: 66,  nome: Undead Crystal Soldier,                 res_fisica: 55, res_magica: 35, res_fogo: 25, res_eletrico: 20, Soldados cristalizados por Seath, resistentes e perigosos em combate direto.
+67. id: 67,  nome: Undead Crystal Archer,                  res_fisica: 50, res_magica: 30, res_fogo: 20, res_eletrico: 25, Arqueiros cristalizados, combinam resistência com ataques à distância.
+68. id: 68,  nome: Crystal Knight,                          res_fisica: 65, res_magica: 40, res_fogo: 30, res_eletrico: 20, Cavaleiros cristalinos criados por Seath, poderosos e com feitiços de cristal.
+69. id: 69,  nome: Undead Attack Dog,                        res_fisica: 30, res_magica: 10, res_fogo: 10, res_eletrico: 5, Cães mortos-vivos que atacam em grupo, rápidos e agressivos.
+70. id: 70,  nome: Flaming Attack Dog,                        res_fisica: 35, res_magica: 15, res_fogo: 40, res_eletrico: 10, Versão flamejante dos cães, causam dano adicional de fogo
+71. id: 71,  nome: Infested Ghoul,                             res_fisica: 45, res_magica: 20, res_fogo: 25, res_eletrico: 10, Criaturas deformadas pela infestação, atacam com ferocidade e aparência grotesca.
+72. id: 72,  nome: Darkwraith Knight,                         res_fisica: 60, res_magica: 45, res_fogo: 30, res_eletrico: 25, Cavaleiros do Abismo que drenam humanidade, inimigos temidos e poderosos.
+73. id: 73,  nome: Necromancer,                               res_fisica: 25, res_magica: 70, res_fogo: 35, res_eletrico: 20, Magos que controlam esqueletos, mantendo-os vivos até serem derrotados.
+74. id: 74, nome: Treant Gardener, res_fisica: 25, res_magica: 40, res_fogo: 5, res_eletrico 25, normal, Árvores animadas que protegem Oolacile, atacam com magia e golpes físicos.
+
+75. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Asylum Demon', 25, 10, 30, 15, 'boss', 'Primeiro chefe do jogo, um demônio corpulento que testa o jogador logo na chegada ao mundo de Lordran');
+76. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Bell Gargoyle', 20, 5, 25, 10, 'boss/normal', 'Gárgulas aladas que atacam em dupla no telhado da igreja, surpreendendo pela cooperação entre elas');
+77. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Capra Demon', 15, 10, 30, 5, 'boss/normal', 'Um demônio com duas espadas e cães ferozes, em uma arena apertada que dificulta o combate');
+78. INSE1RT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Ceaseless Discharge', 35, 20, 90, 20, 'boss', 'Criatura flamejante e trágica que ataca com braços incandescentes, guardando o domínio de lava.');
+79. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Centipede Demon', 30, 25, 100, 25, 'boss', 'Demônio com múltiplos membros e ataques de fogo, encontrado nas profundezas da lava.');
+80. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Chaos Witch Quelaag', 25, 15, 60, 20, 'boss', 'Bruxa fundida a uma aranha gigante, usa ataques de fogo e lava para dominar o campo.');
+81. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Crossbreed Priscilla', 15, 25, 15, 5, 'boss', 'Ser híbrido com poderes de invisibilidade e sangramento, vive isolada no mundo pintado.');
+82. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Dark Sun Gwyndolin', 5, 40, 15, 40, 'boss', 'Guardião ilusório que usa magia e ilusões em um corredor sem fim');
+83. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Demon Firesage', 25, 40, 70, 30, 'boss', 'Versão flamejante do Asylum Demon, com ataques explosivos e área de impacto ampliada.');
+84. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Four Kings', 30, 25, 30, 40, 'boss', 'Entidades espectrais que atacam em grupo no abismo, exigindo dano rápido para evitar sobrecarga.');
+85. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Gaping Dragon', 50, 30, 40, 20, 'boss', 'Dragão deformado com uma boca gigantesca no torso, símbolo da corrupção por ganância.');
+86. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Great Grey Wolf Sif', 10, 20, 30, 20, 'boss', 'Lobo gigante que empunha uma espada, luta com honra para proteger o túmulo de Artorias.');
+87. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Gwyn Lord of Cinder', 40, 20, 40, 50, 'boss', 'Último chefe, outrora um deus, agora um guerreiro consumido pelo fogo que iniciou a Era do Fogo.');
+88. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Iron Golem', 60, 20, 10, 50, 'boss', 'Gigante metálico que guarda a entrada para Anor Londo, com ataques pesados e área de impacto.');
+89. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Moonlight Butterfly', 5, 30, 10, 10, 'boss', 'Criatura mágica que flutua e dispara feitiços, vulnerável apenas em momentos específicos');
+90. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Nito', 30, 20, 20, 10, 'boss', 'Senhor dos mortos, com corpo formado por esqueletos e ataques de veneno e necromancia.');
+91. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Ornstein and Smough', 15, 20, 15, 40, 'boss', 'Dupla icônica que combina velocidade e força bruta, exigindo estratégia e resistência.');
+92. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Pinwheel', 5, 5, 5, 5, 'boss', 'Chefe fraco que usa clones e magias, mas é derrotado rapidamente por jogadores experientes.');
+93. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Seath the Scaleless', 35, 65, 25, 15, 'boss', 'Dragão traidor sem escamas, usa cristais e magia para dominar seu covil.');
+94. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Stray Demon', 25, 15, 35, 25, 'boss', 'Variante do Asylum Demon, mais agressivo e com ataques explosivos de magia.');
+95. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Taurus Demon', 25, 15, 25, 15, 'boss/normal', 'Chefe de ponte que usa força bruta e pode ser vencido com estratégia vertical.');
+96. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('The Bed of Chaos', 0, 0, 0, 0, 'boss', 'Chefe ambiental com foco em plataforma e destruição de raízes, mais puzzle que combate.');
+97. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Sanctuary Guardian', 25, 35, 20, 50, 'boss', 'Fera alada com ataques elétricos e corpo de leão, guarda a entrada do DLC.');
+98. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Artorias the Abysswalker', 40, 35, 30, 30, 'boss', 'Cavaleiro corrompido pelo Abismo, luta com agilidade e força devastadora.');
+99. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Black Dragon Kalameet', 35, 30, 45, 20, 'boss', 'Dragão negro poderoso, com ataques de fogo e maldição, considerado um dos mais difíceis.');
+100. INSERT (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) INTO enemy VALUES ('Manus, Father of the Abyss', 45, 60, 30, 30, 'boss', 'Entidade sombria que representa o caos e a origem do Abismo, com ataques brutais e mágicos.');
+
+101. Skeleton
+id: 101, nome: Skeleton, res_fisica: 10, res_magica: 0, res_fogo: -10, res_eletrico: 20, normal, Esqueletos animados por necromancia, frágeis mas ágeis e persistentes.
+102. Giant Skeleton
+id: 102, nome: Giant Skeleton, res_fisica: 30, res_magica: 10, res_fogo: -20, res_eletrico: 25, normal, Um enorme esqueleto guerreiro, forte e resistente, capaz de esmagar inimigos com ataques pesados.
+107. Giant Skeleton Archer
+id: 107, nome: Giant Skeleton Archer, res_fisica: 20, res_magica: 5, res_fogo: -15, res_eletrico: 25, normal, Esqueleto gigante equipado com arco colossal, acerta flechas devastadoras a longa distância.
+103. Skeleton Beast
+id: 103, nome: Skeleton Beast, res_fisica: 15, res_magica: 5, res_fogo: -25, res_eletrico: 10, normal, Uma criatura óssea animalizada, extremamente rápida e agressiva, ataca em rajadas contínuas.
+104. Wheel Skeleton
+id: 104, nome: Wheel Skeleton, res_fisica: 25, res_magica: 0, res_fogo: -30, res_eletrico: 15, normal, Esqueleto preso a uma roda de tortura, gira violentamente causando dano massivo ao contato.
+105. Bone Tower
+id: 105, nome: Bone Tower, res_fisica: 40, res_magica: 20, res_fogo: -10, res_eletrico: 10, normal, Estrutura óssea viva que lança projéteis e avança lentamente, mas com grande durabilidade.
+106. Skeleton Baby
+id: 107, nome: Skeleton Baby, res_fisica: 5, res_magica: 0, res_fogo: -5, res_eletrico: 10, normal, Pequenos esqueletos deformados, fracos individualmente, porém atacam em enxames implacáveis.
+
+INSERT INTO enemy (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) VALUES ('Skeleton', 20, 0, -10, 20, 'normal', 'Esqueletos animados por necromancia, frágeis mas ágeis e persistentes');
+INSERT INTO enemy (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) VALUES ('Giant Skeleton', 30, 10, -20, 25, 'normal', 'Um enorme esqueleto guerreiro, forte e resistente, capaz de esmagar inimigos com ataques pesados.');
+INSERT INTO enemy (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) VALUES ('Skeleton Beast', 20, 5, -15, 25, 'normal', 'Esqueleto gigante equipado com arco colossal, acerta flechas devastadoras a longa distância');
+INSERT INTO enemy (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) VALUES ('Wheel Skeleton', 25, 0, -10, 10, 'normal', 'Esqueleto preso a uma roda de tortura, gira violentamente causando dano massivo ao contato.');
+INSERT INTO enemy (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) VALUES ('Bone Tower', 40, 20, -10, 10, 'normal', 'Esqueletos animados por necromancia, frágeis mas ágeis e persistentes');
+INSERT INTO enemy (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) VALUES ('Skeleton Baby', 5, 0, -5, 10, 'normal', 'Esqueletos animados por necromancia, frágeis mas ágeis e persistentes');
+INSERT INTO enemy (nome, res_fisica, res_magica, res_fogo, res_eletrico, tipo, descricao) VALUES ('Skeleton Archer', 20, 5, -15, 25, 'normal', 'Esqueletos animados por necromancia, frágeis mas ágeis e persistentes');

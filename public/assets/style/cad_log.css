@@ -1,0 +1,153 @@
+body {
+    margin: 0 !important;
+}
+
+.page_cad_log {
+   width: 100%;
+   min-height: 100vh;
+   display: flex;
+}
+
+.image_div {
+    width: 70%;
+    min-height: 100%;
+    max-height: 100%;
+    position: relative;
+}
+
+.img_cad_log {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.title {
+    margin: 20px
+}
+
+.container_cad_log {
+    padding: 20px;
+    border-left: solid 1px #F17929;
+    width: 30%;
+    min-height: 100%;
+}
+
+.content_cad_log {
+    position: relative;
+    align-items: start;
+}
+
+.form_cad_log {
+    display: flex;
+    flex-flow: column;
+}
+
+.div_containers_half {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.container_half_fields {
+    display: flex;
+    flex-flow: column;
+    min-width: 40%;
+    margin: 3% 20px
+}
+
+.field {
+    padding: 2px 20px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 3px solid #F17929;
+    margin-top: 5px;
+    color: #F17929;
+    background-color: #111;
+}
+
+.container_complete_fields {
+    display: flex;
+    flex-flow: column;
+    min-width: 40%;
+    margin: 20px
+}
+
+.div_send {
+    margin: 20px;
+}
+
+.button_send {
+    padding: 10px 15px;
+    border: 2px solid #F17929;
+    border-radius: 7px;
+    color: #F17929;
+    background-color: #111;
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+    flex-flow: column;
+}
+
+.button_send {
+    margin-bottom: 10px;
+}
+
+.button_send:hover {
+    background-color: #F17929;
+    color: #111;
+}
+
+.cad_redirect {
+    cursor: pointer;
+}
+
+.cad_redirect:hover {
+    text-decoration: underline;
+}
+
+.filter_img {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.title_log_cad {
+    text-align: center;
+    position: relative;
+    top: 30%;
+    font-size: 60px;
+    z-index: 1;
+    color: #fff;
+}
+
+.message_error_login_container {
+    margin: 10px 20px;
+}
+
+.display_none_error_login {
+    display: none;
+}
+
+.display_block_error_login {
+    display: block;
+}
+
+.text_error_login {
+    color: #cc0000;
+}
+
+.terms_div {
+    margin: 3% 20px;
+}
+
+.termo_uso {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.erro_field {
+    border-bottom: 3px solid #991111 !important;
+}

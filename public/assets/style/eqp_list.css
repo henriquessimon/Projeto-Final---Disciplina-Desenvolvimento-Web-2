@@ -1,0 +1,38 @@
+.categoria_div {
+    padding: 20px 20px;
+}
+
+.categoria_eqp_list {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+
+.status_eqp_list {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row;
+    padding: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 3px #f3f3f3;
+    border-style: solid;
+}
+
+.status_eqp_list:nth-child(1) li{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.status_eqp_list li{
+    width: 120px;
+    margin: 10px 20px 10px 0px;
+    color: #f3f3f3;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+.status_eqp_list:hover .item_list:nth-child(1) {
+    text-decoration: underline;
+}

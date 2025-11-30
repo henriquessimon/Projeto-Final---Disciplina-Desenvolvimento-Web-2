@@ -1,0 +1,33 @@
+.enemy_list_container {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    color: #f2f2f2;
+}
+
+.enemy_list_item {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    border-bottom: #f2f2f2 3px solid;
+    padding: 20px 0px 20px 40px;
+    cursor: pointer;
+}
+
+.enemy_list_item:hover li:nth-child(1){
+    text-decoration: underline;
+}
+
+.enemy_list_item li {
+    width: 100%;
+}
+
+.enemy_list_item:nth-child(1) {
+    font-weight: 700;
+    font-size: 18px;
+    cursor: auto;
+}
+
+.enemy_list_item:nth-child(1):hover li{
+    text-decoration: none;
+}

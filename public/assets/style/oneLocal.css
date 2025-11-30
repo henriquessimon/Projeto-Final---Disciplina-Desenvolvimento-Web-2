@@ -1,0 +1,26 @@
+.content_page {
+    color: #f2f2f2;
+    font-size: 18px;
+}
+
+p, img, label, table {
+    padding: 10px 40px;
+}
+
+span {
+    font-size: 21px;
+}
+
+img {
+    margin: 30px 0px
+}
+
+ul {
+    list-style: circle;
+    padding-left: 80px;
+}
+
+th, td {
+    border: 3px #f17929 solid;
+    padding: 10px;
+}

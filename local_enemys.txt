@@ -1,0 +1,217 @@
+local_id: 1:
+    enemy_id: 4;
+    enemy_id: 56;
+    enemy_id: 57;
+    enemy_id: 60;
+    enemy_id: 75;
+
+local_id: 2:
+    enemy_id: 58;
+    enemy_id: 60;
+    enemy_id: 20;
+    enemy_id: 101;
+    enemy_id: 102;
+
+local_id: 3:
+    enemy_id: 57;
+    enemy_id: 56;
+    enemy_id: 59;
+    enemy_id: 61;
+    enemy_id: 77;
+    enemy_id: 95;
+    enemy_id: 4;
+    enemy_id: 1;
+
+local_id: 4:
+    enemy_id: 76;
+    enemy_id: 56;
+    enemy_id: 60;
+    enemy_id: 61;
+    enemy_id: 11;
+
+local_id: 5:
+    enemy_id: 56;
+    enemy_id: 57;
+    enemy_id: 69;
+    enemy_id: 20;
+    enemy_id: 21;
+    enemy_id: 31;
+    enemy_id: 11;
+    enemy_id: 13;
+    enemy_id: 51;
+
+local_id: 6
+    enemy_id: 2;
+    enemy_id: 26;
+    enemy_id: 24;
+    enemy_id: 25;
+    enemy_id: 64;
+    enemy_id: 65;
+    enemy_id: 71;
+
+local_id: 7
+    enemy_id: 80;
+    enemy_id: 37;
+    enemy_id: 38;
+
+local_id: 8:
+    enemy_id: 13;
+    enemy_id: 17;
+    enemy_id: 18;
+
+local_id: 9:
+    enemy_id: 19;
+    enemy_id: 17;
+    enemy_id: 18;
+    enemy_id: 13;
+
+local_id: 10:
+    enemy_id: 28;
+    enemy_id: 29;
+    enemy_id: 52;
+    enemy_id: 62;
+    enemy_id: 88;
+    enemy_id: 61;
+    enemy_id: 10;
+
+local_id: 11:
+    enemy_id: 54;
+    enemy_id: 55;
+    enemy_id: 40;
+    enemy_id: 41;
+    enemy_id: 76;
+    enemy_id: 6;
+    enemy_id: 82;
+    enemy_id: 91;
+    enemy_id: 10;
+
+local_id: 12:
+    enemy_id: 56;
+    enemy_id: 57;
+    enemy_id: 22;
+    enemy_id: 63;
+    enemy_id: 35;
+    enemy_id: 81;
+
+local_id: 13:
+    enemy_id: 4;
+    enemy_id: 1;
+    enemy_id: 53;
+
+local_id: 14;
+    enemy_id: 15;
+    enemy_id: 42;
+    enemy_id: 45;
+    enemy_id: 45;
+    enemy_id: 9;
+    enemy_id: 17;
+    enemy_id: 18;
+    enemy_id: 86;
+    enemy_id: 89;
+
+local_id: 15:
+    enemy_id: 72;
+    enemy_id: 36;
+    enemy_id: 33;
+    enemy_id: 34;
+    enemy_id: 56;
+    enemy_id: 84;
+
+local_id: 16:
+    enemy_id: 66;
+    enemy_id: 67;
+    enemy_id: 68;
+    enemy_id: 11;
+    enemy_id: 29;
+    enemy_id: 28;
+    enemy_id: 43;
+    enemy_id: 10;
+
+local_id: 17:
+    enemy_id: 53;
+    enemy_id: 32;
+    enemy_id: 19;
+    enemy_id: 1;
+    enemy_id: 93;
+
+local_id: 18:
+    enemy_id: 77;
+    enemy_id: 95;
+    enemy_id: 30;
+    enemy_id: 37;
+    enemy_id: 38;
+    enemy_id: 78;
+    enemy_id: 83;
+    enemy_id: 27;
+    enemy_id: 79;
+
+local_id: 19:
+    enemy_id: 39;
+    enemy_id: 96;
+
+local_id: 20:
+    enemy_id: 101;
+    enemy_id: 36;
+    enemy_id: 73;
+    enemy_id: 4;
+    enemy_id: 105;
+    enemy_id: 92;
+
+local_id: 21:
+    enemy_id: 102;
+    enemy_id: 105;
+    enemy_id: 106;
+    enemy_id: 4;
+    enemy_id: 44;
+    enemy_id: 103;
+    enemy_id: 107;
+    enemy_id: 90;
+
+local_id: 22:
+    enemy_id: 4;
+    enemy_id: 87;
+
+local_id: 23
+    enemy_id: 23;
+
+local_id: 24:
+    enemy_id: 97;
+
+local_id: 26:
+    enemy_id: 74;
+    enemy_id: 45;
+    enemy_id: 17;
+    enemy_id: 46;
+    enemy_id: 98;
+    enemy_id: 99;
+
+local_id: 27:
+    enemy_id: 47;
+    enemy_id: 48;
+    enemy_id: 49;
+    enemy_id: 10;
+
+local_id: 28:
+    enemy_id: 47;
+    enemy_id: 48;
+    enemy_id: 50;
+    enemy_id: 100;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
