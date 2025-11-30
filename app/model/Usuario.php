@@ -72,7 +72,7 @@ class Usuario {
     public function deleteUser() {
         $conn = connection();
         $userId = $_SESSION['user_id'];
-
+        var_dump($userId);
         try {
             $stmt = $conn->prepare("
                 DELETE FROM usuario 
