@@ -2,9 +2,6 @@ v<?php
 
 class UsuarioController {
 
-    /* ===============================
-       CADASTRAR USUÁRIO
-    =============================== */
     public function cadastrarUsuario() {
         $data = json_decode(file_get_contents('php://input'), true);
 
@@ -36,8 +33,6 @@ class UsuarioController {
             return;
         }
 
-        // CORREÇÃO IMPORTANTE:
-        // $result possui ['user_id' => id]
         $_SESSION['user_id'] = $result['user_id'];
         $_SESSION['logged_in'] = true;
         $_SESSION['role_user'] = $data['role_user'];
@@ -45,14 +40,9 @@ class UsuarioController {
         echo json_encode(['success' => true]);
     }
 
-
-    /* ===============================
-       PEGAR DADOS DO USUÁRIO LOGADO
-    =============================== */
     public function getOneUser() {
         $user_id = $_SESSION['user_id'];
 
-        // usa o método mais completo
         $results = (new Usuario())->getOne($user_id);
 
         echo json_encode([

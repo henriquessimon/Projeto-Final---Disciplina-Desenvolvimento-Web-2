@@ -36,17 +36,13 @@ class Usuario {
         }
     }
 
-
-    /* ============================
-       BUSCAR UM USUÁRIO POR ID
-    ============================ */
     public function getOne($id) {
         $conn = connection();
 
         $sql = "SELECT nome_completo, telefone, email FROM usuario WHERE id = :id";
 
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':id', $id);
         $stmt->execute();
 
         return $stmt->fetch(PDO::FETCH_ASSOC) ?: null;

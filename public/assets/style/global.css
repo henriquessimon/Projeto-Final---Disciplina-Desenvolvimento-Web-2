@@ -83,12 +83,15 @@ ul {
     border-left: 0px;
     border-right: 0px;
     color: #f2f2f2;
+    width: 300px;
+    margin: 15px 0px;
 }
 
 .content_page form button {
     background-color: #DC4413;
     color: #f2f2f2;
     padding: 15px 20px;
+    width: 300px;
 }
 
 .addEqp {
