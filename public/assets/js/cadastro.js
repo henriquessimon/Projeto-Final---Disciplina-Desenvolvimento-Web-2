@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if(resposta.erro) {
             resposta.erros_campos.forEach(campo => {
-                if(!campo == 'sys_termos_uso') {
+                if(campo != 'sys_termos_uso') {
                     const field = document.querySelector(`[name="${campo}"]`)
                     field.classList.add('erro_field');
                 } else {
