@@ -19,7 +19,7 @@
     <main>
         <section>
             <?php
-                if($_SESSION['role_user']) {
+                if($_SESSION['role_user'] == 'adm') {
 
             ?>
                 <div id="modalAddEqp" class="modal-overlay">
@@ -75,7 +75,7 @@
                         <div class="eqp_title_div">
                             <h1>Inimigos</h1>
                             <?php
-                                if($_SESSION['role_user']) {
+                                if($_SESSION['role_user'] == 'adm') {
 
                             ?>
                                 <button class="addEqp" id="addEqp">Adicionar Inimigo</button>
@@ -93,7 +93,7 @@
                                 <li title="Resistencia contra dano de fogo">RES de Fogo</li>
                                 <li title="Resistencia contra dano elétrico">RES Elétrica</li>
                                 <?php
-                                    if($_SESSION['role_user']) {
+                                    if($_SESSION['role_user'] == 'adm') {
 
                                 ?>
                                     <li></li>
@@ -109,7 +109,7 @@
                                     <li><?= $enem['res_fogo'] ?></li>
                                     <li><?= $enem['res_eletrico'] ?></li>
                                     <?php
-                                        if($_SESSION['role_user']) {
+                                        if($_SESSION['role_user'] == 'adm') {
 
                                     ?>
                                         <li>
