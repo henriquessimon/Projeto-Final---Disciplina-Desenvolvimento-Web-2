@@ -75,10 +75,6 @@ class UsuarioController {
         echo json_encode(['success' => $success]);
     }
 
-
-    /* ===============================
-       DELETAR USUÁRIO
-    =============================== */
     public function deleteUser() {
         $model = new Usuario();
         $result = $model->deleteUser();
