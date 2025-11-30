@@ -70,7 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (e.target.closest('#excluir_conta')) {
             const resposta = await excUser();
-            console.log('Criquei')
+            console.log('Criquei');
+            console.log(resposta)
             if (resposta.success) {
                 alert('Usuário excluído com sucesso');
                 window.location.href = '?controller=home&method=index';
