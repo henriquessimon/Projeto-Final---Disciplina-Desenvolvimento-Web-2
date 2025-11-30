@@ -80,13 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
-// ============================================================
-// FUNÇÕES AJAX
-// ============================================================
-
-// Atualizar usuário
 async function attUser(data) {
     const resp = await fetch('?controller=usuario&method=attUser', {
         method: 'POST',
@@ -94,10 +87,9 @@ async function attUser(data) {
         body: JSON.stringify(data)
     });
 
-    return await resp.json(); // <-- CORREÇÃO IMPORTANTE
+    return await resp.json();
 }
 
-// Excluir usuário
 async function excUser() {
     const resp = await fetch('?controller=usuario&method=deleteUser', {
         method: 'GET'
