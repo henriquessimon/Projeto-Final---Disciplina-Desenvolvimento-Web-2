@@ -70,23 +70,65 @@
                 }
             ?>
             <div class="main_container">
-                    <div class="title_page">
-                        <div class="eqp_title_div">
-                            <h1>Inimigos</h1>
-                            <?php
-                                if($_SESSION['role_user'] == 'adm') {
-
-                            ?>
-                                <button class="addEqp" id="addEqp">Adicionar Inimigo</button>
-                            <?php 
-                                }
-                            ?>
-                        </div>
-                    </div>
-                    <div class="content_page">
-                        
+                <div class="title_page">
+                    <div class="eqp_title_div">
+                        <h1><?= htmlspecialchars($eqp['equipamento_nome']) ?></h1>
+                        <?php if($_SESSION['role_user'] == 'adm'): ?>
+                            <button class="addEqp" id="addEqp">Adicionar Inimigo</button>
+                        <?php endif; ?>
                     </div>
                 </div>
+
+                <div class="content_page">
+
+                    <div class="eqp_section">
+                        <h2>Descrição</h2>
+                        <p><?= htmlspecialchars($eqp['descricao']) ?></p>
+                    </div>
+
+                    <div class="eqp_section">
+                        <h2>Raridade</h2>
+                        <p><?= htmlspecialchars($eqp['raridade_nome']) ?> (Nivel Máx: <?= $eqp['raridade_nivel_max'] ?>)</p>
+                    </div>
+
+                    <?php if(!empty($eqp['dano_fisico'])): ?>
+                    <div class="eqp_section">
+                        <h2>Estatísticas de Combate</h2>
+                        <ul>
+                            <li>Dano Físico: <?= $eqp['dano_fisico'] ?></li>
+                            <li>Dano Mágico: <?= $eqp['dano_magico'] ?></li>
+                            <li>Dano Fogo: <?= $eqp['dano_fogo'] ?></li>
+                            <li>Dano Elétrico: <?= $eqp['dano_eletrico'] ?></li>
+                            <li>Redução Dano Físico: <?= $eqp['dano_fisico_reducao'] ?></li>
+                            <li>Redução Dano Mágico: <?= $eqp['dano_magico_reducao'] ?></li>
+                            <li>Redução Dano Fogo: <?= $eqp['dano_fogo_reducao'] ?></li>
+                            <li>Redução Dano Elétrico: <?= $eqp['dano_eletrico_reducao'] ?></li>
+                            <li>Estabilidade: <?= $eqp['estabilidade'] ?></li>
+                        </ul>
+                    </div>
+                    <?php endif; ?>
+
+                    <?php if(!empty($eqp['arma_categoria_nome'])): ?>
+                    <div class="eqp_section">
+                        <h2>Categoria da Arma</h2>
+                        <p><?= htmlspecialchars($eqp['arma_categoria_nome']) ?></p>
+                    </div>
+                    <?php endif; ?>
+
+                    <?php if(!empty($eqp['escudo_categoria_nome'])): ?>
+                    <div class="eqp_section">
+                        <h2>Categoria do Escudo</h2>
+                        <p><?= htmlspecialchars($eqp['escudo_categoria_nome']) ?></p>
+                    </div>
+                    <?php endif; ?>
+
+                    <div class="eqp_section">
+                        <h2>Efeito</h2>
+                        <p><?= nl2br(htmlspecialchars($eqp['effect'])) ?></p>
+                    </div>
+
+                </div>
+            </div>
         </section>
     </main>
 </body>
