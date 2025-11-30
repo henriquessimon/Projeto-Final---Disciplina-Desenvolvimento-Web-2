@@ -32,7 +32,7 @@
                             <label>E-mail</label>
                             <input type="text" name="email"/>
 
-                            <label>Senha'</label>
+                            <label>Senha</label>
                             <input type="senha" name="senha" />
 
                             <button type="button" id="attButton">Atualizar dados</button>
