@@ -243,6 +243,75 @@ class Equipamento {
             ];
         }
     }
+    
+    public function update($data) {
+        $conn = connection();
+
+        try {
+            $conn->beginTransaction();
+
+            $stmt = $conn->prepare("
+                UPDATE equipamento
+                SET nome = :nome,
+                    descricao = :descricao,
+                    effect = :effect,
+                    raridade_id = :raridade_id
+                WHERE id = :id
+            ");
+            $stmt->execute([
+                ':nome' => $data['nome'],
+                ':descricao' => $data['descricao'],
+                ':effect' => $data['effect'],
+                ':raridade_id' => $data['raridade_id'],
+                ':id' => $data['id']
+            ]);
+
+            if (in_array($data['tipo_equipamento'], ['arma', 'escudo'])) {
+                $stmt = $conn->prepare("
+                    UPDATE equipamentocombate
+                    SET dano_fisico = :dano_fisico,
+                        dano_magico = :dano_magico,
+                        dano_fogo = :dano_fogo,
+                        dano_eletrico = :dano_eletrico,
+                        dano_fisico_reducao = :dano_fisico_reducao,
+                        dano_magico_reducao = :dano_magico_reducao,
+                        dano_fogo_reducao = :dano_fogo_reducao,
+                        dano_eletrico_reducao = :dano_eletrico_reducao,
+                        estabilidade = :estabilidade
+                    WHERE id_eqp = :id
+                ");
+                $stmt->execute([
+                    ':dano_fisico' => $data['dano_fisico'],
+                    ':dano_magico' => $data['dano_magico'],
+                    ':dano_fogo' => $data['dano_fogo'],
+                    ':dano_eletrico' => $data['dano_eletrico'],
+                    ':dano_fisico_reducao' => $data['dano_fisico_reducao'],
+                    ':dano_magico_reducao' => $data['dano_magico_reducao'],
+                    ':dano_fogo_reducao' => $data['dano_fogo_reducao'],
+                    ':dano_eletrico_reducao' => $data['dano_eletrico_reducao'],
+                    ':estabilidade' => $data['estabilidade'],
+                    ':id' => $data['id']
+                ]);
+
+                $table = $data['tipo_equipamento'] === 'arma' ? 'arma' : 'escudo';
+                $stmt = $conn->prepare("
+                    UPDATE $table
+                    SET categoria_id = :categoria_id
+                    WHERE id_eqp = :id
+                ");
+                $stmt->execute([
+                    ':categoria_id' => $data['categoria_id'],
+                    ':id' => $data['id']
+                ]);
+            }
+
+            $conn->commit();
+            return ['success' => true];
+        } catch (Exception $e) {
+            $conn->rollBack();
+            return ['success' => false, 'error' => $e->getMessage()];
+        }
+    }
 
     public function delete($id) {
         $conn = connection();

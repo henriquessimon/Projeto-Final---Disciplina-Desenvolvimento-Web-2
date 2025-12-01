@@ -34,8 +34,7 @@
 
                                 <label class="form_label">Descrição</label>
                                 <input type="text" name="descricao" value="<?= isset($eqp['descricao']) ? htmlspecialchars($eqp['descricao']) : '' ?>" required>
-
-                                <!-- Seção de Danos -->
+                                
                                 <div class="form-section">
                                     <h3>Dano</h3>
                                     <div class="form-grid">
@@ -53,7 +52,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Seção de Reduções -->
                                 <div class="form-section">
                                     <h3>Redução de Dano</h3>
                                     <div class="form-grid">
@@ -71,7 +69,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Outras Estatísticas -->
                                 <div class="form-grid-2">
                                     <div>
                                         <label class="form_label">Estabilidade</label>
@@ -84,7 +81,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Raridade -->
                                 <label class="form_label">Raridade</label>
                                 <select class="select_add_eqp" name="raridade_id">
                                     <option value="1" <?= (isset($eqp['raridade_id']) && $eqp['raridade_id'] == 1) ? 'selected' : '' ?>>Comum</option>
@@ -94,7 +90,6 @@
                                     <option value="5" <?= (isset($eqp['raridade_id']) && $eqp['raridade_id'] == 5) ? 'selected' : '' ?>>Demon</option>
                                 </select>
 
-                                <!-- Tipo de Equipamento -->
                                 <label class="form_label">Tipo de Equipamento</label>
                                 <select id="selectTipo" class="select_add_eqp" name="tipo_equipamento">
                                     <option value="">Selecione o Tipo</option>
@@ -103,7 +98,6 @@
                                     <option value="anel" <?= (isset($eqp['tipo']) && $eqp['tipo'] == 'anel') ? 'selected' : '' ?>>Anel</option>
                                 </select>
 
-                                <!-- Categoria do equipamento (dinâmico) -->
                                 <label class="slc_cat_label">Categoria do equipamento</label>
                                 <select id="selectCategoria" class="select_add_eqp slc_cat" name="categoria_id">
                                     <?php if(isset($eqp['arma_categoria_id']) && !empty($eqp['arma_categoria_id'])): ?>
@@ -120,7 +114,7 @@
                                 </select>
 
                                 <div class="form-buttons">
-                                    <button type="submit" class="btn-save"><?= isset($eqp['equipamento_id']) ? 'Atualizar' : 'Salvar' ?></button>
+                                    <button type="button" class="btn-save"><?= isset($eqp['equipamento_id']) ? 'Atualizar' : 'Salvar' ?></button>
                                     <button type="button" class="btn-close" id="closeModal">Fechar</button>
                                 </div>
                             </form>

@@ -60,6 +60,34 @@ class EquipamentoController {
 
     }
 
+    public function update() {
+
+        $data = json_decode(file_get_contents("php://input"), true);
+
+        if (!$data || !isset($data['id'])) {
+            echo json_encode([
+                'success' => false,
+                'error' => 'Dados inválidos ou ID não fornecido.'
+            ]);
+            return;
+        }
+
+        $equipamentoModel = new Equipamento();
+        $result = $equipamentoModel->update($data);
+
+        if ($result['success']) {
+            echo json_encode([
+                'success' => true,
+                'message' => 'Equipamento atualizado com sucesso.'
+            ]);
+        } else {
+            echo json_encode([
+                'success' => false,
+                'error' => $result['error'] ?? 'Erro ao atualizar equipamento.'
+            ]);
+        }
+    }
+
     public function deleteEqp() {
         if (empty($_SESSION['logged_in'])) {
             header("Location: ?controller=home&index");

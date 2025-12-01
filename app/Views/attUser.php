@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="<?= BASE_URL ?>public/assets/style/global.css" />
     <?php include_once __DIR__ . '/components/importCssHF.php' ?>
     <script src="<?= BASE_URL ?>public/assets/js/verificaLogin.js"></script>
-    <script src="<?= BASE_URL ?>public/assets/js/att.js"></script>
+    <script src="<?= BASE_URL ?>public/assets/js/attUser.js"></script>
 </head>
 <body>
     <header>
