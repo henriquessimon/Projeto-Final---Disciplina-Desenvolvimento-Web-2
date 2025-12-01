@@ -270,15 +270,15 @@
                     let texto = `🏹 Build: ${build.nome_build}\n\n`;
 
                     const eqp = build.equipamento;
-                    texto += `🔹 Arma Principal: ${eqp.arma_principal.nome} - ${eqp.arma_principal.descricao}\n\n`;
-                    texto += `🔹 Arma Secundária: ${eqp.arma_secundaria.nome} - ${eqp.arma_secundaria.descricao}\n\n`;
-                    texto += `🔹 Escudo: ${eqp.escudo.nome} - ${eqp.escudo.descricao}\n\n`;
-                    texto += `🔹 Anel 1: ${eqp.anel_1.nome} - ${eqp.anel_1.descricao}\n\n`;
-                    texto += `🔹 Anel 2: ${eqp.anel_2.nome} - ${eqp.anel_2.descricao}\n\n`;
-                    texto += `🔹 Cabeça: ${eqp.cabeca.nome} - ${eqp.cabeca.descricao}\n\n`;
-                    texto += `🔹 Peitoral: ${eqp.peitoral.nome} - ${eqp.peitoral.descricao}\n\n`;
-                    texto += `🔹 Luvas: ${eqp.luvas.nome} - ${eqp.luvas.descricao}\n\n`;
-                    texto += `🔹 Pernas: ${eqp.pernas.nome} - ${eqp.pernas.descricao}\n\n`;
+                    texto += `🔹 Arma Principal: ${eqp.arma_principal.nome} - ${eqp.arma_principal.descricao}\n`;
+                    texto += `🔹 Arma Secundária: ${eqp.arma_secundaria.nome} - ${eqp.arma_secundaria.descricao}\n`;
+                    texto += `🔹 Escudo: ${eqp.escudo.nome} - ${eqp.escudo.descricao}\n`;
+                    texto += `🔹 Anel 1: ${eqp.anel_1.nome} - ${eqp.anel_1.descricao}\n`;
+                    texto += `🔹 Anel 2: ${eqp.anel_2.nome} - ${eqp.anel_2.descricao}\n`;
+                    texto += `🔹 Cabeça: ${eqp.cabeca.nome} - ${eqp.cabeca.descricao}\n`;
+                    texto += `🔹 Peitoral: ${eqp.peitoral.nome} - ${eqp.peitoral.descricao}\n`;
+                    texto += `🔹 Luvas: ${eqp.luvas.nome} - ${eqp.luvas.descricao}\n`;
+                    texto += `🔹 Pernas: ${eqp.pernas.nome} - ${eqp.pernas.descricao}\n`;
 
                     texto += `🔥 Feitiços/Piromancias:\n\n`;
                     eqp.feitiços_piromancias.forEach(f => {
@@ -287,14 +287,14 @@
 
                     texto += `\n💪 Status Ideais:\n\n`;
                     const s = build.status_ideais;
-                    texto += `- Nível Inicial: ${s.nivel_inicial}\n\n`;
-                    texto += `- Vitalidade: ${s.vitalidade.valor} (${s.vitalidade.descricao})\n\n`;
+                    texto += `- Nível Inicial: ${s.nivel_inicial}\n`;
+                    texto += `- Vitalidade: ${s.vitalidade.valor} (${s.vitalidade.descricao})\n`;
                     texto += `- Memória: ${s.memoria.valor} (${s.memoria.descricao})\n\n`;
-                    texto += `- Resistência: ${s.resistencia.valor} (${s.resistencia.descricao})\n\n`;
-                    texto += `- Força: ${s.forca.valor} (${s.forca.descricao})\n\n`;
-                    texto += `- Destreza: ${s.destreza.valor} (${s.destreza.descricao})\n\n`;
-                    texto += `- Resistência Física: ${s.resistencia_fisica.valor} (${s.resistencia_fisica.descricao})\n\n`;
-                    texto += `- Inteligência: ${s.inteligencia.valor} (${s.inteligencia.descricao})\n\n`;
+                    texto += `- Resistência: ${s.resistencia.valor} (${s.resistencia.descricao})\n`;
+                    texto += `- Força: ${s.forca.valor} (${s.forca.descricao})\n`;
+                    texto += `- Destreza: ${s.destreza.valor} (${s.destreza.descricao})\n`;
+                    texto += `- Resistência Física: ${s.resistencia_fisica.valor} (${s.resistencia_fisica.descricao})\n`;
+                    texto += `- Inteligência: ${s.inteligencia.valor} (${s.inteligencia.descricao})\n`;
                     texto += `- Fé: ${s.fe.valor} (${s.fe.descricao})\n`;
 
                     // Se ainda não estiver quebrando linha, use innerHTML com <br>
