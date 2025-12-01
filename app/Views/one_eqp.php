@@ -256,8 +256,14 @@
 
                     console.log(buildResponse)
 
-                    // Como a Gemini retorna JSON dentro de "texto", precisamos parsear novamente
-                    const build = JSON.parse(buildResponse.texto);
+                    let buildText = buildResponse.texto;
+
+                    // Remove barras invertidas extras
+                    buildText = buildText.replace(/\\"/g, '"').replace(/\\n/g, '');
+
+                    // Agora parse
+                    const build = JSON.parse(buildText);
+
 
                     let texto = `🏹 Build: ${build.nome_build}\n\n`;
 
