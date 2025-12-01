@@ -8,13 +8,49 @@ class GeminiController {
         $eqp = $_GET['equipamento'] ?? 'Espada Longa';
         $eqp = htmlspecialchars($eqp, ENT_QUOTES, 'UTF-8');
         
-        $prompt = "A sua função é fazer uma build com o equipamento $eqp de Dark Souls 1.
-        Você precisa retornar todos os outros itens da build e os status ideais do personagem.
-        você precisa interpretar o personagem Chapolin Colorado para dar a resposta, quero apenas a resposta da build não precisa de nada muito além disso, 
-        da uma interpretada no personagem para responder e tal, como essa resposta vem para um usuário, quero apenas que fale como se fosse ele, 
-        não fique dizendo coisas do tipo 'certo vou interpretar o Chapolin e responder ao seu usuario', pois vai ficar ruim a experiencia do usuario se fizer isso, então
-        apenas sugira a build interpretando o Chapolin Colorado.
-        O retorno deve ser apenas um JSON como string, seguindo este formato:";
+        $prompt = "
+        A sua função é criar uma build completa para Dark Souls 1 a partir do equipamento fornecido: $eqp.
+        Você deve interpretar o personagem Chapolin Colorado, usando o estilo dele em todas as descrições.
+        O retorno **deve ser apenas um JSON**, sem explicações adicionais, comentários, ou qualquer texto fora do JSON.
+        O formato do JSON deve ser exatamente assim:
+
+        {
+            \"nome_build\": \"string\",
+            \"equipamento\": {
+                \"arma_principal\": { \"nome\": \"string\", \"descricao\": \"string\" },
+                \"arma_secundaria\": { \"nome\": \"string\", \"descricao\": \"string\" },
+                \"escudo\": { \"nome\": \"string\", \"descricao\": \"string\" },
+                \"anel_1\": { \"nome\": \"string\", \"descricao\": \"string\" },
+                \"anel_2\": { \"nome\": \"string\", \"descricao\": \"string\" },
+                \"cabeca\": { \"nome\": \"string\", \"descricao\": \"string\" },
+                \"peitoral\": { \"nome\": \"string\", \"descricao\": \"string\" },
+                \"luvas\": { \"nome\": \"string\", \"descricao\": \"string\" },
+                \"pernas\": { \"nome\": \"string\", \"descricao\": \"string\" },
+                \"feitiços_piromancias\": [
+                    { \"nome\": \"string\", \"descricao\": \"string\" },
+                    { \"nome\": \"string\", \"descricao\": \"string\" }
+                ]
+            },
+            \"status_ideais\": {
+                \"nivel_inicial\": \"string\",
+                \"vitalidade\": { \"valor\": numero, \"descricao\": \"string\" },
+                \"memoria\": { \"valor\": numero, \"descricao\": \"string\" },
+                \"resistencia\": { \"valor\": numero, \"descricao\": \"string\" },
+                \"forca\": { \"valor\": numero, \"descricao\": \"string\" },
+                \"destreza\": { \"valor\": numero, \"descricao\": \"string\" },
+                \"resistencia_fisica\": { \"valor\": \"string\", \"descricao\": \"string\" },
+                \"inteligencia\": { \"valor\": \"string\", \"descricao\": \"string\" },
+                \"fe\": { \"valor\": \"string\", \"descricao\": \"string\" }
+            }
+        }
+
+        **IMPORTANTE:** 
+        - Não repita o prompt no JSON. 
+        - Não adicione explicações. 
+        - Tudo deve seguir o tom e estilo do Chapolin Colorado.
+        - Sempre retorne **valores válidos** para cada campo, como números ou strings apropriadas.
+        ";
+
 
         $corpo = [
             "contents" => [

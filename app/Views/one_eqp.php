@@ -241,7 +241,7 @@
     </main>
     <script>
         document.addEventListener('click', async function(e) {
-            if(e.target.closest('#build')) {
+            if (e.target.closest('#build')) {
                 e.preventDefault();
 
                 const respostaElem = document.querySelector('.resposta_gemini');
@@ -249,12 +249,44 @@
 
                 try {
                     const res = await fetch(`?controller=gemini&method=gerarBuild&equipamento=${encodeURIComponent('<?= $eqp['equipamento_nome'] ?>')}`);
-                    
-                    if(!res.ok) throw new Error('Erro na requisição');
+                    if (!res.ok) throw new Error('Erro na requisição');
 
-                    const data = await res.json();
-                    respostaElem.textContent = data.texto; 
-                } catch(err) {
+                    const build = await res.json();
+
+                    // Monta um texto legível para o usuário
+                    let texto = `🏹 Build: ${build.nome_build}\n\n`;
+
+                    const eqp = build.equipamento;
+                    texto += `🔹 Arma Principal: ${eqp.arma_principal.nome} - ${eqp.arma_principal.descricao}\n`;
+                    texto += `🔹 Arma Secundária: ${eqp.arma_secundaria.nome} - ${eqp.arma_secundaria.descricao}\n`;
+                    texto += `🔹 Escudo: ${eqp.escudo.nome} - ${eqp.escudo.descricao}\n`;
+                    texto += `🔹 Anel 1: ${eqp.anel_1.nome} - ${eqp.anel_1.descricao}\n`;
+                    texto += `🔹 Anel 2: ${eqp.anel_2.nome} - ${eqp.anel_2.descricao}\n`;
+                    texto += `🔹 Cabeça: ${eqp.cabeca.nome} - ${eqp.cabeca.descricao}\n`;
+                    texto += `🔹 Peitoral: ${eqp.peitoral.nome} - ${eqp.peitoral.descricao}\n`;
+                    texto += `🔹 Luvas: ${eqp.luvas.nome} - ${eqp.luvas.descricao}\n`;
+                    texto += `🔹 Pernas: ${eqp.pernas.nome} - ${eqp.pernas.descricao}\n\n`;
+
+                    texto += `🔥 Feitiços/Piromancias:\n`;
+                    eqp.feitiços_piromancias.forEach(f => {
+                        texto += `- ${f.nome}: ${f.descricao}\n`;
+                    });
+
+                    texto += `\n💪 Status Ideais:\n`;
+                    const s = build.status_ideais;
+                    texto += `- Nível Inicial: ${s.nivel_inicial}\n`;
+                    texto += `- Vitalidade: ${s.vitalidade.valor} (${s.vitalidade.descricao})\n`;
+                    texto += `- Memória: ${s.memoria.valor} (${s.memoria.descricao})\n`;
+                    texto += `- Resistência: ${s.resistencia.valor} (${s.resistencia.descricao})\n`;
+                    texto += `- Força: ${s.forca.valor} (${s.forca.descricao})\n`;
+                    texto += `- Destreza: ${s.destreza.valor} (${s.destreza.descricao})\n`;
+                    texto += `- Resistência Física: ${s.resistencia_fisica.valor} (${s.resistencia_fisica.descricao})\n`;
+                    texto += `- Inteligência: ${s.inteligencia.valor} (${s.inteligencia.descricao})\n`;
+                    texto += `- Fé: ${s.fe.valor} (${s.fe.descricao})\n`;
+
+                    respostaElem.textContent = texto;
+
+                } catch (err) {
                     respostaElem.textContent = 'Erro ao gerar build: ' + err.message;
                 }
             }
