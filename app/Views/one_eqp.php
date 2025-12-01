@@ -258,12 +258,14 @@
 
                     let buildText = buildResponse.texto;
 
-                    // Remove barras invertidas extras
-                    buildText = buildText.replace(/\\"/g, '"').replace(/\\n/g, '');
+                    // Remove o bloco de código markdown se existir
+                    buildText = buildText.replace(/```json\s*/g, '').replace(/```\s*$/g, '');
+                    
+                    // Remove barras invertidas extras e limpa
+                    buildText = buildText.replace(/\\"/g, '"').replace(/\\n/g, '').trim();
 
                     // Agora parse
                     const build = JSON.parse(buildText);
-
 
                     let texto = `🏹 Build: ${build.nome_build}\n\n`;
 
@@ -298,6 +300,7 @@
                     respostaElem.textContent = texto;
 
                 } catch (err) {
+                    console.error('Erro detalhado:', err);
                     respostaElem.textContent = '❌ Erro ao gerar build: ' + err.message;
                 }
             }
