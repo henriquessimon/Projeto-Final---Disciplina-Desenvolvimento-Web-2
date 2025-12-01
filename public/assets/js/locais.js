@@ -1,9 +1,9 @@
 document.addEventListener('click', async function(e) {
 
+    //deletar
     if(e.target.closest('.dlt_local')) {
         e.stopPropagation();
         const local_id = e.target.closest('.local_list_item').getAttribute('id');
-
         const data = await deleteLocal(local_id);
 
         if(data.success == true) {
