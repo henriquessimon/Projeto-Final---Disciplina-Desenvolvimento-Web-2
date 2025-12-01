@@ -18,7 +18,7 @@
         <main>
             <section>
                 <?php
-                    if($_SESSION['role_user'] == 'adm') {
+                    if(isset($_SESSION['role_user']) && $_SESSION['role_user'] == 'adm') {
                         
                 ?>
                     <div id="modalAddEqp" class="modal-overlay">
@@ -54,7 +54,7 @@
                         <div class="eqp_title_div">
                             <h1>Locais</h1>
                             <?php
-                                if($_SESSION['role_user'] == 'adm') {
+                                if(isset($_SESSION['role_user']) && $_SESSION['role_user'] == 'adm') {
 
                             ?>
                                 <button class="addEqp" id="addEqp">Adicionar Local</button>
@@ -69,7 +69,7 @@
                                 <div class="local_list_item" id="<?=$loc['id']?>">
                                     <h3><?= $loc['nome'] ?></h3>
                                     <?php
-                                        if($_SESSION['role_user'] == 'adm') {
+                                        if(isset($_SESSION['role_user']) && $_SESSION['role_user'] == 'adm') {
 
                                     ?>
                                         <svg class="dlt_local" width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
