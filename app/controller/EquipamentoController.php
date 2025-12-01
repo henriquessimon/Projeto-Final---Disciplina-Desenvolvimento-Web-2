@@ -60,7 +60,7 @@ class EquipamentoController {
 
     }
 
-    public function update() {
+    public function attEqp() {
 
         $data = json_decode(file_get_contents("php://input"), true);
 
