@@ -51,7 +51,6 @@ class GeminiController {
         - Sempre retorne **valores válidos** para cada campo, como números ou strings apropriadas.
         ";
 
-
         $corpo = [
             "contents" => [
                 [

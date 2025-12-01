@@ -262,7 +262,7 @@
                     buildText = buildText.replace(/```json\s*/g, '').replace(/```\s*$/g, '');
                     
                     // Remove barras invertidas extras e limpa
-                    buildText = buildText.replace(/\\"/g, '"').replace(/\\n/g, '').trim();
+                    buildText = buildText.replace(/\\"/g, '"').replace(/\\n/g, '\n').trim(); // Mudei aqui: \\n vira \n real
 
                     // Agora parse
                     const build = JSON.parse(buildText);
@@ -297,7 +297,8 @@
                     texto += `- Inteligência: ${s.inteligencia.valor} (${s.inteligencia.descricao})\n`;
                     texto += `- Fé: ${s.fe.valor} (${s.fe.descricao})\n`;
 
-                    respostaElem.textContent = texto;
+                    // Se ainda não estiver quebrando linha, use innerHTML com <br>
+                    respostaElem.innerHTML = texto.replace(/\n/g, '<br>');
 
                 } catch (err) {
                     console.error('Erro detalhado:', err);
