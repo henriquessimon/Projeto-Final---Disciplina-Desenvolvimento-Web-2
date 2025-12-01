@@ -254,6 +254,8 @@
 
                     const buildResponse = await res.json();
 
+                    console.log(buildResponse)
+
                     // Como a Gemini retorna JSON dentro de "texto", precisamos parsear novamente
                     const build = JSON.parse(buildResponse.texto);
 
