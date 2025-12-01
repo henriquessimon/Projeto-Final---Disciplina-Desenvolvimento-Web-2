@@ -231,9 +231,34 @@
                         <h2>Efeito</h2>
                         <p><?= !empty($eqp['effect']) ? nl2br(htmlspecialchars($eqp['effect'])) : 'Sem efeitos especiais' ?></p>
                     </div>
+                    <div class="eqp_section">
+                        <button id="build">Me Sugira uma build</button>
+                        <p class="resposta_gemini"></p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+    <script>
+        document.addEventListener('click', async function(e) {
+            if(e.target.closest('#build')) {
+                e.preventDefault();
+
+                const respostaElem = document.querySelector('.resposta_gemini');
+                respostaElem.textContent = 'Carregando...';
+
+                try {
+                    const res = await fetch(`?controller=gemini&method=gerarBuild&equipamento=${encodeURIComponent('<?= $eqp['equipamento_nome'] ?>')}`);
+                    
+                    if(!res.ok) throw new Error('Erro na requisição');
+
+                    const data = await res.json(); // Correção: mudei 'texto' para 'data'
+                    respostaElem.textContent = data.texto; // Correção: acessa data.texto em vez de res.texto
+                } catch(err) {
+                    respostaElem.textContent = 'Erro ao gerar build: ' + err.message;
+                }
+            }
+        });
+    </script>
 </body>
 </html>
