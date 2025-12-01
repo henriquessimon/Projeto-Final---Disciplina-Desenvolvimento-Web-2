@@ -248,12 +248,15 @@
                 respostaElem.textContent = 'Carregando...';
 
                 try {
-                    const res = await fetch(`?controller=gemini&method=gerarBuild&equipamento=${encodeURIComponent('<?= $eqp['equipamento_nome'] ?>')}`);
+                    const equipamento = encodeURIComponent('<?= $eqp['equipamento_nome'] ?>');
+                    const res = await fetch(`?controller=gemini&method=gerarBuild&equipamento=${equipamento}`);
                     if (!res.ok) throw new Error('Erro na requisição');
 
-                    const build = await res.json();
-                    console.log(build)
-                    // Monta um texto legível para o usuário
+                    const buildResponse = await res.json();
+
+                    // Como a Gemini retorna JSON dentro de "texto", precisamos parsear novamente
+                    const build = JSON.parse(buildResponse.texto);
+
                     let texto = `🏹 Build: ${build.nome_build}\n\n`;
 
                     const eqp = build.equipamento;
@@ -287,7 +290,7 @@
                     respostaElem.textContent = texto;
 
                 } catch (err) {
-                    respostaElem.textContent = 'Erro ao gerar build: ' + err.message;
+                    respostaElem.textContent = '❌ Erro ao gerar build: ' + err.message;
                 }
             }
         });
