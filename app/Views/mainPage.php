@@ -122,8 +122,7 @@
                             if($_SESSION['role_user'] == 'adm') {
                         ?>
                                 <button class="addEqp" id="addEqp">Adicionar Equipamento</button>
-                                <button class="addEqp" id="addCat">Adicionar categoria</button>
-                        <?php    
+                        <?php
                             }
                         ?>
                     </div>

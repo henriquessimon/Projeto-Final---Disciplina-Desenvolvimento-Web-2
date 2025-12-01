@@ -232,8 +232,8 @@
                         <p><?= !empty($eqp['effect']) ? nl2br(htmlspecialchars($eqp['effect'])) : 'Sem efeitos especiais' ?></p>
                     </div>
                     <div class="eqp_section">
-                        <button id="build">Me Sugira uma build</button>
                         <p class="resposta_gemini"></p>
+                        <button id="build">Me Sugira uma build</button>
                     </div>
                 </div>
             </div>
