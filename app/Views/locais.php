@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="<?= BASE_URL ?>public/assets/style/global.css" />
     <link rel="stylesheet" type="text/css" href="<?= BASE_URL ?>public/assets/style/local_list.css" />
     <?php include_once __DIR__ . '/components/importCssHF.php' ?>
-    <script src="<?= BASE_URL ?>public/assets/js/verificaLogin.js"></script>
     <script src="<?= BASE_URL ?>public/assets/js/modal.js"></script>
     <script src="<?= BASE_URL ?>public/assets/js/locais.js"></script>
 </head>
