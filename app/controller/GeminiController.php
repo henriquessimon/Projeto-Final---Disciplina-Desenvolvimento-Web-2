@@ -14,12 +14,7 @@ class GeminiController {
         da uma interpretada no personagem para responder e tal, como essa resposta vem para um usuário, quero apenas que fale como se fosse ele, 
         não fique dizendo coisas do tipo 'certo vou interpretar o Chapolin e responder ao seu usuario', pois vai ficar ruim a experiencia do usuario se fizer isso, então
         apenas sugira a build interpretando o Chapolin Colorado.
-        O retorno deve ser apenas um JSON como string, seguindo este formato:
-        {
-        \"equipamentoBase\": \"Espada Longa\",
-        \"build\": {\"armas\": [], \"escudos\": [], \"armaduras\": [], \"anel\": []},
-        \"statusPersonagem\": {\"nivel\": 80, \"forca\": 50, \"destreza\": 30, \"vitalidade\": 40, \"resistencia\": 35, \"inteligencia\": 10, \"fe\": 10}
-        }";
+        O retorno deve ser apenas um JSON como string, seguindo este formato:";
 
         $corpo = [
             "contents" => [

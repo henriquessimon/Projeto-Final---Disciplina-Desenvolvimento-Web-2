@@ -252,8 +252,8 @@
                     
                     if(!res.ok) throw new Error('Erro na requisição');
 
-                    const data = await res.json(); // Correção: mudei 'texto' para 'data'
-                    respostaElem.textContent = data.texto; // Correção: acessa data.texto em vez de res.texto
+                    const data = await res.json();
+                    respostaElem.textContent = data.texto; 
                 } catch(err) {
                     respostaElem.textContent = 'Erro ao gerar build: ' + err.message;
                 }
