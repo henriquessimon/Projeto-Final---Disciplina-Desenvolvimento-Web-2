@@ -252,7 +252,7 @@
                     if (!res.ok) throw new Error('Erro na requisição');
 
                     const build = await res.json();
-
+                    console.log(build)
                     // Monta um texto legível para o usuário
                     let texto = `🏹 Build: ${build.nome_build}\n\n`;
 
