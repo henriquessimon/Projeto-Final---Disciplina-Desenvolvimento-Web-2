@@ -1,7 +1,7 @@
 <?php
 class GeminiController {
 
-    private $apiKey = 'AIzaSyC3frBmw4eXsbiDesEcsCJ1UgBiYU-Dp9c';
+    private $apiKey = 'AIzaSyAMOERVxWCB5y2UEkPJDUMtdjJUbZQDX5E';
 
     public function gerarBuild() {
         // Validação moderna do input
