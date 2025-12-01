@@ -20,7 +20,7 @@ document.addEventListener('click', async function(e) {
            
     if(e.target.closest('.click_item') && !e.target.closest('.dlt_enemy')) {
         const enemy_id = e.target.closest('.click_item').getAttribute('id');
-        window.location.href = `<?= BASE_URL ?>?controller=inimigo&method=getOneInimigo&enemy_id=${enemy_id}`;
+        window.location.href = `?controller=inimigo&method=getOneInimigo&enemy_id=${enemy_id}`;
         
     }
 
