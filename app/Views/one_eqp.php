@@ -248,7 +248,7 @@
                 respostaElem.textContent = 'Carregando...';
 
                 try {
-                    const equipamento = encodeURIComponent('<?= $eqp['equipamento_nome'] ?>');
+                    const equipamento = encodeURIComponent("<?= $eqp['equipamento_nome'] ?>");
                     const res = await fetch(`?controller=gemini&method=gerarBuild&equipamento=${equipamento}`);
                     if (!res.ok) throw new Error('Erro na requisição');
 
