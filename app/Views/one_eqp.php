@@ -280,16 +280,16 @@
                     texto += `🔹 Luvas: ${eqp.luvas.nome} - ${eqp.luvas.descricao}\n`;
                     texto += `🔹 Pernas: ${eqp.pernas.nome} - ${eqp.pernas.descricao}\n`;
 
-                    texto += `🔥 Feitiços/Piromancias:\n\n`;
+                    texto += `🔥 Feitiços/Piromancias:\n`;
                     eqp.feitiços_piromancias.forEach(f => {
-                        texto += `- ${f.nome}: ${f.descricao}\n\n`;
+                        texto += `- ${f.nome}: ${f.descricao}\n`;
                     });
 
                     texto += `\n💪 Status Ideais:\n\n`;
                     const s = build.status_ideais;
                     texto += `- Nível Inicial: ${s.nivel_inicial}\n`;
                     texto += `- Vitalidade: ${s.vitalidade.valor} (${s.vitalidade.descricao})\n`;
-                    texto += `- Memória: ${s.memoria.valor} (${s.memoria.descricao})\n\n`;
+                    texto += `- Memória: ${s.memoria.valor} (${s.memoria.descricao})\n`;
                     texto += `- Resistência: ${s.resistencia.valor} (${s.resistencia.descricao})\n`;
                     texto += `- Força: ${s.forca.valor} (${s.forca.descricao})\n`;
                     texto += `- Destreza: ${s.destreza.valor} (${s.destreza.descricao})\n`;
