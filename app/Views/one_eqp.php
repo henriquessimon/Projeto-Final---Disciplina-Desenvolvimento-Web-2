@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="plagiarism" content="Este conteúdo é protegido por direitos autorais. Por favor, atribua a autoria corretamente para evitar problemas de plágio.">
     <title>DS Equip Wiki</title>
     <link rel="stylesheet" type="text/css" href="<?= BASE_URL ?>public/assets/style/global.css" />
     <link rel="stylesheet" type="text/css" href="<?= BASE_URL ?>public/assets/style/eqp.css" />
+    <meta name="plagiarism" content="Este conteúdo é protegido por direitos autorais. Por favor, atribua a autoria corretamente para evitar problemas de plágio.">
     <?php include_once __DIR__ . '/components/importCssHF.php' ?>
     <script src="<?= BASE_URL ?>public/assets/js/verificaLogin.js"></script>
     <script src="<?= BASE_URL ?>public/assets/js/modal.js"></script>
@@ -275,7 +277,7 @@
                     texto += `🔹 Cabeça: ${eqp.cabeca.nome} - ${eqp.cabeca.descricao}\n`;
                     texto += `🔹 Peitoral: ${eqp.peitoral.nome} - ${eqp.peitoral.descricao}\n`;
                     texto += `🔹 Luvas: ${eqp.luvas.nome} - ${eqp.luvas.descricao}\n`;
-                    texto += `🔹 Pernas: ${eqp.pernas.nome} - ${eqp.pernas.descricao}\n`;
+                    texto += `🔹 Pernas: ${eqp.pernas.nome} - ${eqp.pernas.descricao}\n\n`;
 
                     texto += `🔥 Feitiços/Piromancias:\n`;
                     eqp.feitiços_piromancias.forEach(f => {

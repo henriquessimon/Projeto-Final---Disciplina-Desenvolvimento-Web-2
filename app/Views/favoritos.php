@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favoritos - DS Equip Wiki</title>
-
+    <meta name="plagiarism" content="Este conteúdo é protegido por direitos autorais. Por favor, atribua a autoria corretamente para evitar problemas de plágio.">
     <link rel="stylesheet" type="text/css" href="<?= BASE_URL ?>public/assets/style/global.css" />
     <link rel="stylesheet" type="text/css" href="<?= BASE_URL ?>public/assets/style/eqp_list.css" />
     <?php include_once __DIR__ . '/components/importCssHF.php' ?>
