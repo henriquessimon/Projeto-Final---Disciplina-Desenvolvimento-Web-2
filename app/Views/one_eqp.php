@@ -258,13 +258,10 @@
 
                     let buildText = buildResponse.texto;
 
-                    // Remove o bloco de código markdown se existir
                     buildText = buildText.replace(/```json\s*/g, '').replace(/```\s*$/g, '');
                     
-                    // Remove barras invertidas extras e limpa
-                    buildText = buildText.replace(/\\"/g, '"').replace(/\\n/g, '\n').trim(); // Mudei aqui: \\n vira \n real
+                    buildText = buildText.replace(/\\"/g, '"').replace(/\\n/g, '\n').trim();
 
-                    // Agora parse
                     const build = JSON.parse(buildText);
 
                     let texto = `🏹 Build: ${build.nome_build}\n\n`;
@@ -297,7 +294,6 @@
                     texto += `- Inteligência: ${s.inteligencia.valor} (${s.inteligencia.descricao})\n`;
                     texto += `- Fé: ${s.fe.valor} (${s.fe.descricao})\n`;
 
-                    // Se ainda não estiver quebrando linha, use innerHTML com <br>
                     respostaElem.innerHTML = texto.replace(/\n/g, '<br>');
 
                 } catch (err) {

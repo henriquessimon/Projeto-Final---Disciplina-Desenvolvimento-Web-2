@@ -46,7 +46,7 @@
                         <li>Favorito</li>
                     </ul>
                     <?php foreach ($favoritos as $item): ?>
-                        <ul class="status_eqp_list" id="<?= $item['equipamento_id'] ?>">
+                        <ul class="status_eqp_list fav_page" id="<?= $item['equipamento_id'] ?>">
 
                             <li class="item_list"><?= $item['equipamento_nome'] ?></li>
                             <li class="item_list"><?= $item['dano_fisico'] ?></li>
@@ -81,6 +81,5 @@
     </div>
 </section>
 </main>
-
 </body>
 </html>

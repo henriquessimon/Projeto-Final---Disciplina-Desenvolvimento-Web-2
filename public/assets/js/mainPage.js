@@ -70,6 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
             favoritar(eqp_id).then(favoritou => {
                 estrela_svg.setAttribute('fill', favoritou ? 'gold' : '');
             });
+
+            if(e.target.closest('.fav_page')) {
+                e.target.closest('.status_eqp_list').remove();
+            }
         }
 
         if(e.target.closest('.status_eqp_list') && !e.target.closest('.dlt_eqp') && !e.target.closest('#favoritar')) {
